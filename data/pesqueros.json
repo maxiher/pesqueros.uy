@@ -1,0 +1,2017 @@
+[
+    {
+        "nombre": "Escollera Sarandí",
+        "id": 0,
+        "slug": "escollera-sarandí",
+        "departamento": "Montevideo",
+        "seccion": 0,
+        "descripcion": "Muy buen lugar para pesca variada cerca del puerto.",
+        "ambiente": "Escollera",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 5,
+        "enganche": 3,
+        "mejorViento": "SE",
+        "nivel": 5,
+        "portada": "Fotos/pesqueros/EscolleraSarandi.webp",
+        "imagenes": [
+            "Fotos/pesqueros/EscolleraSarandi.webp",
+            "Fotos/pesqueros/EscolleraSarandi1.webp",
+            "Fotos/pesqueros/EscolleraSarandi2.webp",
+            "Fotos/pesqueros/EscolleraSarandi3.webp",
+            "Fotos/pesqueros/EscolleraSarandi4.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+      "nombre": "La Farola",
+      "lat": -34.906,
+      "lng": -56.215,
+      "profundidad": 5
+    },
+    {
+      "nombre": "El Caballete",
+      "lat": -34.9056,
+      "lng": -56.2148
+    },
+    {
+      "nombre": "Las Tres Piedras",
+      "lat": -34.904,
+      "lng": -56.213,
+      "enganche": 1
+    },
+    {
+      "nombre": "La Redonda",
+      "lat": -34.903,
+      "lng": -56.212,
+      "profundidad": 5
+    }
+],
+            
+    "normativa": "libre"
+    },
+    {
+        "nombre": "Parque Rodó",
+        "id": 2,
+        "slug": "parque-rodo",
+        "departamento": "Montevideo",
+        "seccion": 1,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Rambla",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 3,
+        "enganche": 4,
+        "mejorViento": "SE",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/parquerodoPortada.webp",
+        "imagenes": [
+            "Fotos/pesqueros/parquerodo.webp",
+            "Fotos/pesqueros/parquerodo1.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            }
+        ],
+        "ubicacion": [
+            {
+                "lat": -34.91,
+                "lng": -56.16
+            },
+            {
+                "lat": -34.915084,
+                "lng": -56.178712
+            }
+        ],
+        "normativa": "libre"
+    },
+    {
+        "nombre": "Punta Carretas",
+        "id": 3,
+        "slug": "punta-carretas",
+        "departamento": "Montevideo",
+        "seccion": 1,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "muelle",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/PuntaCarretas.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaCarretas.webp",
+            "Fotos/pesqueros/puntacarretas2.webp",
+            "Fotos/pesqueros/PuntaCarretas3.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "lat": -34.921344,
+                "lng": -56.172319
+            },
+            {
+                "lat": -34.925191,
+                "lng": -56.172694
+            },
+            {
+                "lat": -34.937665,
+                "lng": -56.160160
+            },
+            {
+                "lat": -34.928395,
+                "lng": -56.156382
+            }
+        ],
+        "normativa": "libre"
+    },
+    {
+        "nombre": "Puerto del Buceo",
+        "id": 4,
+        "slug": "puerto-del-buceo",
+        "departamento": "Montevideo",
+        "seccion": 1,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Escollera",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 5,
+        "enganche": 2,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/buceo2.webp",
+        "imagenes": [
+            "Fotos/pesqueros/buceo.webp",
+            "Fotos/pesqueros/buceo1.webp",
+            "Fotos/pesqueros/buceo2.webp",
+            "Fotos/pesqueros/puertoDelBuceo.webp",
+            "Fotos/pesqueros/Pocitos.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "lat": -34.911326,
+                "lng": -56.129881
+            },
+            {
+                "lat": -34.909208,
+                "lng": -56.127990
+            },
+            {
+                "lat": -34909235,
+                "lng": -56.126335
+            }
+        ]
+    },
+    {
+        "nombre": "Malvin - Punta Gorda",
+        "id": 5,
+        "slug": "malvin-punta-gorda",
+        "departamento": "Montevideo",
+        "seccion": 1,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Rambla",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "VARIOS",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/PuntaGorda1.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaGorda1.webp",
+            "Fotos/pesqueros/PuntaGorda.webp",
+            "Fotos/pesqueros/Malvin.webp",
+            "Fotos/pesqueros/Malvin1.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Playa Malvin",
+                "lat": -34.897204,
+                "lng": -56.110191
+            },
+            {
+                "nombre": "Playa Malvin",
+                "lat": -34.899498,
+                "lng": -56.100756
+            },
+            {
+                "nombre": "Muelle Playa Honda",
+                "lat": -34.896395,
+                "lng": -56.088825
+            },
+            {
+                "nombre": "Virgilio",
+                "lat": -34.900400,
+                "lng": -56.082185
+            },
+            {
+                "nombre": "Náutico",
+                "lat": -34.899567,
+                "lng": -56.072796
+            }
+        ],
+        "normativa": "????????"
+    },
+    {
+        "nombre": "Carrasco",
+        "id": 6,
+        "slug": "carrasco",
+        "departamento": "Montevideo",
+        "seccion": 1,
+        "ambiente": "Playa",
+        "agua": "salada",
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "SE",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/carrasco2.webp",
+        "imagenes": [
+            "Fotos/pesqueros/carrasco.webp",
+            "Fotos/pesqueros/Carrasco2.webp",
+            "Fotos/pesqueros/carrasco3.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Club Naútico",
+                "lat": -34.899603,
+                "lng": -56.072818
+            },
+            {
+                "nombre": "La Mulata",
+                "lat": -34.900070,
+                "lng": -56.067217
+            },
+            {
+                "nombre": "La Restinga",
+                "lat": -34.898802,
+                "lng": -56.063308
+            },
+            {
+                "nombre": "Playa Carrasco",
+                "lat": -34.888195,
+                "lng": -56.046628
+            }
+        ],
+
+    "normativa": {
+            "temporadaBañistas": {
+                "pescaPermitida": "todo el dia",
+                "desde": "19:00",
+                "hasta": "08:00",
+                "lat": -34.92,
+                "lng": -56.15
+            }
+        }
+    },
+    {
+        "nombre": "Ciudad de la Costa",
+        "id": 7,
+        "slug": "ciudad-de-la-costa",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "Para pescar en ciudad de la costa, donde se ubican los balnearios Shangrila, Lagomar, Solymar y El Pinar. Es un lugar muy concurrido por pescadores Montevideanos debido a su proximidad a la capital del país. Si bien no suele ser el lugar preferido de los pescadores mas experimentados, suelen darse buenos resultados en algunas épocas del año.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "SE",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/elPinar.webp",
+        "imagenes": [
+            "Fotos/pesqueros/elPinar.webp",
+            "Fotos/pesqueros/MedanosDeSolymar.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 2
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Bajada 24",
+                "lat": -34.832814,
+                "lng": -55.944938
+            },
+            {
+                "nombre": "Playa Solymar",
+                "lat": -34.843448,
+                "lng": -55.965406
+            },
+            {
+                "nombre": "Playa El Pinar",
+                "lat": -34.802992,
+                "lng": -55.888346
+            }
+        ]
+    },
+    {
+        "nombre": "Neptunia - Fortin de Sta. Rosa",
+        "id": 8,
+        "slug": "pinamar-fortin",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "Desde el balneario Pinamar, pasando por Salinas hasta Marindia, nos encontramos con playas amplias, que si bien no cuentan con mucha profundidad.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "SE",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/elfortin2.webp",
+        "imagenes": [
+            "Fotos/pesqueros/ElFortin.webp",
+            "Fotos/pesqueros/elfortin2.webp",
+            "Fotos/pesqueros/marindia.webp",
+            "Fotos/pesqueros/marindia2.webp",
+            "Fotos/pesqueros/marindiaFortin.webp",
+            "Fotos/pesqueros/Salinas.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 1
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 1
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 1
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Desembocadura Arroyo Pando",
+                "lat": -34.780292,
+                "lng": -55.826212
+            },
+        {
+            "nombre": "Playa Marindia",
+            "lat": -34.779703,
+            "lng": -55.818539
+        },
+        {
+            "nombre": "El Fortín",
+            "lat": -34.774720,
+            "lng": -55.803013
+        }
+        ]
+    },
+    {
+        "nombre": "Villa Argentina - Atlantida",
+        "id": 9,
+        "slug": "villa-arg-atl",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "Frente a El Aguila, un emblematico monumento ubicado en el balneario Villa Argentina, se suelen dar muy buenas pescas ya que cuenta con algunas zonas mas profundas que las playas aledañas. ",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "S",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/MansaAtlantida3.webp",
+        "imagenes": [
+            "Fotos/pesqueros/MansaDeAtlantida.webp",
+            "Fotos/pesqueros/MansaDeAtlantida2.webp",
+            "Fotos/pesqueros/MansaDeAtlantida4.webp",
+            "Fotos/pesqueros/MansaDeAtlantida5.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 1
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "El Águila",
+                "lat": -34.771324,
+                "lng": -55.780153
+            },
+            {
+                "nombre": "Mansa de Altántida",
+                "lat": -34.771808,
+                "lng": -55.775277
+            }
+        ]
+    },
+    {
+        "nombre": "Atlántida",
+        "id": 10,
+        "slug": "atlantida",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "Frente a El Aguila, un emblematico monumento ubicado en el balneario Villa Argentina, se suelen dar muy buenas pescas ya que cuenta con algunas zonas mas profundas que las playas aledañas. ",
+        "acceso": "Facil",
+        "profundidad": 4,
+        "enganche": 3,
+        "mejorViento": "SE",
+        "nivel": 4,
+        "portada": "Fotos/pesqueros/PiedraLisa.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PiedraLisa.webp",
+            "Fotos/pesqueros/piedralisa2",
+            "Fotos/pesqueros/BajadaDelCholo1.webp",
+            "Fotos/pesqueros/BajadaDelCholo2.webp",
+            "Fotos/pesqueros/BajadaDelCholo3.webp",
+            "Fotos/pesqueros/BajadaDelCholo4.webp",
+            "Fotos/pesqueros/IslaAtlantida.webp",
+            "Fotos/pesqueros/IslaAtlantida2.webp",
+            "Fotos/pesqueros/IslaAtlantida3.webp",
+            "Fotos/pesqueros/EspañolaAtlantida.webp",
+            "Fotos/pesqueros/MuellePuedraLisa.webp"
+
+        ],
+        "especies": [
+            {
+                "nombre": "Brótola",
+                "nivel": 4
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Negra",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "El Cholo",
+                "lat": -34.780006,
+                "lng": -56.2148
+            },
+            {
+                "nombre": "La Isla",
+                "lat": -34.781835,
+                "lng": -55.760512
+            },
+            {
+                "nombre": "Muelle Piedra Lisa",
+                "lat": -34.781804,
+                "lng": -55.751973
+            }
+        ]
+    },
+    {
+        "nombre": "Las Toscas - Parque del Plata",
+        "id": 11,
+        "slug": "las-toscas-parque",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "En estos balnearios nos encontramos algunas de las mejores playas para pescar del país, con mas profundidad y abundancia de pesca. ",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 4,
+        "enganche": 2,
+        "mejorViento": "SE",
+        "nivel": 4,
+        "portada": "Fotos/pesqueros/LasToscas.webp",
+        "imagenes": [
+            "Fotos/pesqueros/LasToscas.webp",
+            "Fotos/pesqueros/LasToscas2.webp",
+            "Fotos/pesqueros/ParqueDelPlata.webp"
+
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina",
+                "nivel": 5
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 4
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 3
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "La Casa Hundida",
+                "lat": -34.777195,
+                "lng": -55.742160
+            },
+            {
+                "nombre": "Bajada F",
+                "lat": -34.771783,
+                "lng": -55.728454
+            },
+            {
+                "nombre": "Central",
+                "lat": -34.775226,
+                "lng": -55.737561
+            },
+            {
+                "nombre": "La Guitarrita",
+                "lat": -34.773540,
+                "lng": -55.733076
+            }
+        ]
+    },
+    {
+        "nombre": "Las Vegas - Floresta",
+        "id": 12,
+        "slug": "las-vegas-floresta",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "desde el balneario la Floresta hasta Bello horizonte cuentan con muy buenos pesqueros para diversas especies, . Uno de los pesqueros mas reconocidos de la zona “Los Corralitos”, un pesquero excepcional para la corvina blanca, donde conviene tirar lejos y cuidarse del enganche en las rocas.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 2,
+        "enganche": 2,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/laFloresta.webp",
+        "imagenes": [
+            "Fotos/pesqueros/laFloresta.webp",
+            "Fotos/pesqueros/laFloresta1.webp",
+            "Fotos/pesqueros/laFloresta2.webp",
+            "Fotos/pesqueros/laFloresta3.webp",
+            "Fotos/pesqueros/laFloresta4.webp",
+            "Fotos/pesqueros/lasVegas.webp"
+        
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Playa Las Vegas",
+                "lat": -34.762824,
+                "lng": -55.695646
+            },
+            {
+                "nombre": "Los Chuchos",
+                "lat": -34.761983,
+                "lng": -55.686917
+            },
+            {
+                "nombre": "Playa La Floresta",
+                "lat": -34.762369,
+                "lng": -55.678687
+            }
+        ]
+    },
+    {
+        "nombre": "Costa Azul - Bello Horizonte",
+        "id": 13,
+        "slug": "costa-azul-bello-horizonte",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "desde el balneario la Floresta hasta Bello horizonte cuentan con muy buenos pesqueros para diversas especies, . Uno de los pesqueros mas reconocidos de la zona “Los Corralitos”, un pesquero excepcional para la corvina blanca, donde conviene tirar lejos y cuidarse del enganche en las rocas.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/CostaAzul.webp",
+        "imagenes": [
+            "Fotos/pesqueros/CostaAzul2"
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Pescadilla",
+                "nivel": 2
+            },
+            {
+                "nombre": "Sargo",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Pesquero Costa Azul",
+                "lat": -34.773983,
+                "lng": -55.658255
+            },
+            {
+                "nombre": "Los Cornalitos",
+                "lat": -34.777463,
+                "lng": -55.652280
+            }
+        ]
+    },
+    {
+        "nombre": "San Luis - Sta. Lucia del Este",
+        "id": 14,
+        "slug": "san-luis-santa-lucia",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": ": Desde el Balneario san Luis hasta Santa Lucia del Este, no solo podemos contar con playas hermosas de arena blanca, tambien son pesqueros muy buenos tantos por su considerable profundidad como por los comederos para los peces.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 3,
+        "enganche": 2,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/SantaLuciaDelEste3.webp",
+        "imagenes": [
+            "Fotos/pesqueros/SanLuis.webp",
+            "Fotos/pesqueros/SanLuis1.webp",
+            "Fotos/pesqueros/SantaLuciaDelEste.webp",
+            "Fotos/pesqueros/SantaLuciaDelEste1.webp",
+            "Fotos/pesqueros/SantaLuciaDelEste2.webp",
+            "Fotos/pesqueros/SantaLuciaDelEste3.webp",
+            "Fotos/pesqueros/Araminda.webp",
+            "Fotos/pesqueros/araminda3.webp",
+            "Fotos/pesqueros/araminda5"
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pescadilla",
+                "nivel": 2
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Playa San Luis",
+                "lat": -34.773548,
+                "lng": -55.594609
+            },
+            {
+                "nombre": "Las Terceras",
+                "lat": -34.782738,
+                "lng": -55.577763
+            },
+            {
+                "nombre": "Araminda",
+                "lat": -34.789728,
+                "lng": -55.554994
+            },
+            {
+                "nombre": "Los Corralitos",
+                "lat": -34.797708,
+                "lng": -55.533979
+            }
+        ]
+    },
+    {
+        "nombre": "Cuchilla Alta - Jaureguiberry",
+        "id": 15,
+        "slug": "cuchilla-jaureguiberry",
+        "departamento": "Canelones",
+        "seccion": 2,
+        "descripcion": "Playas espectaculares y buena pesca caracterizan a esta parte del departamento.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 3,
+        "enganche": 2,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/cuchillaAlta.webp",
+        "imagenes": [
+            "Fotos/pesqueros/CuchillaAlta1.webp",
+            "Fotos/pesqueros/CuchillaAlta2.webp",
+            "Fotos/pesqueros/CuchillaAlta3.webp",
+            "Fotos/pesqueros/paraisoSuizo.webp",
+            "Fotos/pesqueros/BalnearioArgentino.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Lenguado",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Negra",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pescadilla",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 4
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 1
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Muelle Club Náutico",
+                "lat": -34.7984800,
+                "lng": -55.497606
+            },
+            {
+                "nombre": "Playa de los Pescadores",
+                "lat": -34.798425,
+                "lng": -55.495346
+            },
+            {
+                "nombre": "Playa Sierras del Mar",
+                "lat": -34.798352,
+                "lng": -55.490609
+            },
+            {
+                "nombre": "Balneario Argentino",
+                "lat": -34.792651,
+                "lng": -55.446402
+            },
+            {
+                "nombre": "Paraíso Suizo",
+                "lat": -34.791661,
+                "lng": -55.430502
+            },
+            {
+                "nombre": "Desembocadura Solís Grande",
+                "lat": -34.790665,
+                "lng": -55.399008
+            }
+        ]
+    },
+    {
+        "nombre": "Balneario Solís",
+        "id": 16,
+        "slug": "balneario-solis",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Muelle",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "SE",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/balnearioSolis.webp",
+        "imagenes": [
+            "Fotos/pesqueros/BalnearioSolis2.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Negra",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pescadilla",
+                "nivel": 3
+            },
+            {
+                "nombre": "Lenguado",
+                "nivel": "3"
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Desembocadura Solís Grande",
+                "lat": -34.791356,
+                "lng": -55.394069
+            },
+            {
+                "nombre": "Los Rieles",
+                "lat": -34.802499,
+                "lng": -55.385343
+            },
+            {
+                "nombre": "La Colorada",
+                "lat": -34.800684,
+                "lng": -55.386056
+            }
+        ]
+    },
+    {
+        "nombre": "Bella Vista",
+        "id": 17,
+        "slug": "bella-vista",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 4,
+        "mejorViento": "SE",
+        "nivel": 4,
+        "portada": "Fotos/pesqueros/bellaVistaPortada.webp",
+        "imagenes": [
+            "Fotos/pesqueros/Bella Vista.webp",
+            "Fotos/pesqueros/BellaVista.webp",
+            "Fotos/pesqueros/BellaVista2.webp",
+            "Fotos/pesqueros/BellaVista3.webp",
+            "Fotos/pesqueros/BellaVista4.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": {
+            "lat": -34.806123,
+            "lng": -55.353851
+        }
+    },
+    {
+        "nombre": "Playa Verde",
+        "id": 18,
+        "slug": "playa-verde",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 4,
+        "mejorViento": "SE",
+        "nivel": 4,
+        "portada": "Fotos/pesqueros/playaVerde.webp",
+        "imagenes": [
+            "Fotos/pesqueros/playaVerde1.webp",
+            "Fotos/pesqueros/playaVerde2.webp",
+            "Fotos/pesqueros/playaVerde3.webp",
+            "Fotos/pesqueros/playaVerde4.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Piedra Brava",
+                "lat": -34.830522,
+                "lng": -55.315949
+            },
+            {
+                "nombre": "Muelle del Pato",
+                "lat": -34.827333,
+                "lng": -55.317507
+            },
+            {
+                "nombre": "El Espejo",
+                "lat": -34.832768,
+                "lng": -55.313838
+            }
+        ]
+    },
+    {
+        "nombre": "Piriápolis",
+        "id": 19,
+        "slug": "piriapolis",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Escollera",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 3,
+        "enganche": 2,
+        "mejorViento": "SO",
+        "nivel": 4,
+        "portada":"Fotos/pesqueros/piria2.webp",
+        "imagenes": [
+            "Fotos/pesqueros/piria2.webp",
+            "Fotos/pesqueros/piria3.webp",
+            "Fotos/pesqueros/PuertoPiria.webp",
+            "Fotos/pesqueros/EscolleraPiria.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicacion": {
+            "lat": -34.874314,
+            "lng": -55.282634
+        }
+    },
+    {
+        "nombre": "Punta Colorada",
+        "id": 20,
+        "slug": "punta-colorada",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Piedras",
+        "agua": "salada",
+        "acceso": 2,
+        "profundidad": 3,
+        "enganche": 4,
+        "mejorViento": "SE",
+        "nivel": 5,
+        "portada": "Fotos/pesqueros/PuntaColorada.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaColorada.webp",
+            "Fotos/pesqueros/PuntaColorada1.webp",
+            "Fotos/pesqueros/PuntaColorada2.webp",
+            "Fotos/pesqueros/PuntaColorada3.webp",
+            "Fotos/pesqueros/PuntaColorada4.webp",
+            "Fotos/pesqueros/PuntaColorada5.webp",
+            "Fotos/pesqueros/PuntaColorada6.webp",
+            "Fotos/pesqueros/PuntaColorada7.webp",
+            "Fotos/pesqueros/PuntaColorada8.webp",
+            "Fotos/pesqueros/PuntaColorada9.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pescadilla",
+                "nivel": 2
+            },
+            {
+                "nombre": "Sargo",
+                "nivel": 3
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "La Haragana",
+                "lat": -34.898384,
+                "lng": -55.260158,
+                "mejorViento": "E"
+            },
+            {
+                "nombre": "Piedra Alta",
+                "lat": -34.900513,
+                "lng": -55.261496
+            },
+            {
+                "nombre": "La Batidora",
+                "lat": -34.903229,
+                "lng": -55.257106
+            }
+        ]
+    },
+    {
+        "nombre": "Punta Negra",
+        "id": 21,
+        "slug": "punta-negra",
+        "departamento": "Maldonado",
+        "seccion": 4,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Piedras - Playa",
+        "agua": "salada",
+        "acceso": "Medio",
+        "profundidad": 3,
+        "enganche": 5,
+        "mejorViento": "SE",
+        "nivel": 4,
+        "portada":"Fotos/pesqueros/PuntaNegra.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaNegra.webp",
+            "Fotos/pesqueros/PuntaNegra2.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 2
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Sargo",
+                "nivel": 4
+            },
+            {
+                "nombre": "Lenguado",
+                "nivel": 3
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Piedra Mora",
+                "lat": -34.904133,
+                "lng": -55.236875
+            },
+            {
+                "nombre": "las Gemelas",
+                "lat": -34.898920,
+                "lng": -55.230095
+            },
+            {
+                "nombre": "Moonlight",
+                "lat": -34.888568,
+                "lng": -55.199251
+            }
+        ]
+    },
+    {
+        "nombre": "Ocean Park",
+        "id": 22,
+        "slug": "ocean-park",
+        "departamento": "Maldonado",
+        "seccion": 5,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": 3,
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada":"Fotos/pesqueros/OceanPark.webp",
+        "imagenes": [
+            "Fotos/pesqueros/OceanPark.webp",
+            "Fotos/pesqueros/OceanPark2.webp",
+            "Fotos/pesqueros/Solanas.webp",
+            "Fotos/pesqueros/Solanas2.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Playa Ocean Park",
+                "lat": -34.879650,
+                "lng": -55.123184
+            },
+            {
+                "nombre": "Chihuahua",
+                "lat": -34.877608,
+                "lng": -55.094088
+            },
+            {
+                "nombre": "Tio Tom",
+                "lat": -34.877608,
+                "lng": -55.094088
+            }
+        ]
+    },
+    {
+        "nombre": "Punta Ballena",
+        "id": 23,
+        "slug": "punta-ballena",
+        "departamento": "Maldonado",
+        "seccion": 6,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Piedra",
+        "agua": "salada",
+        "acceso": 3,
+        "profundidad": 3,
+        "enganche": 4,
+        "mejorViento": "SE",
+        "nivel": 5,
+        "portada": "Fotos/pesqueros/PuntaBallena.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaBallena2.webp",
+            "Fotos/pesqueros/PuntaBallena3.webp",
+            "Fotos/pesqueros/PuntaBallena4.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 5
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 5
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 3
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Islote Las Cañas",
+                "lat": -34.912787,
+                "lng": -55.046479
+            },
+            {
+                "nombre": "El Morro",
+                "lat": -34.913212,
+                "lng": -55.046479
+            },
+            {
+                "nombre": "La Losa",
+                "lat": -34.913551,
+                "lng": -55.046806
+            },
+            {
+                "nombre": "La Islada",
+                "lat": -34.914543,
+                "lng": -55.047497
+            },
+            {
+                "nombre": "Botiquín",
+                "lat": -34.915683,
+                "lng": -55.047781
+            },
+            {
+                "nombre": "El Islote",
+                "lat": -34.916862,
+                "lng": -55.047691
+            },
+            {
+                "nombre": "Islote de las Corvinas",
+                "lat": -34.916641,
+                "lng": -55.046205
+            },
+            {
+                "nombre": "Boquerón Grande",
+                "lat": -34.915473,
+                "lng": -55.045955
+            },
+            {
+                "nombre": "Boquerón Chico",
+                "lat": -34.914564,
+                "lng": -55.045314
+            },
+            {
+                "nombre": "La Partida",
+                "lat": -34.9123331,
+                "lng": -55.043811
+            },
+            {
+                "nombre": "Las Grutas",
+                "lat": -34.911989,
+                "lng": -55.043626
+            },
+            {
+                "nombre": "La Colorada",
+                "lat": -34.911569,
+                "lng": -55.043304
+            }
+        ]
+    },
+    {
+        "nombre": "Punta del Este",
+        "id": 24,
+        "slug": "punta-de-este",
+        "departamento": "Maldonado",
+        "seccion": 7,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "E",
+        "nivel": 5,
+        "portada": "Fotos/pesqueros/MansaPuntaDelEste.webp",
+        "imagenes": [
+            "Fotos/pesqueros/MansaPuntaDelEste.webp",
+            "Fotos/pesqueros/MansaPuntaDelEste2.webp",
+            "Fotos/pesqueros/MansaPDE.webp",
+            "Fotos/pesqueros/LaBarra.webp",
+            "Fotos/pesqueros/LaBarra2.webp",
+            "Fotos/pesqueros/LaBarra3.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Puerto de Punta Del Este",
+                "lat": -34.960003,
+                "lng": -54.951179
+            },
+            {
+                "nombre": "Piedra del Chileno",
+                "lat": -34.912278,
+                "lng": -55.014962
+            },
+            {
+                "nombre": "Playa Mansa",
+                "lat": -34.935959,
+                "lng": -54.953454
+            },
+            {
+                "nombre": "La Barra",
+                "lat": -34.917441,
+                "lng": -54.865739
+            }
+        ]
+    },
+    {
+        "nombre": "Manantiales - Sta. Mónica",
+        "id": 25,
+        "slug": "manantiales",
+        "departamento": "Maldonado",
+        "seccion": 8,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 2,
+        "enganche": 3,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/manantiales.webp",
+        "imagenes": [
+            "Fotos/pesqueros/manantiales.webp",
+            "Fotos/pesqueros/SantaMonica.webp",
+            "Fotos/pesqueros/BuenosAires.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 2
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 4
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Santa Monica",
+                "lat": -34.850178,
+                "lng": -54.698470
+            },
+            {
+                "nombre": "Piedra del Toto",
+                "lat": -34.909016,
+                "lng": -54.825243
+            },
+            {
+                "nombre": "Balneario Buenos Aires",
+                "lat": -34.888959,
+                "lng": -54.781822
+            }
+        ]
+    },
+    {
+        "nombre": "José Ignacio",
+        "id": 27,
+        "slug": "jose-ignacio",
+        "departamento": "Maldonado",
+        "seccion": 3,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Piedras - Playa",
+        "agua": "salada",
+        "acceso": "Facil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/joseignacio.webp",
+        "imagenes": [
+            "Fotos/pesqueros/JoseIgnacio.webp",
+            "Fotos/pesqueros/JoseIgnacio2.webp",
+            "Fotos/pesqueros/JoseIgnacio3.webp",
+            "Fotos/pesqueros/JoseIgnacio5.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Los Palitos",
+                "lat": -34.846220,
+                "lng": -54.630949
+            }
+        ]
+    },
+    {
+        "nombre": "Las Garzas",
+        "id": 28,
+        "slug": "las-garzas",
+        "departamento": "Rocha",
+        "seccion": 4,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 2,
+        "enganche": 2,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/LasGarzas2.webp",
+        "imagenes": [
+            "Fotos/pesqueros/LasGarzas2.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 3
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 3
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+            "nombre": "Playa Las garzas",
+            "lat": -34.729899,
+            "lng": -54.400800
+        }
+    ]
+    },
+    {
+        "nombre": "La Paloma",
+        "id": 29,
+        "slug": "la-paloma",
+        "departamento": "Rocha",
+        "seccion": 1,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Escollera",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 3,
+        "enganche": 2,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/laPaloma.webp",
+        "imagenes": [
+            "Fotos/pesqueros/laPaloma.webp",
+            "Fotos/pesqueros/laPaloma1.webp",
+            "Fotos/pesqueros/LaPedrera.webp",
+            "Fotos/pesqueros/LaPedrera.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+            "nombre": "Escollera de La Paloma",    
+            "lat": -34.651348,
+            "lng": -54.141587
+        }
+    ]
+    },
+    {
+        "nombre": "La Pedrera",
+        "id": 30,
+        "slug": "la-pedrera",
+        "departamento": "Rocha",
+        "seccion": 4,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 3,
+        "enganche": 3,
+        "mejorViento": "E",
+        "nivel": 3,
+        "portada": "Fotos/pesqueros/LaPedrera.webp",
+        "imagenes": [
+            "Fotos/pesqueros/LaPedrera.webp",
+            "Fotos/pesqueros/LaPedrera2.webp",
+            "Fotos/pesqueros/PuntaRubia.webp",
+            "Fotos/pesqueros/PuntaRubia2.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+            "nombre": "Playa La Pedre",
+                "lat": -34.593673,
+            "lng": -54.121311
+        }
+    ]
+    },
+    {
+        "nombre": "La Esmeralda",
+        "id": 31,
+        "slug": "la-esmeralda",
+        "departamento": "Rocha",
+        "seccion": 4,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Piedras",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "N",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/Rocha/laesmeralda.webp",
+        "imagenes": [
+            "Fotos/rocha/laesmeralda.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 4
+            },
+            {
+                "nombre": "Brótola",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 3
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+            "nombre": "Playa La Esmeralda",
+                "lat": -34.169003,
+            "lng": -53.683653
+        }
+        ]
+    },
+    {
+        "nombre": "Punta del Diablo",
+        "id": 32,
+        "slug": "punta-del-diablo",
+        "departamento": "Rocha",
+        "seccion": 4,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa - Piedras",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 2,
+        "enganche": 3,
+        "mejorViento": "E - N",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/PuntaDelDiablo.webp",
+        "imagenes": [
+            "Fotos/pesqueros/PuntaDelDiablo.webp",
+            "Fotos/pesqueros/PuntaDelDiablo1.webp",
+            "Fotos/pesqueros/PuntaDelDiablo2.webp",
+            "Fotos/pesqueros/PuntaDelDiablo3.webp",
+            "Fotos/pesqueros/PuntaDelDiablo4.webp",
+            "Fotos/pesqueros/PuntaDelDiablo5.webp",
+            "Fotos/pesqueros/PuntaDelDiablo6.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Burriqueta",
+                "nivel": 2
+            },
+            {
+                "nombre": "Mochuelo",
+                "nivel": 3
+            },
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 2
+            },
+            {
+                "nombre": "Chucho",
+                "nivel": 2
+            },
+            {
+                "nombre": "Anchoa",
+                "nivel": 2
+            }
+        ],
+        "ubicaciones": [
+            {
+            "nombre": "La Viuda",
+                "lat": -34.044613,
+            "lng": -53.534582
+        }
+    ]
+    },
+    {
+        "nombre": "La Coronilla y Barra de Chui",
+        "id": 33,
+        "slug": "la-coronilla-chui",
+        "departamento": "Rocha",
+        "seccion": 5,
+        "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
+        "ambiente": "Playa",
+        "agua": "salada",
+        "acceso": "Fácil",
+        "profundidad": 2,
+        "enganche": 1,
+        "mejorViento": "E - N",
+        "nivel": 2,
+        "portada": "Fotos/pesqueros/Rocha/lacoronilla.webp",
+        "imagenes": [
+            "Fotos/rocha/lacoronilla.webp"
+        ],
+        "especies": [
+            {
+                "nombre": "Chucho",
+                "nivel": 4
+            },
+            
+            {
+                "nombre": "Pejerrey",
+                "nivel": 4
+            },
+            {
+                "nombre": "Tambera",
+                "nivel": 2
+            },
+            {
+                "nombre": "Corvina Blanca",
+                "nivel": 2
+            }
+           
+        ],
+        "ubicaciones": [
+            {
+                "nombre": "Playa La Coronilla",
+            "lat": -33.897275,
+            "lng": -53.508131
+        }
+    ]
+    }
+]

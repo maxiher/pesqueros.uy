@@ -1,0 +1,211 @@
+body {
+    background-color: #f4f6f8;
+}
+
+.volver-lista {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #0b5f8a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.volver-lista:hover {
+    text-decoration: underline;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.carrusel-imagenes {
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-img.activa {
+    display: block;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    border: none;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.siguiente {
+    right: 15px;
+}
+
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 7px;
+    z-index: 2;
+}
+
+.indicador {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+}
+
+.indicador.activo {
+    background-color: white;
+}
+
+.pesquero-detalle {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+.card-caracteristicas {
+    background-color: white;
+    border-radius: 10px;
+    
+    padding: 15px;
+   
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-caracteristica h2 {
+    margin: 0;
+}
+
+.caracteristica {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+}
+
+.escala {
+    display: flex;
+    gap: 4px;
+}
+
+.barra {
+    width: 22px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+.barra.activa {
+    background-color: #e5b933;
+}
+
+.card-especies {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.aclaracion-especies {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.especie-frecuente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.especie-frecuente:last-child {
+    border-bottom: none;
+}
+
+.estrellas {
+    font-size: 1.1rem;
+}
+
+.card-ubicaciones {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#lista-ubicaciones {
+    margin-top: 20px;
+}
+
+.ubicacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ver-en-mapa {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.popup-ubicacion p {
+    margin: 5px 0;
+}
+
+.popup-enlaces {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}

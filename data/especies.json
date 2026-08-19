@@ -1,0 +1,579 @@
+{
+  "especies": [
+    {
+      "id": "pejerrey",
+      "nombre_comun": "Pejerrey",
+      "nombre_cientifico": "Odontesthes bonariensis",
+      "familia": "Atherinopsidae",
+      "imagen": "Fotos/Especies/pejerrey.webp",
+      "habitat": "Costas y estuarios marinos, salobres",
+      "metodos_de_pesca": [
+        "Línea de flote",
+        "Fondo",
+        "Encandilada"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Langostino",
+        "Hígado de pollo"
+      ],
+      "temporada": "Mayo - Septiembre",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": 25,
+      "talla_maxima_cm": 40,
+      "descripcion": "Pejerrey marino/salobre común en costas uruguayas, de carne sabrosa y muy buscado por pescadores deportivos.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Carnívoro",
+        "profundidad_recomendada_m": "0–30"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "corvina_blanca",
+      "nombre_comun": "Corvina Blanca",
+      "nombre_cientifico": "Micropogonias furnieri",
+      "familia": "Sciaenidae",
+      "imagen": "Fotos/Especies/corvina_blanca.webp",
+      "habitat": "Fondo marino costero y estuarios",
+      "metodos_de_pesca": [
+        "Fondo",
+        "Spinning"
+      ],
+      "carnadas": [
+        "Langostino",
+        "Camarón",
+        "Calamar",
+        "Lisa",
+        "Mejillon",
+        "Pejerrey"
+      ],
+      "temporada": "Septiembre - Abril",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": 40,
+      "talla_maxima_cm": 60,
+      "descripcion": "Corvina común en la pesca costera uruguaya, con carne blanca y sabrosa y buena combatividad en la lucha del reel.",
+      "caracteristicas": {
+        "combatividad": "Alta",
+        "dieta": "Carnívoro bentónico",
+        "profundidad_recomendada_m": "3+"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "brotola",
+      "nombre_comun": "Brotola",
+      "nombre_cientifico": "Urophycis brasiliensis",
+      "familia": "Phycidae",
+      "imagen": "Fotos/Especies/brotola.webp",
+      "habitat": "Fondos rocosos y estructuras",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Langostino",
+        "Lisa",
+        "Lacha",
+        "Camarón",
+        "Carnada Blanca",
+        "Congrio",
+        "Cangrejos",
+        "Peces de agua dulce"
+      ],
+      "temporada": "Abril - Octubre",
+      "interes_gastronomico": "Alto",
+      "talla_promedio_cm": 40,
+      "talla_maxima_cm": 60,
+      "descripcion": "Brotola marina de carne blanca y delicada, común en costa atlántica y Río de la Plata.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Carnívoro",
+        "profundidad_recomendada_m": "5+"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "pescadilla",
+      "nombre_comun": "Pescadilla",
+      "nombre_cientifico": "Cynoscion guatucupa",
+      "familia": "Sciaenidae",
+      "imagen": "Fotos/Especies/pescadilla.webp",
+      "habitat": "Costas y bajíos arenosos",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Calamar",
+        "Langostino",
+        "Anchoita",
+        "Camarón",
+        "Pejerrey"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": 35,
+      "talla_maxima_cm": 65,
+      "descripcion": "Pescadilla de cuerpo fusiforme, reconocida en Uruguay como recurso principal de pesca artesanal y deportiva. Se pesca incluso a mayor profundidad.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Carnívoro",
+        "profundidad_recomendada_m": "10–130"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "anchoa",
+      "nombre_comun": "Anchoa",
+      "nombre_cientifico": "Pomatomus Saltatrix",
+      "familia": "Pomatomidae",
+      "imagen": "Fotos/Especies/anchoa.webp",
+      "habitat": "Pelágico costero",
+      "metodos_de_pesca": [
+        "Fondo",
+        "Media Agua",
+        "Spinning"
+      ],
+      "carnadas": [
+        "Pejerrey",
+        "Filet de pescado",
+        "Cebo vivo pequeño"
+      ],
+      "temporada": "Marzo - Noviembre",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": 15,
+      "talla_maxima_cm": 50,
+      "descripcion": "Especie pelágica muy abundante en aguas costeras uruguayas, importante también como carnada para otras especies.",
+      "caracteristicas": {
+        "combatividad": "Baja",
+        "dieta": "Planktonívoro",
+        "profundidad_recomendada_m": "0–20"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "mochuelo",
+      "nombre_comun": "Mochuelo (Bagre de Mar)",
+      "nombre_cientifico": "Genidens barbus",
+      "familia": "Ariidae",
+      "imagen": "Fotos/Especies/mochuelo.webp",
+      "habitat": "Costas y estuarios",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Crustáceos",
+        "Carne",
+        "Pescados"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": 40,
+      "talla_maxima_cm": 70,
+      "descripcion": "Bagre marino conocido como mochuelo, común en pesca artesanal y deportiva en zonas costeras y estuarios.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Omnívoro",
+        "profundidad_recomendada_m": "5–50"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "sargo",
+      "nombre_comun": "Sargo",
+      "nombre_cientifico": "Diplodus argenteus argenteus",
+      "familia": "Sparidae",
+      "imagen": "Fotos/Especies/sargo.webp",
+      "habitat": "Arrecifes y fondos rocosos",
+      "metodos_de_pesca": [
+        "Fondo",
+        "Spinning ligero"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Piojo de Mar",
+        "Cangrejos Pequeños"
+      ],
+      "temporada": "",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Sargo plateado común en el Atlántico sudoccidental, se pesca con caña ligera y se reconoce por su cuerpo plateado con barras oscuras y mancha en el pedúnculo caudal. Con presencia en costas uruguayas.",
+      "caracteristicas": {
+        "combatividad": "Alta",
+        "dieta": "Omnívoro",
+        "profundidad_recomendada_m": "5–30"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "lisa",
+      "nombre_comun": "Lisa",
+      "nombre_cientifico": "Mugil platanus",
+      "familia": "Mugilidae",
+      "imagen": "Fotos/Especies/lisa.webp",
+      "habitat": "Costas y estuarios",
+      "metodos_de_pesca": [
+        "A flor",
+        "Robador"
+      ],
+      "carnadas": [
+        "Pan, gusanitos"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Bajo",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Lisa, pez de la familia de los mújiles, común en zonas costeras y salobres de Uruguay, capturada con carnadas simples e importante para pesca deportiva local.",
+      "caracteristicas": {
+        "combatividad": "Baja",
+        "dieta": "Omnívoro",
+        "profundidad_recomendada_m": "0–15"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "burriqueta",
+      "nombre_comun": "Burriqueta",
+      "nombre_cientifico": "Boridia grossidens",
+      "familia": "Haemulidae",
+      "imagen": "Fotos/Especies/burriqueta.webp",
+      "habitat": "Fondos marinos poco profundos",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Langostino",
+        "Lisa"
+      ],
+      "temporada": "Primavera / Otoño",
+      "interes_gastronomico": "Alto",
+      "talla_promedio_cm": 20,
+      "talla_maxima_cm": 45,
+      "descripcion": "Burriqueta o salmerón, especie de interés pesquero en Uruguay, de talla menor y cuerpo con bandas, capturada cerca del fondo marino.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Carnívoro bentónico",
+        "profundidad_recomendada_m": "10–40"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "ajorreal",
+      "nombre_comun": "Ajorreal",
+      "nombre_cientifico": "Percophis brasiliensis",
+      "familia": "Pinguipedidae",
+      "imagen": "Fotos/Especies/ajorreal.webp",
+      "habitat": "Fondos arenosos",
+      "metodos_de_pesca": [
+        "Fondo ligero"
+      ],
+      "carnadas": [
+        "Calamar pequeño",
+        "Camarón"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Ajorreal, pez de fondo arenoso presente en pesca costera uruguaya. Comunmente capturado con líneas de fondo ligeras.",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "?",
+        "profundidad_recomendada_m": "10–30"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "pampanito",
+      "nombre_comun": "Pampanito",
+      "nombre_cientifico": "Stromateus brasiliensis",
+      "familia": "Stromateidae",
+      "imagen": "Fotos/Especies/pampanito.webp",
+      "habitat": "Pelágico costero",
+      "metodos_de_pesca": [
+        "Red / línea ligera"
+      ],
+      "carnadas": [
+        "Cebo vivo"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Pampanito, también llamado papafigo en algunas fuentes comerciales, pez pelágico de distribución atlántica. ?",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "corvina_negra",
+      "nombre_comun": "Corvina Negra",
+      "nombre_cientifico": "Pogonias courbina",
+      "familia": "Sciaenidae",
+      "imagen": "Fotos/Especies/corvina_negra.webp",
+      "habitat": "Costas y estuarios",
+      "metodos_de_pesca": [
+        "Fondo",
+        "Spinning fuerte"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Calamar grande",
+        "Cangrejo"
+      ],
+      "temporada": "Primavera - otoño",
+      "interes_gastronomico": "Alto",
+      "talla_promedio_cm": 60,
+      "talla_maxima_cm": 120,
+      "descripcion": "Corvina negra, escienido de gran tamaño y alta combatividad, muy valorada en la pesca deportiva uruguaya y costera. Su carne es sabrosa y se pesca en aguas poco profundas y estuarios.",
+      "caracteristicas": {
+        "combatividad": "Muy alta",
+        "dieta": "Carnívoro bentónico",
+        "profundidad_recomendada_m": "5–50"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "lenguado",
+      "nombre_comun": "Lenguado",
+      "nombre_cientifico": "Paralichthys orbignyanus",
+      "familia": "Paralichthyidae",
+      "imagen": "Fotos/Especies/lenguado.webp",
+      "habitat": "Fondo arenoso y estuarios",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño"
+      ],
+      "temporada": "Diciembre - Marzo",
+      "interes_gastronomico": "Muy Alto",
+      "talla_promedio_cm": 30,
+      "talla_maxima_cm": 70,
+      "descripcion": "Lenguado, pez plano típico del Atlántico suroccidental presente en Uruguay y Argentina, muy apreciado por su carne y capturado en fondos arenosos y estuarios. Estudios locales confirman su presencia y hábitos alimentarios en costas uruguayas. :contentReference[oaicite:0]{index=0}",
+      "caracteristicas": {
+        "combatividad": "Media",
+        "dieta": "Piscívoro bentónico",
+        "profundidad_recomendada_m": "10–60"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "pargo_blanco",
+      "nombre_comun": "Pargo Blanco",
+      "nombre_cientifico": "Umbrina canosai",
+      "familia": "Sciaenidae",
+      "imagen": "Fotos/Especies/pargo_blanco.webp",
+      "habitat": "Fondo marino costero",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Calamar"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Pargo blanco, especie capturada en la costa uruguaya y reportada en estadísticas pesqueras nacionales. :contentReference[oaicite:1]{index=1}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "pargo_rosado",
+      "nombre_comun": "Pargo Rosado",
+      "nombre_cientifico": "Pagrus pagrus",
+      "familia": "Sparidae",
+      "imagen": "Fotos/Especies/pargo_rosado.webp",
+      "habitat": "Fondo marino",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Calamar"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Alto",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Pargo rosado o pagro, especie presente en la pesca marina uruguaya según estadísticas pesqueras. :contentReference[oaicite:2]{index=2}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "cazon",
+      "nombre_comun": "Cazón",
+      "nombre_cientifico": "Galeorhinus galeus",
+      "familia": "Triakidae",
+      "imagen": "Fotos/Especies/cazon.webp",
+      "habitat": "Costas marinas",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Cazón, tiburón pequeño presente en registros de pesca artesanal de Uruguay. :contentReference[oaicite:3]{index=3}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "chucho_ray",
+      "nombre_comun": "Chucho",
+      "nombre_cientifico": "Dasyatis / Aetobatus / Pteroplatytrygon spp.",
+      "familia": "Dasyatidae / Myliobatidae",
+      "imagen": "Fotos/Especies/chucho.webp",
+      "habitat": "Fondos marinos costeros",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "Raya",
+      "nombre_comun": "Chucho (Rayas)",
+      "nombre_cientifico": "Dasyatis / Aetobatus / Pteroplatytrygon spp.",
+      "familia": "Dasyatidae / Myliobatidae",
+      "imagen": "Fotos/Especies/raya.webp",
+      "habitat": "Fondos marinos costeros",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "Pez Guitarra",
+      "nombre_comun": "Guitarra",
+      "nombre_cientifico": "Dasyatis / Aetobatus / Pteroplatytrygon spp.",
+      "familia": "Dasyatidae / Myliobatidae",
+      "imagen": "Fotos/Especies/guitarra.webp",
+      "habitat": "Fondos marinos costeros",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño",
+        "Carnada Blanca"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+    {
+      "id": "Congrio",
+      "nombre_comun": "Congrio",
+      "nombre_cientifico": "Conger orbignyanus",
+      "familia": "Congridae",
+      "imagen": "Fotos/Especies/congrio.webp",
+      "habitat": "Costas marinas y estructuras",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Calamar",
+        "Camarón",
+        "Pez pequeño"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Congrio argentino/ojo de serpiente, especie de congrio encontrada en aguas uruguayas en pesca recreativa y artesanal. :contentReference[oaicite:5]{index=5}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "Carnívoro",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    },
+
+        {
+      "id": "Pez Sable",
+      "nombre_comun": "Guitarra",
+      "nombre_cientifico": "Dasyatis / Aetobatus / Pteroplatytrygon spp.",
+      "familia": "Dasyatidae / Myliobatidae",
+      "imagen": "Fotos/Especies/sable.webp",
+      "habitat": "Fondos marinos costeros",
+      "metodos_de_pesca": [
+        "Fondo"
+      ],
+      "carnadas": [
+        "Camarón",
+        "Pez pequeño",
+        "Carnada Blanca"
+      ],
+      "temporada": "Todo el año",
+      "interes_gastronomico": "Medio",
+      "talla_promedio_cm": "?",
+      "talla_maxima_cm": "?",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "caracteristicas": {
+        "combatividad": "?",
+        "dieta": "?",
+        "profundidad_recomendada_m": "?"
+      },
+      "notas_adicionales": ""
+    }
+  ]
+}

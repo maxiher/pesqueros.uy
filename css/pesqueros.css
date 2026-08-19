@@ -1,0 +1,86 @@
+body{
+    min-height: 100vh; 
+    background-color: rgb(244, 246, 248); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#container{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 2rem 1.5rem;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(11, 60, 93); 
+    margin-bottom: 1rem;
+}
+
+#search-input {
+    height: 2rem;
+    width: 40%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+   
+}
+
+#grid{
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.5rem;
+}
+
+.department-card{
+    background-color: rgb(255, 255, 255); 
+    border-radius: 12px; 
+    padding: 1.5rem; 
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; 
+    cursor: pointer; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    transform: translateY(0px);
+}
+
+.department-card p {
+    color: rgb(74, 74, 74); 
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    
+}
+
+.department-card:hover {
+  transform: translateY(-4px);
+}
+
+#results-container {
+    margin: 5%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, 
+    minmax(300px, 1fr)); 
+    gap: 1.5rem;
+}
+
+.card-pesquero{
+    width: 80%;
+    align-items: center;
+    
+    background-color: rgb(255, 255, 255); 
+    border-radius: 12px; 
+    padding: 1.5rem; 
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; 
+    cursor: pointer; 
+    transition: transform 0.2s, 
+    box-shadow 0.2s; transform: translateY(0px);
+}
+
+.card-pesquero img{
+    width: 100%;
+    height: 200px;
+  object-fit: cover;
+}
+
+.link-pesquero {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

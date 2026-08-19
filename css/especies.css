@@ -1,0 +1,69 @@
+#container{
+    margin: 5%;
+}
+
+.contenedor-especies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card-especie {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 340px;
+}
+
+.card-especie-img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card-especie-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-especie h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: #003f66;
+}
+
+.nombre-cientifico {
+  margin: 0 0 16px;
+  font-style: italic;
+  color: #16739a;
+}
+
+.card-especie a {
+  margin-top: auto;
+
+  width: fit-content;
+  padding: 10px 24px;
+
+  background-color: #06496d;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 7px;
+
+  transition: background-color 0.2s ease;
+}
+
+.card-especie a:hover {
+  background-color: #033d5d;
+}

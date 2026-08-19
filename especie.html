@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/especie.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+     <header>
+    <div id="navbar-container"></div>
+    </header>
+    
+
+<main class="detalle-especie">
+
+  <a href="especies.html" class="volver">
+    ← Volver a especies
+  </a>
+
+  <section class="especie-hero">
+
+    <div class="especie-imagen">
+      <img id="imagen-especie" src="" alt="">
+    </div>
+
+    <div class="especie-info">
+      <h1 id="nombre-especie"></h1>
+
+      <p id="nombre-cientifico" class="nombre-cientifico"></p>
+
+      <p id="familia"></p>
+
+      <p id="descripcion"></p>
+    </div>
+
+  </section>
+
+
+  <section class="datos-especie">
+
+    <article>
+      <h2>Hábitat</h2>
+      <p id="habitat"></p>
+    </article>
+
+  <article>
+      <h2>Temporada</h2>
+      <p id="temporada"></p>
+    </article>
+
+    <article>
+      <h2>Métodos de pesca</h2>
+      <p class="dato-secundario">
+    Combatividad <span id="combatividad"></span>
+  </p>
+      <div id="metodos-pesca"></div>
+    </article>
+
+    <article>
+      <h2>Carnadas</h2>
+        <p class="dato-secundario">
+    Dieta: <span id="dieta"></span>
+  </p>
+      <div id="carnadas"></div>
+    </article>
+
+  
+
+    <article>
+      <h2>Interés gastronómico</h2>
+      <p id="interes-gastronomico"></p>
+    </article>
+
+    <article>
+      <h2>Tallas</h2>
+      <p id="tallas"></p>
+    </article>
+
+  </section>
+
+</main>
+
+<script src="js/navbar.js"></script>
+<script src="js/especie.js"></script>
+</body>
+</html>

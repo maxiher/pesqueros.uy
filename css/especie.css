@@ -1,0 +1,190 @@
+.detalle-especie {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 24px;
+  text-decoration: none;
+  color: #0b4f6c;
+  font-weight: 600;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+
+/* HERO */
+
+.especie-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 30px;
+
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.especie-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.especie-imagen img {
+  width: 100%;
+  max-height: 400px;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.especie-info h1 {
+  margin: 0 0 8px;
+
+  font-size: 2.3rem;
+  color: #063f5c;
+}
+
+.nombre-cientifico {
+  margin: 0 0 8px;
+
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #34758f;
+}
+
+.especie-info #familia {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.especie-info #descripcion {
+  line-height: 1.7;
+  color: #333;
+}
+
+
+/* DATOS */
+
+.datos-especie {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.datos-especie article {
+  background-color: #fff;
+
+  padding: 22px 24px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.datos-especie h2 {
+  margin: 0 0 12px;
+    margin-bottom: 8px;
+  font-size: 1.15rem;
+  color: #06496d;
+}
+
+.datos-especie p {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+#metodos-pesca,
+#carnadas,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  background-color: #eaf4f7;
+  color: #075373;
+
+  border-radius: 20px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+ .dato-secundario {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.dato-secundario span {
+  font-weight: 600;
+  color: #0b4f6c;
+}
+
+
+#familia {
+  color: #7a7a7a;
+  font-size: 0.95rem;
+}
+
+.combatividad {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #5f6b73;
+}
+
+.combatividad span {
+  font-weight: 600;
+  color: #0b4f6c;
+}
+
+.datos-especie {
+  align-items: stretch;
+}
+
+
+
+@media (max-width: 800px) {
+
+  .especie-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .especie-imagen img {
+    max-height: 320px;
+  }
+
+  .datos-especie {
+    grid-template-columns: 1fr;
+  }
+
+  .especie-info h1 {
+    font-size: 1.9rem;
+  }
+
+ 
+}

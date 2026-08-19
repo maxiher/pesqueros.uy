@@ -1,0 +1,125 @@
+/* --- Reset y Variables básicas --- */
+:root {
+    --color-primary: #0a3d62; /* El azul oscuro de tu texto */
+    --color-border: #eceff1;  /* El gris sutil de las líneas divisorias */
+    --bg-white: #ffffff;
+}
+
+#navbar-container{
+margin: 0 3px;
+box-shadow: -2px 0 5px rgba(0,0,0,0.1);;
+}
+
+.main-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--color-border);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Cambiala por la tipografía de tu web */
+    z-index: 100;
+}
+
+/* --- Logo --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+/* --- Botón Hamburguesa Estilo Recuadro --- */
+.menu-toggle {
+    background: transparent;
+    border: 2px solid #000000; /* Borde negro cuadrado de la captura */
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.burger-icon {
+    width: 22px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+/* --- Animación a la "X" al abrir --- */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Menú Desplegable (Cae desde arriba) --- */
+.nav-menu {
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 100%; /* Se posiciona justo abajo de la navbar principal */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    max-height: 0; /* Oculto por defecto mediante altura cero */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Cuando se activa, toma la altura necesaria para mostrar los links */
+.nav-menu.active {
+    max-height: 300px; /* Ajustalo según el espacio de tus links */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    border-bottom: 1px solid var(--color-border); /* Las líneas grises sutiles */
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 18px 25px;
+    text-decoration: none;
+    color: #555555; /* Color gris suave para los links */
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Efecto hover opcional */
+.nav-menu ul li a:hover {
+    background-color: #f8f9fa;
+    color: var(--color-primary);
+}
