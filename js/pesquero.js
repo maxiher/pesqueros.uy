@@ -33,7 +33,7 @@ function renderPesquero(pesquero) {
     ← Volver a lista
 </a>
     <section class="carrusel">
-    <button class="carrusel-btn anterior" id="btn-anterior">‹</button>
+    <button class="carrusel-btn anterior" id="btn-anterior" aria-label="Imagen anterior">‹</button>
 
     <div class="carrusel-imagenes" id="carrusel-imagenes">
         ${pesquero.imagenes.map((imagen, index) => `
@@ -45,7 +45,7 @@ function renderPesquero(pesquero) {
         `).join("")}
     </div>
 
-    <button class="carrusel-btn siguiente" id="btn-siguiente">›</button>
+    <button class="carrusel-btn siguiente" id="btn-siguiente" aria-label="Imagen siguiente">›</button>
     <div class="carrusel-indicadores">
     ${pesquero.imagenes.map((_, index) => `
         <span class="indicador ${index === 0 ? "activo" : ""}"></span>
