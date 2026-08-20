@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <header class="main-header">
                 <div class="logo-container">
                     <a href="index.html">
-                     <img src="Fotos/General/LogoEnNegro.png" width="15%"  class="logo"></img>
+                     <img src="Fotos/General/LogoEnNegro.png" class="logo"></img>
                     </a>
                 </div>
                 
