@@ -18,16 +18,7 @@ fetch("./data/pesqueros.json")
         console.error("Error al cargar el pesquero:", error);
     });
 
-function renderPesquero(pesquero) {
-    document.title = `${pesquero.nombre} | PesquerosUY`;
 
-    const contenedor = document.getElementById("pesquero-contenido");
-
-    contenedor.innerHTML = `
-        <h1>${pesquero.nombre}</h1>
-        <p>${pesquero.descripcion}</p>
-    `;
-}
 
 function renderPesquero(pesquero) {
     document.title = `${pesquero.nombre} | PesquerosUY`;
