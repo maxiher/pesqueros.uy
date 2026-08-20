@@ -1,18 +1,19 @@
-body{
-    min-height: 100vh; 
-    background-color: rgb(244, 246, 248); 
+body {
+    min-height: 100vh;
+    background-color: rgb(244, 246, 248);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-#container{
+#container {
     max-width: 1200px;
     margin: 0px auto;
     padding: 2rem 1.5rem;
 }
-h1{
+
+h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: rgb(11, 60, 93); 
+    color: rgb(11, 60, 93);
     margin-bottom: 1rem;
 }
 
@@ -21,7 +22,7 @@ h1{
     width: 40%;
     border-radius: 5px;
     margin-bottom: 0;
-   
+
 }
 
 .search-controls {
@@ -48,57 +49,58 @@ h1{
     opacity: 0.9;
 }
 
-#grid{
+#grid {
     display: grid;
     grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr)); 
+        repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
-.department-card{
-    background-color: rgb(255, 255, 255); 
-    border-radius: 12px; 
-    padding: 1.5rem; 
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; 
-    cursor: pointer; 
-    transition: transform 0.2s, box-shadow 0.2s; 
+.department-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
     transform: translateY(0px);
 }
 
 .department-card p {
-    color: rgb(74, 74, 74); 
+    color: rgb(74, 74, 74);
     font-size: 1.05rem;
     margin-bottom: 1rem;
-    
+
 }
 
 .department-card:hover {
-  transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 #results-container {
     margin: 5%;
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, 
-    minmax(300px, 1fr)); 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-.card-pesquero{
+.card-pesquero {
     align-items: center;
-    background-color: rgb(255, 255, 255); 
-    border-radius: 12px; 
-    padding: 1.5rem; 
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; 
-    cursor: pointer; 
-    transition: transform 0.2s, 
-    box-shadow 0.2s; transform: translateY(0px);
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+    cursor: pointer;
+    transition: transform 0.2s,
+        box-shadow 0.2s;
+    transform: translateY(0px);
 }
 
-.card-pesquero img{
+.card-pesquero img {
     width: 100%;
     height: 200px;
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .link-pesquero {
@@ -128,18 +130,32 @@ h1{
         width: auto;
     }
 
-     #btn-filtro {
+    #btn-filtro {
         flex-shrink: 0;
         margin-left: 0;
     }
 
     #grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 1rem;
     }
 
     .department-card {
-        padding: 1.2rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .department-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        margin-top: 0;
+    }
+
+    .department-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        margin-top: 1vh;
     }
 
     #results-container {
@@ -156,5 +172,9 @@ h1{
     .card-pesquero img {
         height: 190px;
         border-radius: 8px;
+    }
+
+    .department-card:hover {
+        transform: none;
     }
 }
