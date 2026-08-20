@@ -21,16 +21,21 @@ async function loadPesqueros() {
 
 
 function getDepartmentStats(pesqueros) {
+
   const stats = {};
 
   pesqueros.forEach(p => {
-    const dep = p.departamento;
+    const dep = p.departamento;   
 
     if (!stats[dep]) {
       stats[dep] = 0;
     }
 
-    stats[dep]++;
+    if (Array.isArray(p.ubicaciones)) {
+      stats[dep] += p.ubicaciones.length;
+    }  else if (p.ubicaciones || p.ubicacion) {
+      stats[dep] += 1;
+    }
   });
 
   return stats;
@@ -44,6 +49,8 @@ function renderDepartments(stats) {
    Object.entries(stats).forEach(([dep, count]) => {
     const card = document.createElement("div");
     card.className = "department-card";
+    
+    console.log(dep.ubicaciones)
 
     card.innerHTML = `<h3>🎣${dep}</h3>
     <p>${count} pesqueros</p>

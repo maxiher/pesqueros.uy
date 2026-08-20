@@ -108,7 +108,7 @@
                 "nivel": 2
             }
         ],
-        "ubicacion": [
+        "ubicaciones": [
             {
                 "lat": -34.91,
                 "lng": -56.16
@@ -1195,7 +1195,7 @@
                 "nivel": 2
             }
         ],
-        "ubicacion": {
+        "ubicaciones": {
             "lat": -34.874314,
             "lng": -55.282634
         }
