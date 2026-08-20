@@ -209,3 +209,78 @@ h1 {
     gap: 10px;
     margin-top: 10px;
 }
+
+@media (max-width: 600px) {
+
+    .pesquero-detalle {
+        padding: 24px 14px;
+    }
+
+    .volver-lista {
+        margin-bottom: 14px;
+    }
+
+    .carrusel {
+        height: 260px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+    }
+
+    .carrusel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+
+    .anterior {
+        left: 10px;
+    }
+
+    .siguiente {
+        right: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.15;
+        margin-bottom: 16px;
+    }
+
+    .card-caracteristicas,
+    .card-especies,
+    .card-ubicaciones {
+        padding: 16px;
+    }
+
+    .card-caracteristicas h2,
+    .card-especies h2,
+    .card-ubicaciones h2 {
+        font-size: 1.35rem;
+    }
+
+    .caracteristica {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .barra {
+        width: 18px;
+    }
+
+    #map {
+        height: 320px;
+    }
+
+    .ubicacion-item {
+        gap: 12px;
+    }
+
+    .ubicacion-item > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .ver-en-mapa {
+        flex-shrink: 0;
+    }
+}
