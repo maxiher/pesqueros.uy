@@ -157,6 +157,16 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
+.link-especie {
+    color: #0b5f8a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-especie:hover {
+    text-decoration: underline;
+}
+
 .especie-frecuente:last-child {
     border-bottom: none;
 }

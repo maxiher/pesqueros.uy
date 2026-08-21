@@ -95,7 +95,13 @@ function renderPesquero(pesquero) {
     <div class="lista-especies">
         ${especiesOrdenadas.map(especie => `
             <div class="especie-frecuente">
-                <span>${especie.nombre}</span>
+
+                <a
+            href="especie.html?id=${especie.id}"
+            class="link-especie"
+        >
+            ${especie.nombre}
+        </a>
 
                 <div class="estrellas">
                     ${crearEstrellas(especie.nivel)}
