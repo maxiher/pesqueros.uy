@@ -68,7 +68,7 @@ h2{
 
 .info-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3, 1fr);
     gap:20px;
 }
 
@@ -78,6 +78,111 @@ h2{
     align-items: center;
     margin-top: 2%;
     
+}
+
+.wind-compass {
+    position: relative;
+    width: 220px;
+    max-width: 100%;
+    aspect-ratio: 1;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.wind-compass::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+
+    background:
+        repeating-conic-gradient(
+            rgba(255, 255, 255, 0.25) 0deg 1deg,
+            transparent 1deg 6deg
+        );
+
+    mask: radial-gradient(
+        transparent 0 82%,
+        #000 83%
+    );
+
+    -webkit-mask: radial-gradient(
+        transparent 0 82%,
+        #000 83%
+    );
+}
+
+.cardinal {
+    position: absolute;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.north {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.south {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.east {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.west {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wind-speed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.wind-speed strong {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.wind-speed span {
+    font-size: 1rem;
+}
+
+.wind-arrow {
+    position: absolute;
+
+    top: 18%;
+    left: 50%;
+
+    transform-origin: 50% 160%;
+    transform: translateX(-50%) rotate(0deg);
+
+    font-size: 2.4rem;
+    line-height: 1;
+
+    z-index: 3;
+}
+
+#wind-direction {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 8px;
 }
 
 #moon-icon{

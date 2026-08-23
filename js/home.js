@@ -5,32 +5,32 @@ const fecha = document.getElementById("fecha");
 const hoy = new Date();
 
 const dias = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado"
+  "Domingo",
+  "Lunes",
+  "Martes",
+  "Miércoles",
+  "Jueves",
+  "Viernes",
+  "Sábado"
 ];
 
 const meses = [
-    "enero",
-    "febrero",
-    "marzo",
-    "abril",
-    "mayo",
-    "junio",
-    "julio",
-    "agosto",
-    "septiembre",
-    "octubre",
-    "noviembre",
-    "diciembre"
+  "enero",
+  "febrero",
+  "marzo",
+  "abril",
+  "mayo",
+  "junio",
+  "julio",
+  "agosto",
+  "septiembre",
+  "octubre",
+  "noviembre",
+  "diciembre"
 ];
 
 fecha.textContent =
-`${dias[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]}`;
+  `${dias[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]}`;
 
 
 // TEMPORAL
@@ -96,7 +96,7 @@ async function getWeather() {
       "https://api.open-meteo.com/v1/forecast" +
       "?latitude=-34.9011" +
       "&longitude=-56.1645" +
-      "&current=temperature_2m,weather_code,wind_speed_10m" +
+      "&current=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m" +
       "&timezone=auto";
 
     const res = await fetch(url);
@@ -110,6 +110,7 @@ async function getWeather() {
     const weather = {
       temp: data.current.temperature_2m,
       wind: data.current.wind_speed_10m,
+      windDirection: data.current.wind_direction_10m,
       code: data.current.weather_code
     };
 
@@ -120,16 +121,47 @@ async function getWeather() {
   }
 }
 
+function getWindDirection(degrees) {
+    const directions = [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SO",
+        "O",
+        "NO"
+    ];
+
+    const index = Math.round(degrees / 45) % 8;
+
+    return directions[index];
+}
+
 async function renderWeather() {
-  const mostrarClima = document.getElementById("mostrarClima");
+    const mostrarClima = document.getElementById("mostrarClima");
+    const windSpeed = document.getElementById("wind-speed");
+    const windDirection = document.getElementById("wind-direction");
+    const windArrow = document.getElementById("wind-arrow");
 
-  const data = await getWeather();
+    const data = await getWeather();
 
-  mostrarClima.innerHTML = `
-    <h3>Clima (Sur de Uruguay)</h3>
-    <p>🌡️ ${data.temp}°C</p>
-    <p>💨 Viento: ${data.wind} km/h</p>
-  `;
+    const direction = getWindDirection(data.windDirection);
+
+    // Open-Meteo indica de dónde viene el viento.
+    // La flecha muestra hacia dónde sopla.
+    const arrowDirection = (data.windDirection + 180) % 360;
+
+    mostrarClima.innerHTML = `
+        <p>🌡️ ${data.temp}°C</p>
+    `;
+
+    windSpeed.textContent = Math.round(data.wind);
+
+    windDirection.textContent = direction;
+
+    windArrow.style.transform =
+        `translateX(-50%) rotate(${arrowDirection}deg)`;
 }
 
 renderWeather();
@@ -137,23 +169,24 @@ renderWeather();
 
 // DEPARTAMENTOS
 
-const departamentos = 
-[
+const departamentos =
+  [
     {
-        nombre:"Montevideo",
-        cantidad:7
+      nombre: "Montevideo",
+      cantidad: 7
     },
     {
-        nombre:"Canelones",
-        cantidad:11
+      nombre: "Canelones",
+      cantidad: 11
     },
     {
-        nombre:"Maldonado",
-        cantidad:11
+      nombre: "Maldonado",
+      cantidad: 11
     },
     {
-        nombre:"Rocha",
-        cantidad:6
+      nombre: "Rocha",
+      cantidad: 6
     }
-];
+  ];
+
 
