@@ -161,7 +161,7 @@ async function renderWeather() {
     windDirection.textContent = direction;
 
     windArrow.style.transform =
-        `translateX(-50%) rotate(${arrowDirection}deg)`;
+        `rotate(${arrowDirection}deg)`;
 }
 
 renderWeather();
