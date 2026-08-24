@@ -72,39 +72,62 @@ h2{
     gap:20px;
 }
 
-#card-grid {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-top: 2%;
-    
-}
 
-.wind-simple {
-    margin-top: 20px;
-}
-
-.wind-main {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-}
-
-.wind-label {
+.info-date {
+    margin-top: -20px;
+    margin-bottom: 15px;
+    color: #5f7183;
     font-size: 1rem;
-    font-weight: 600;
 }
+
+.card {
+    min-height: 220px;
+}
+
+.weather-content,
+.wind-content,
+.moon-content {
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: center;
+}
+
+
+/* CLIMA */
+
+#weather-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+#weather-condition {
+    font-size: 1.25rem;
+}
+
+#temperature {
+    font-size: 1.1rem;
+    color: #5f7183;
+}
+
+
+/* VIENTO */
 
 .wind-direction-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 #wind-direction,
 .wind-arrow {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -115,30 +138,20 @@ h2{
 }
 
 .wind-speed {
-    margin-top: 10px;
     font-size: 1.1rem;
+    color: #5f7183;
 }
 
-#wind-speed {
-    font-weight: 600;
-}
 
-.wind-arrow {
-    display: inline-block;
-    font-size: 2rem;
+/* LUNA */
+
+#moon-icon {
+    font-size: 3rem;
     line-height: 1;
-
-    transform-origin: center;
 }
 
-.wind-speed {
-    margin-top: 8px;
-    font-size: 1rem;
-}
-
-
-#moon-icon{
-    font-size: 2.5rem;
+#fase-lunar {
+    font-size: 1.4rem;
 }
 
 .card{

@@ -82,12 +82,12 @@ const moonIcon = document.getElementById("moon-icon");
 
 const phase = getMoonPhase();
 const phaseString = getMoonPhaseName(phase)
-let phaseToArray = phaseString.split(" ");
+const phaseToArray = phaseString.split(" ");
 
-faseLunar.textContent = `${phaseToArray[1]}
-`;
-moonIcon.textContent = `${phaseToArray[0]}
-`
+faseLunar.textContent = phaseToArray.slice(1).join(" ");
+
+moonIcon.textContent = `${phaseToArray[0]}`
+
 
 //Clima actual
 async function getWeather() {
@@ -138,33 +138,106 @@ function getWindDirection(degrees) {
     return directions[index];
 }
 
+function getWeatherCondition(code) {
+  if (code === 0) {
+    return {
+      icon: "☀️",
+      text: "Despejado"
+    };
+  }
+
+  if (code === 1 || code === 2) {
+    return {
+      icon: "🌤️",
+      text: "Parcialmente nublado"
+    };
+  }
+
+  if (code === 3) {
+    return {
+      icon: "☁️",
+      text: "Nublado"
+    };
+  }
+
+  if (code === 45 || code === 48) {
+    return {
+      icon: "🌫️",
+      text: "Niebla"
+    };
+  }
+
+  if (code >= 51 && code <= 57) {
+    return {
+      icon: "🌦️",
+      text: "Llovizna"
+    };
+  }
+
+  if (code >= 61 && code <= 67) {
+    return {
+      icon: "🌧️",
+      text: "Lluvia"
+    };
+  }
+
+  if (code >= 80 && code <= 82) {
+    return {
+      icon: "🌦️",
+      text: "Chubascos"
+    };
+  }
+
+  if (code >= 95) {
+    return {
+      icon: "⛈️",
+      text: "Tormenta"
+    };
+  }
+
+  return {
+    icon: "🌤️",
+    text: "Variable"
+  };
+}
+
 async function renderWeather() {
-    const mostrarClima = document.getElementById("mostrarClima");
-    const windSpeed = document.getElementById("wind-speed");
-    const windDirection = document.getElementById("wind-direction");
-    const windArrow = document.getElementById("wind-arrow");
+  const weatherIcon = document.getElementById("weather-icon");
+  const weatherCondition = document.getElementById("weather-condition");
+  const temperature = document.getElementById("temperature");
 
-    const data = await getWeather();
+  const windSpeed = document.getElementById("wind-speed");
+  const windDirection = document.getElementById("wind-direction");
+  const windArrow = document.getElementById("wind-arrow");
 
-    const direction = getWindDirection(data.windDirection);
+  const data = await getWeather();
 
-    // Open-Meteo indica de dónde viene el viento.
-    // La flecha muestra hacia dónde sopla.
-    const arrowDirection = (data.windDirection + 180) % 360;
+  if (!data) return;
 
-    mostrarClima.innerHTML = `
-        <p>🌡️ ${data.temp}°C</p>
-    `;
+  // CLIMA
+  const condition = getWeatherCondition(data.code);
 
-    windSpeed.textContent = Math.round(data.wind);
+  weatherIcon.textContent = condition.icon;
+  weatherCondition.textContent = condition.text;
+  temperature.textContent = `${data.temp}°C`;
 
-    windDirection.textContent = direction;
+  // VIENTO
+  const direction = getWindDirection(data.windDirection);
 
-    windArrow.style.transform =
-        `rotate(${arrowDirection}deg)`;
+  // Open-Meteo indica de dónde viene el viento.
+  // La flecha indica hacia dónde sopla.
+  const arrowDirection = (data.windDirection + 180) % 360;
+
+  windDirection.textContent = direction;
+  windSpeed.textContent = Math.round(data.wind);
+
+  windArrow.style.transform =
+    `rotate(${arrowDirection}deg)`;
 }
 
 renderWeather();
+
+
 
 
 // DEPARTAMENTOS

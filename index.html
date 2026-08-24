@@ -48,49 +48,50 @@
     <!-- INFORMACIÓN DEL DÍA -->
 
     <section class="container">
+<h2>Información del día</h2>
 
-        <h2>Información del día</h2>
+<p id="fecha" class="info-date"></p>
 
-        <div class="info-grid">
+<div class="info-grid">
 
-            <div class="card">
+    <div class="card">
+        <h3>Clima</h3>
 
-                <h3 id="fecha">📅</h3>
-
-                <p id="mostrarClima">
-                    Cargando...
-                </p>
-
-            </div>
-
-            <div class="card">
-                <h3>Viento</h3>
-                <div class="wind-simple">
-                    <div class="wind-main">
-                        <span><strong id="wind-direction">--</strong></span>
-                        <span id="wind-arrow" class="wind-arrow">↑</span>
-                    </div>
-
-                    <p class="wind-speed">
-                        <span id="wind-speed">--</span> km/h
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="card">
-
-                <h3>Fase Lunar</h3>
-
-
-                <div id="card-grid">
-                    <span id="moon-icon"></span>
-                    <p id="fase-lunar">Cargando...</p>
-                </div>
-
-            </div>
-
+        <div class="weather-content">
+            <span id="weather-icon">--</span>
+            <strong id="weather-condition">Cargando...</strong>
+            <span id="temperature">--°C</span>
         </div>
+    </div>
+
+    <div class="card">
+        <h3>Viento</h3>
+
+        <div class="wind-content">
+            <div class="wind-direction-group">
+                <strong id="wind-direction">--</strong>
+                <span id="wind-arrow" class="wind-arrow">↑</span>
+            </div>
+
+            <span class="wind-speed">
+                <span id="wind-speed">--</span> km/h
+            </span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Fase Lunar</h3>
+
+        <div class="moon-content">
+            <span id="moon-icon"></span>
+            <strong id="fase-lunar">Cargando...</strong>
+        </div>
+    </div>
+
+</div>
+        
+
+       
 
         <div class="alert-box">
 
