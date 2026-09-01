@@ -3,7 +3,7 @@
     "id": "surfcasting",
     "nombre": "Surfcasting",
     "descripcion": "Es la tecninca mas usada en las costas uruguayas. Consiste en usar cañas largas, que soportan plomos de hasta 200 gramos, con reeles de mucha capacidad de linea y resistencia. Si bien muchas veces la pesca se ecnuetra cerca de la orilla, en muchas otras es conveniente lanzar la carnada lo mas lejos posible, por eso se usan cañas de longitud superior a 3,90mts y reeles con capacidad de 200 mts de linea para arriba.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/surfcast.webp",
     "equipo_recomendado": {
       "cana": {
         "tipo": "",
@@ -19,8 +19,9 @@
 
     "reel": {
       "tipos": ["frontal", "rotativo"],
-      "tamano": "",
-      "capacidad": ""
+      "tamano": "Grande",
+      "capacidad": "Alta",
+      "carga": "Nailon"
     },
 
     "elementos": []
@@ -31,7 +32,7 @@
     "id": "spinning",
     "nombre": "Spinning",
     "descripcion": "Es una tecnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recojer buscando que los peces depredadores ataquen el cebo. La diferencia respecto al Baitcasting es meramente el reel, ya que en spinning se utlizan reeles Frontales de tamaño de entre 1000 y 6000, aunque en busca de peces de ultramar, se pueden ver hasta modelos 14000.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/spinning.webp",
     "equipo_recomendado": {
       "caña": "3.90 a 4.50 m",
       "max_weight_caña": "100 - 200 o +",
@@ -47,7 +48,7 @@
     "id": "baitcasting",
     "nombre": "baitcasting",
     "descripcion": "Es una tecnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recojer buscando que los peces depredadores ataquen el cebo. La diferencia respecto al Spinning es meramente el reel, ya que en baitcasting se utlizan reeles de perfil bajo en busca de mayor precision, para tirar el sueñelo entre ramas o huecos en las orillas.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/baitcasting.webp",
     "equipo_recomendado": {
       "caña": "3.90 a 4.50 m",
       "max_weight_caña": "100 - 200 o +",
@@ -63,7 +64,7 @@
     "id": "robada",
     "nombre": "Robada",
     "descripcion": "La pesca a la robada, consiste en lanzar un plomo con puntas, y recojer dando chichotazos fuertes intentando atravesar a los peces que estan acardumados. Se utilizan cañas largas y rigidas, y un robador, que no es mas que una plomada con dos o tres puntas de anzuelos grande integradas.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/robada.webp",
     "equipo_recomendado": {
       "caña": "3.90 a 4.50 m",
       "max_weight_caña": "100 - 200 o +",
@@ -79,7 +80,7 @@
     "id": "lengue",
     "nombre": "Lengue",
     "descripcion": "El lengue es una tecnica de pesca con multiples anzuelos pero sin carnada. Se utilizan Cañas largas y una linea atada a la punta, que puede contener de 10 a 50 anzuelos pequeños y brillantes. Se debe subir y bajar la linea en el agua y los peces atacan el brillo del anzuelo.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/lengue.webp",
     "equipo_recomendado": {
       "caña": "4.50 m o +",
       "max_weight_caña": "-",

@@ -14,7 +14,7 @@ fetch("./data/tecnicas.json")
 
             card.innerHTML = `
                 <img
-                    src="${tecnica.imagen}"
+                    src="${tecnica.imagenes}"
                     alt="${tecnica.nombre}"
                     class="card-tecnica-img"
                 >
