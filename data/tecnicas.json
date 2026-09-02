@@ -95,7 +95,7 @@
     "id": "encandilada",
     "nombre": "Encandilada",
     "descripcion": "La pesca a la encandilada es una de las pescas mas divertidas a realiza en las costas uruguayas. Consiste en meterse al agua por la noche con linternas o faroles y calderines. La idea es ir caminando y con las linternas se pueden ver perfectamante los peces que son atraidos por la luz, para luego capturarlos con el caldrin. Si bien pueden haber excepciones, la especie que se busca realizando esta pesca son pejerreyes cornalitos, los cuales son delicioso fritos.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/encandilada.webp",
     "equipo_recomendado": {
       "extra": [
         "Balde",
@@ -108,7 +108,7 @@
     "id": "red",
     "nombre": "Red",
     "descripcion": "Para la pesca con red simplemente se restrilla la orilla de la playa pasando una red, comunmente de 20 metros o mas.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/redOrilla.webp",
     "equipo_recomendado": {
       "caña": "-",
       "max_weight_caña": "-",
@@ -123,7 +123,7 @@
     "id": "trasmallo",
     "nombre": "Trasmallo",
     "descripcion": "La pesca con trasmallo es una técnica de pesca artesanal que utiliza una red fija de tres capas superpuestas para atrapar peces de fondo por enmalle",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/trasmallo.webp",
     "equipo_recomendado": {
       "red": "De tres capas, con boyas"
     }
@@ -132,7 +132,7 @@
     "id": "espinel",
     "nombre": "Espinel",
     "descripcion": "La pesca con espinel es una técnica de pesca pasiva, artesanal y tradicional, muy utilizada tanto en ríos como en el mar, que consiste en una línea principal (llamada linea madre) de la cual cuelgan múltiples líneas secundarias más cortas (brazoladas o reinales) equipadas con anzuelos con carnada",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/espinel.webp",
     "equipo_recomendado": {
       "caña": "3.90 a 4.50 m",
       "max_weight_caña": "100 - 200 o +",
@@ -148,7 +148,7 @@
     "id": "trolling",
     "nombre": "trolling",
     "descripcion": "El trolling es una pesca pasiva que se raliza en embarcaciones, consiste en dejar caer un señuelo al agua, colcar la caña en los posa caña, y ciruclar con el señuelo detras de la lancha a una velocidad adecuada al pez que se quiere pescar. Es muy utilizada para la pesca de atunes en agua salada y Surubí en agua dulce.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/trolling.webp",
     "equipo_recomendado": {
       "caña": "Rigida",
       "max_weight_caña": "Alto",
@@ -161,20 +161,7 @@
     "id": "pesca_con_mosca",
     "nombre": "Pesca Con Mosca",
     "descripcion": "La pesca con mosca es una modalidad de pesca que utiliza una caña y señuelo artificial llamado mosca. La pesca con mosca se practica usualmente en lagos, ríos y en el mar.",
-    "imagenes": "",
-    "equipo_recomendado": {
-      "caña": "Flexibles y ligeras",
-      "max_weight_caña": "-",
-      "reel": "Carrete",
-      "capacidad_reel": "-",
-      "extra": "Mosca"
-    }
-  },
-  {
-    "id": "pesca_con_mosca",
-    "nombre": "Pesca Con Mosca",
-    "descripcion": "La pesca con mosca es una modalidad de pesca que utiliza una caña y señuelo artificial llamado mosca. La pesca con mosca se practica usualmente en lagos, ríos y en el mar.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/mosca.webp",
     "equipo_recomendado": {
       "caña": "Flexibles y ligeras",
       "max_weight_caña": "-",
@@ -187,7 +174,7 @@
     "id": "pesca_con_atarraya",
     "nombre": "Pesca Con Atarraya",
     "descripcion": "La atarraya (también llamada tarraya o esparavel) es una red de pesca circular y de caída libre que se lanza de forma manual para atrapar peces pequeños, camarones o crustáceos en aguas poco profundas.",
-    "imagenes": "",
+    "imagenes": "Fotos/tecnicas/atarraya.webp",
     "equipo_recomendado": {
       "caña": "-",
       "max_weight_caña": "-",
