@@ -1,0 +1,162 @@
+.detalle-tecnica {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+}
+
+.volver-lista {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #0b5f8a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.volver-lista:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO */
+
+.tecnica-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 30px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+.tecnica-imagen {
+    width: 100%;
+}
+
+.tecnica-imagen img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    border-radius: 10px;
+}
+
+
+.tecnica-info h1 {
+    margin: 0 0 18px;
+
+    font-size: 2.3rem;
+    color: #063f5c;
+}
+
+.tecnica-info p {
+    margin: 0;
+
+    line-height: 1.7;
+    color: #333;
+}
+
+
+/* EQUIPO */
+
+.seccion-equipo {
+    margin-top: 35px;
+}
+
+.seccion-equipo > h2 {
+    margin-bottom: 18px;
+
+    font-size: 1.5rem;
+    color: #06496d;
+}
+
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.equipo-card {
+    background-color: #fff;
+
+    padding: 22px 24px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+
+.equipo-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 1.15rem;
+    color: #06496d;
+}
+
+.equipo-card p {
+    margin: 0;
+
+    line-height: 1.6;
+    color: #444;
+}
+
+
+/* GALERÍA */
+
+.seccion-galeria {
+    margin-top: 35px;
+}
+
+.seccion-galeria > h2 {
+    color: #06496d;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .tecnica-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnica-info h1 {
+        font-size: 1.9rem;
+    }
+}
