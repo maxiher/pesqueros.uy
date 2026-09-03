@@ -52,6 +52,15 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
+/* Recortar texto*/
+.tecnica-card .card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+
 /* IMAGEN */
 
 .card-tecnica-img {
