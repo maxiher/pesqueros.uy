@@ -53,7 +53,7 @@
 }
 
 /* Recortar texto*/
-.tecnica-card .card-text {
+.card-tecnica p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
