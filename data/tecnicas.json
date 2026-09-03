@@ -2,13 +2,13 @@
   {
     "id": "surfcasting",
     "nombre": "Surfcasting",
-    "descripcion": "Es la técninca mas usada en las costas uruguayas. Consiste en usar cañas largas, que soportan plomos de hasta 200 gramos, con reeles de mucha capacidad de línea y resistencia. Si bien muchas veces la pesca se ecnuetra cerca de la orilla, en muchas otras es conveniente lanzar la carnada lo mas lejos posible, por eso se usan cañas de longitud superior a 3,90mts y reeles con capacidad de 200 mts de línea para arriba.",
+    "descripcion": "Es la técnica mas usada en las costas uruguayas. Consiste en usar cañas largas, que soportan plomos de hasta 200 gramos, con reeles de mucha capacidad de línea y resistencia. Si bien muchas veces la pesca se encuetra cerca de la orilla, en muchas otras es conveniente lanzar la carnada lo mas lejos posible, por eso se usan cañas de longitud superior a 3,90mts y reeles con capacidad de 200 mts de línea para arriba.",
     "portada": "Fotos/tecnicas/surfcast.webp",
     "imagenes": [],
     "equipo_recomendado": {
       "caña": {
         "nombre": "Caña",
-        "detalle": "Caña larga, generalmente de 3,90 a 4,50 m, con capacidad para lanzar plomadas pesadas."
+        "detalle": "Caña larga, generalmente de 3,90 m a 4,50 m, con capacidad para lanzar plomadas pesadas."
       },
       "reel": {
         "nombre": "Reel",
@@ -19,13 +19,13 @@
   {
     "id": "spinning",
     "nombre": "Spinning",
-    "descripcion": "Es una técnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recoger buscando que los peces depredadores ataquen el cebo. Se utilizan tanto en ríos y arroyos, como en playa y mar abierto.La diferencia respecto al Baitcasting es principalemente el reel, ya que en spinning se utlizan reeles Frontales de tamaño de entre 1000 y 6000, aunque en busca de peces de ultramar, se pueden ver hasta modelos 14000.",
+    "descripcion": "Es una técnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recoger buscando que los peces depredadores ataquen el cebo. Se utilizan tanto en ríos y arroyos, como en playa y mar abierto.La diferencia respecto al Baitcasting es principalmente el reel, ya que en spinning se utilizan reeles Frontales de tamaño de entre 1000 y 6000, aunque en busca de peces de ultramar, se pueden ver hasta modelos 14000.",
     "portada": "Fotos/tecnicas/spinning.webp",
     "imagenes": [],
     "equipo_recomendado": {
       "caña": {
         "nombre": "Caña",
-        "detalle": "Caña corta o mediana para reel frontal, generalmente de entre 1,80m a 3m, con flexibilidad para poder lanzar señuelos livianos a distancias considerables."
+        "detalle": "Caña corta o mediana para reel frontal, generalmente de entre 1,80 m a 3 m, con flexibilidad para poder lanzar señuelos livianos a distancias considerables."
       },
       "reel": {
         "nombre": "Reel",
@@ -36,13 +36,13 @@
   {
     "id": "baitcasting",
     "nombre": "Baitcasting",
-    "descripcion": "Es una técnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recoger buscando que los peces depredadores ataquen el cebo. Se utilizan tanto en ríos y arroyos, como en playa y mar abierto. La diferencia principal respecto al Spinning es el reel, ya que en baitcasting se utlizan reeles de perfil bajo en busca de mayor precisión, para tirar el sueñelo entre ramas o huecos en las orillas.",
+    "descripcion": "Es una técnica de pesca activa, que consiste en lanzar un señuelo o un pez colocado en el anzuelo, para luego recoger buscando que los peces depredadores ataquen el cebo. Se utilizan tanto en ríos y arroyos, como en playa y mar abierto. La diferencia principal respecto al Spinning es el reel, ya que en baitcasting se utlizan reeles de perfil bajo en busca de mayor precisión, para tirar el señuelo entre ramas o huecos en las orillas.",
     "portada": "Fotos/tecnicas/baitcasting.webp",
     "imagenes": [],
     "equipo_recomendado": {
       "caña": {
         "nombre": "Caña",
-        "detalle": "Caña corta o mediana, generalmente de entre 1,80 m a 3 m, con flexibilidad para poder lanzar señuelos livianos a distancias coonsiderables. Las cañas para reel rotativo suelen tener pasa hilos mas bajos y un pico de agarre en la empuñadura del lado opuesto al reel."
+        "detalle": "Caña corta o mediana, generalmente de entre 1,80 m a 3 m, con flexibilidad para poder lanzar señuelos livianos a distancias considerables. Las cañas para reel rotativo suelen tener pasa hilos mas bajos y un pico de agarre en la empuñadura del lado opuesto al reel."
       },
       "reel": {
         "nombre": "Reel",
@@ -53,13 +53,13 @@
   {
     "id": "robador",
     "nombre": "Pesca con Robador",
-    "descripcion": "La pesca a la robada, consiste en lanzar un plomo con puntas, y recoger dando chichotazos fuertes intentando atravesar a los peces que estan en cardumen cerca de la costa. Se utilizan cañas largas y rigidas, con un robador, que no es mas que una plomada con dos o tres puntas de anzuelos grande integradas. También se puede armar un arreglo que cumpla esta función con una plomada ovalada y anzuelos triples grandes.",
+    "descripcion": "La pesca a la robada, consiste en lanzar un plomo con puntas, y recoger dando chichotazos fuertes intentando atravesar a los peces que estan en cardumen cerca de la costa. Se utilizan cañas largas y rígidas, con un robador, que no es mas que una plomada con dos o tres puntas de anzuelo grande integrado. También se puede armar un arreglo que cumpla esta función con una plomada ovalada y anzuelos triples grandes.",
     "portada": "Fotos/tecnicas/robada.webp",
     "imagenes": [],
     "equipo_recomendado": {
       "caña": {
         "nombre": "Caña",
-        "detalle": "Caña larga, generalmente de 3,90 a 4,50 m, rígida y de alta resistencia."
+        "detalle": "Caña larga, generalmente de 3,90 m a 4,50 m, rígida y de alta resistencia."
       },
       "reel": {
         "nombre": "Reel",
@@ -70,7 +70,7 @@
   {
     "id": "lengue",
     "nombre": "Lengue",
-    "descripcion": "El lengue es una técnica de pesca con multiples anzuelos sin carnada. Se utilizan cañas largas y una línea atada de la punta, que puede contener de 10 a 50 anzuelos pequeños y brillantes, con un plomo pequeño al final. Se debe subir y bajar la línea en el agua y los peces atacan el brillo del anzuelo. Ideal para el pejerrey cornalito y la anchoita.",
+    "descripcion": "El lengue es una técnica de pesca con múltiples anzuelos sin carnada. Se utilizan cañas largas y una línea atada de la punta, que puede contener de 10 a 50 anzuelos pequeños y brillantes, con un plomo pequeño al final. Se debe subir y bajar la línea en el agua y los peces atacan el brillo del anzuelo. Ideal para el pejerrey cornalito y la anchoita.",
     "portada": "Fotos/tecnicas/lengue.webp",
     "imagenes": [],
     "equipo_recomendado": {
@@ -83,7 +83,7 @@
   {
     "id": "encandilada",
     "nombre": "Encandilada",
-    "descripcion": "La pesca a la encandilada es una de las pescas mas divertidas que se pueden hacer en las costas de Uruguay. Consiste en meterse al agua por la noche con linternas o faroles y calderines. La idea es ir caminando y con las linternas se pueden ver perfectamante los peces que son atraídos por la luz, para luego capturarlos con el caldrín. Si bien pueden haber excepciones, la especie que se busca realizando esta pesca son pejerreyes cornalitos, los cuales son deliciosos fritos.",
+    "descripcion": "La pesca a la encandilada es una de las pescas mas divertidas que se pueden hacer en las costas de Uruguay. Consiste en meterse al agua por la noche con linternas o faroles y calderines. La idea es ir caminando y con las linternas se pueden ver perfectamente los peces que son atraídos por la luz, para luego capturarlos con el caldrín. Si bien pueden haber excepciones, la especie que se busca realizando esta pesca son pejerreyes cornalitos, los cuales son deliciosos fritos.",
     "portada": "Fotos/tecnicas/encandilada.webp",
     "imagenes": [],
     "equipo_recomendado": {
@@ -104,20 +104,20 @@
   {
     "id": "red_orilla",
     "nombre": "Red de Orilla",
-    "descripcion": "Para la pesca con red simplemente se restrilla la orilla de la playa pasando una red, comúnmente de 20 metros o más.  Se requieren dos personas y una red adecuada a la especie que se búsque. La idea es pasar la red caminando perpendicularmente a la orilla, para luego salir rapidamente del agua sacando los peces. Si los orificios son muy grandes, los peces pequeños escaparán. Pero si los orificios son muy pequeños la mayor parte de los peces grandes escaparán.",
+    "descripcion": "Para la pesca con red simplemente se restrilla la orilla de la playa pasando una red, comúnmente de 20 metros o más.  Se requieren dos personas y una red adecuada a la especie que se busque. La idea es pasar la red caminando perpendicularmente a la orilla, para luego salir rapidamente del agua sacando los peces. Si los orificios son muy grandes, los peces pequeños escaparán. Pero si los orificios son muy pequeños la mayor parte de los peces grandes escaparán.",
     "portada": "Fotos/tecnicas/redOrilla.webp",
     "imagenes": [],
     "equipo_recomendado": {
       "red": {
         "nombre": "Red",
-        "detalle": "Red larga de entre 15 a 30 metros, con palos de madera rígida en los extremos para ser arrastrada por la orilla verticalmente. El diámetro de los orificios y el tejido de la red debará ser adecuado para la especie objetivo."
+        "detalle": "Red larga de entre 15 a 30 metros, con palos de madera rígida en los extremos para ser arrastrada por la orilla verticalmente. El diámetro de los orificios y el tejido de la red deberá ser adecuado para la especie objetivo."
       }
     }
   },
   {
     "id": "trasmallo",
     "nombre": "Trasmallo",
-    "descripcion": "La pesca con trasmallo es una técnica de pesca artesanal que utiliza una red fija de tres capas superpuestas para atrapar peces de fondo por enmalle",
+    "descripcion": "La pesca con trasmallo es una técnica de pesca artesanal que utiliza una red fija de tres capas superpuestas para atrapar peces de fondo por enmalle.",
     "portada": "Fotos/tecnicas/trasmallo.webp",
     "imagenes": [],
     "equipo_recomendado": {
@@ -130,7 +130,7 @@
   {
     "id": "espinel",
     "nombre": "Espinel",
-    "descripcion": "La pesca con espinel es una técnica de pesca pasiva, artesanal y tradicional, muy utilizada tanto en ríos como en el mar, que consiste en una línea principal (llamada linea madre) de la cual cuelgan múltiples líneas secundarias más cortas (brazoladas o reinales) equipadas con anzuelos con carnada",
+    "descripcion": "La pesca con espinel es una técnica de pesca pasiva, artesanal y tradicional, muy utilizada tanto en ríos como en el mar, que consiste en una línea principal (llamada linea madre) de la cual cuelgan múltiples líneas secundarias más cortas (brazoladas o reinales) equipadas con anzuelos con carnada.",
     "portada": "Fotos/tecnicas/espinel.webp",
     "imagenes": [],
     "equipo_recomendado": {
@@ -143,7 +143,7 @@
   {
     "id": "trolling",
     "nombre": "Trolling",
-    "descripcion": "El trolling es una pesca pasiva que se raliza en embarcaciones, consiste en dejar caer un señuelo al agua, colocar la caña en los posa caña de la embarcación, y ciruclar a una velocidad adecuada al pez que se quiere pescar. Es muy utilizada para la pesca de atunes en agua salada y Surubí en agua dulce.",
+    "descripcion": "El trolling es una pesca pasiva que se realiza en embarcaciones, consiste en dejar caer un señuelo al agua, colocar la caña en los posa caña de la embarcación, y circular a una velocidad adecuada al pez que se quiere pescar. Es muy utilizada para la pesca de atunes en agua salada y Surubí en agua dulce.",
     "portada": "Fotos/tecnicas/trolling.webp",
     "imagenes": [],
     "equipo_recomendado": {
@@ -159,7 +159,7 @@
   },
   {
     "id": "pesca_con_mosca",
-    "nombre": "Pesca Con Mosca",
+    "nombre": "Pesca con Mosca",
     "descripcion": "La pesca con mosca es una modalidad de pesca que utiliza una caña y señuelo artificial llamado mosca. La pesca con mosca se practica usualmente en lagos, ríos y en el mar.",
     "portada": "Fotos/tecnicas/mosca.webp",
     "imagenes": [],
@@ -180,7 +180,7 @@
   },
   {
     "id": "pesca_con_atarraya",
-    "nombre": "Pesca Con Atarraya",
+    "nombre": "Pesca con Atarraya",
     "descripcion": "La atarraya (también llamada tarraya o esparavel) es una red de pesca circular y de caída libre que se lanza de forma manual para atrapar peces pequeños, camarones o crustáceos en aguas poco profundas. Se requiere un poco de práctica para lanzar correctamente este tipo de red y que abarque la mayor superficie del agua posible, optimizando la pesca en relación a los lanzamientos. Al caer, se abre como un cono y los plomos se hunden rápido, cerrando la red por el fondo para que los peces no escapen. Es muy utilizada para capturar carnadas.",
     "portada": "Fotos/tecnicas/atarraya.webp",
     "imagenes": [],
@@ -193,8 +193,8 @@
   },
   {
     "id": "pesca_con_boya",
-    "nombre": "Pesca Con Boya",
-    "descripcion": "La pesca con boya es una de las técnicas más sencilla y utilizada en todos los ambientes, tanto por expertos como principiantes. Consiste simplemente en una caña (muchas veces de tacuara), una boya y por debajo de esta un anzuelo. La boya y el anzuelo dependerán de la espcie objetivo.",
+    "nombre": "Pesca con Boya",
+    "descripcion": "La pesca con boya es una de las técnicas más sencilla y utilizada en todos los ambientes, tanto por expertos como principiantes. Consiste simplemente en una caña (muchas veces de tacuara), una boya y por debajo de esta un anzuelo. La boya y el anzuelo dependerán de la especie objetivo.",
     "portada": "Fotos/tecnicas/pescaConBoya.webp",
     "imagenes":[],
     "equipo_recomendado": {
