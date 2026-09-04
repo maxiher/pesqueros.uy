@@ -1,3 +1,10 @@
+body {
+    background-color: #f4f6f8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+    color: #333;
+}
+
 .detalle-tecnica {
     width: min(1100px, 90%);
     margin: 0 auto;
@@ -25,7 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
-    align-items: center;
+    align-items: start;
 
     background-color: #fff;
     border-radius: 14px;
@@ -53,8 +60,8 @@
 
 .tecnica-info h1 {
     margin: 0 0 18px;
-
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+    line-height: 1.15;
     color: #063f5c;
 }
 
@@ -72,7 +79,7 @@
     margin-top: 35px;
 }
 
-.seccion-equipo > h2 {
+.seccion-equipo>h2 {
     margin-bottom: 18px;
 
     font-size: 1.5rem;
@@ -82,7 +89,10 @@
 
 .equipo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(280px, 100%), 1fr)
+    );
     gap: 20px;
 }
 
@@ -119,7 +129,7 @@
     margin-top: 35px;
 }
 
-.seccion-galeria > h2 {
+.seccion-galeria>h2 {
     color: #06496d;
 }
 
@@ -140,23 +150,72 @@
 
 
 /* RESPONSIVE */
+/* TABLET */
+@media (max-width: 850px) {
 
-@media (max-width: 800px) {
+    .detalle-tecnica {
+        width: 92%;
+        padding: 30px 0 55px;
+    }
 
     .tecnica-hero {
         grid-template-columns: 1fr;
         gap: 24px;
+        padding: 24px;
     }
 
-    .equipo-grid {
-        grid-template-columns: 1fr;
+    .tecnica-imagen img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MÓVIL */
+@media (max-width: 576px) {
+
+    .detalle-tecnica {
+        width: 92%;
+        padding: 24px 0 45px;
+    }
+
+    .volver-lista {
+        margin-bottom: 14px;
+    }
+
+    .tecnica-hero {
+        gap: 20px;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .tecnica-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 14px;
+    }
+
+    .tecnica-info p {
+        line-height: 1.6;
+    }
+
+    .seccion-equipo,
+    .seccion-galeria {
+        margin-top: 28px;
+    }
+
+    .seccion-equipo > h2,
+    .seccion-galeria > h2 {
+        font-size: 1.35rem;
+    }
+
+    .equipo-card {
+        padding: 18px;
     }
 
     .galeria-grid {
         grid-template-columns: 1fr;
-    }
-
-    .tecnica-info h1 {
-        font-size: 1.9rem;
     }
 }
