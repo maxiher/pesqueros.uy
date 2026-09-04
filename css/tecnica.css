@@ -89,10 +89,8 @@ body {
 
 .equipo-grid {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(280px, 100%), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit,
+            minmax(min(280px, 100%), 1fr));
     gap: 20px;
 }
 
@@ -187,14 +185,15 @@ body {
     }
 
     .tecnica-hero {
-        gap: 20px;
-        padding: 18px;
+        gap: 18px;
+        padding: 14px;
         border-radius: 12px;
     }
 
     .tecnica-info h1 {
         font-size: 1.8rem;
-        margin-bottom: 14px;
+        line-height: 1.15;
+        margin-bottom: 12px;
     }
 
     .tecnica-info p {
@@ -212,7 +211,7 @@ body {
     }
 
     .equipo-card {
-        padding: 18px;
+        padding: 16px;
     }
 
     .galeria-grid {
