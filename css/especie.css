@@ -1,19 +1,23 @@
 .detalle-especie {
   width: min(1100px, 90%);
   margin: 0 auto;
-  padding: 40px 0 70px;
+  padding: 20px 0 70px;
 }
 
-.volver {
-  display: inline-block;
-  margin-bottom: 24px;
-  text-decoration: none;
-  color: #0b4f6c;
-  font-weight: 600;
+
+
+.volver-lista {
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    color: #0b5f8a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
-.volver:hover {
-  text-decoration: underline;
+.volver-lista:hover {
+    text-decoration: underline;
 }
 
 
@@ -169,6 +173,9 @@
 
 @media (max-width: 800px) {
 
+  .detalle-especie{
+    padding: 15px 0 70px;
+  }
   .especie-hero {
     grid-template-columns: 1fr;
     gap: 24px;

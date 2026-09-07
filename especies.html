@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,29 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/especies.css">
 </head>
+
 <body>
     <!-- NAVBAR -->
-     <header>
-    <div id="navbar-container"></div>
+    <header>
+        <div id="navbar-container"></div>
     </header>
+
     <div id="container">
         <a href="index.html" class="volver-lista">
             ← Volver al inicio
         </a>
-    <h1>Especies de Uruguay</h1>
-        <p>Seleccioná una especie para explorar sus características o buscalos aqui.</p>
-        <input type="text" id="search-input" placeholder="Buscar especie...">
-        <button type="button" id="btn-filtro">Filtrar</button>
-    <div id="contenedor-especies" class="contenedor-especies"></div>
+        <h1>Especies de Uruguay</h1>
+        <p>Seleccioná una especie para explorar sus características o buscala aqui.</p>
+
+        <div class="search-controls">
+            <input type="text" id="search-input" placeholder="Buscar especie...">
+            <button type="button" id="btn-filtro">Filtrar</button>
+        </div>
+
+        <div id="contenedor-especies" class="contenedor-especies"></div>
     </div>
     <script src="js/navbar.js"></script>
     <script src="js/especies.js"></script>
 </body>
+
 </html>
