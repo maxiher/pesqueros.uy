@@ -11,24 +11,25 @@
 
 <body>
     <!-- NAVBAR -->
-     <header>
-    <div id="navbar-container"></div>
+    <header>
+        <div id="navbar-container"></div>
     </header>
-    
+
     <div id="container">
+
+        <a href="index.html" class="volver-lista">
+            ← Volver al inicio
+        </a>
+        
         <h1>Pesqueros de Uruguay</h1>
         <p>Seleccioná un departamento para explorar sus pesqueros o buscalos aqui.</p>
         <div class="search-controls">
-    <input
-        type="text"
-        id="search-input"
-        placeholder="Buscar pesqueros..."
-    >
+            <input type="text" id="search-input" placeholder="Buscar pesqueros...">
 
-    <button type="button" id="btn-filtro">
-        Filtros
-    </button>
-</div>
+            <button type="button" id="btn-filtro">
+                Filtros
+            </button>
+        </div>
 
         <div id="grid"></div>
         <div id="results-container"></div>

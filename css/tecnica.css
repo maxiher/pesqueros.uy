@@ -5,16 +5,17 @@ body {
     color: #333;
 }
 
+
 .detalle-tecnica {
     width: min(1100px, 90%);
     margin: 0 auto;
-    padding: 40px 0 70px;
+    padding: 17px 0 70px;
 }
 
 .volver-lista {
     display: inline-block;
     margin-bottom: 18px;
-
+    font-family: 'Times New Roman', Times, serif;
     color: #0b5f8a;
     text-decoration: none;
     font-size: 0.9rem;
@@ -153,8 +154,9 @@ body {
 
     .detalle-tecnica {
         width: 92%;
-        padding: 30px 0 55px;
+        padding: 15px 0 55px;
     }
+
 
     .tecnica-hero {
         grid-template-columns: 1fr;
@@ -177,7 +179,7 @@ body {
 
     .detalle-tecnica {
         width: 92%;
-        padding: 24px 0 45px;
+        padding: 10px 0 45px;
     }
 
     .volver-lista {
@@ -217,4 +219,9 @@ body {
     .galeria-grid {
         grid-template-columns: 1fr;
     }
+
+    .volver-lista {
+        margin-bottom: 14px;
+    }
+
 }

@@ -1,7 +1,19 @@
 #container {
     width: 90%;
     max-width: 1300px;
-    margin: 50px auto;
+    margin: 20px auto;
+}
+
+.volver-lista {
+    display: inline-block;
+    color: #0b5f8a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.volver-lista:hover {
+    text-decoration: underline;
 }
 
 .tecnicas-header {
@@ -10,6 +22,7 @@
 
 .tecnicas-header h1 {
     margin-bottom: 10px;
+    margin-top: 10px;
     color: #003f66;
 }
 
@@ -117,7 +130,7 @@
 @media (max-width: 576px) {
     #container {
         width: 92%;
-        margin: 30px auto;
+        margin: 20px auto;
     }
 
     .contenedor-tecnicas {
