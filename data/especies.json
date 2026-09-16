@@ -19,8 +19,8 @@
       ],
       "temporada": "Mayo - Septiembre",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 25,
-      "talla_maxima_cm": 40,
+      "talla_promedio_cm": "25",
+      "talla_maxima_cm": "40",
       "descripcion": "Pejerrey marino/salobre común en costas uruguayas, de carne sabrosa y muy buscado por pescadores deportivos.",
       "caracteristicas": {
         "combatividad": "Media",
@@ -37,7 +37,7 @@
         "cantidad_anzuelos": "2 - 3",
         "anzuelo": "N.º 6 a 8, pata larga",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "40 - 60 cm"
         },
@@ -70,8 +70,8 @@
       ],
       "temporada": "Septiembre - Abril",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 40,
-      "talla_maxima_cm": 60,
+      "talla_promedio_cm": "40",
+      "talla_maxima_cm": "60",
       "descripcion": "Corvina común en la pesca costera uruguaya, con carne blanca y sabrosa y buena combatividad en la lucha del reel.",
       "caracteristicas": {
         "combatividad": "Alta",
@@ -88,7 +88,7 @@
         "cantidad_anzuelos": "1 - 2",
         "anzuelo": "N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "40 - 50 cm"
         },
@@ -122,8 +122,8 @@
       ],
       "temporada": "Abril - Octubre",
       "interes_gastronomico": "Alto",
-      "talla_promedio_cm": 40,
-      "talla_maxima_cm": 60,
+      "talla_promedio_cm": "40",
+      "talla_maxima_cm": "60",
       "descripcion": "Brotola marina de carne blanca y delicada, común en costa atlántica y Río de la Plata.",
       "caracteristicas": {
         "combatividad": "Media",
@@ -140,7 +140,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 3 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "40 - 50 cm"
         },
@@ -171,8 +171,8 @@
       ],
       "temporada": "Todo el año",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 35,
-      "talla_maxima_cm": 65,
+      "talla_promedio_cm": "35",
+      "talla_maxima_cm": "65",
       "descripcion": "Pescadilla de cuerpo fusiforme, reconocida en Uruguay como recurso principal de pesca artesanal y deportiva. Se pesca incluso a mayor profundidad.",
       "caracteristicas": {
         "combatividad": "Media",
@@ -189,7 +189,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "True",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "50 - 80 cm"
         },
@@ -220,8 +220,8 @@
       ],
       "temporada": "Marzo - Noviembre",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 15,
-      "talla_maxima_cm": 50,
+      "talla_promedio_cm": "15",
+      "talla_maxima_cm": "50",
       "descripcion": "Especie pelágica muy abundante en aguas costeras uruguayas, importante también como carnada para otras especies.",
       "caracteristicas": {
         "combatividad": "Baja",
@@ -238,7 +238,7 @@
         "cantidad_anzuelos": "1 o 2",
         "anzuelo": "Pata Larga N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "True",
+          "linga_acero": true,
           "diametro": "0.60 mm",
           "largo": "50 - 80 cm"
         },
@@ -247,7 +247,7 @@
           "peso": "100 - 150 g"
         }
       },
-      "notas_adicionales": "Se recomienda colocar una Boya Elevadora en la brazolada del anzuelo para levantar la carnada del fondo dándole moviemiento."
+      "notas_adicionales": "Se recomienda colocar una Boya Elevadora en la brazolada del anzuelo para levantar la carnada del fondo dándole movimiento."
     },
     
     {
@@ -267,8 +267,8 @@
       ],
       "temporada": "Todo el año",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 40,
-      "talla_maxima_cm": 70,
+      "talla_promedio_cm": "40",
+      "talla_maxima_cm": "70",
       "descripcion": "Bagre marino conocido como mochuelo, común en pesca artesanal y deportiva en zonas costeras y estuarios.",
       "caracteristicas": {
         "combatividad": "Media",
@@ -285,7 +285,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "30 - 50 cm"
         },
@@ -316,7 +316,7 @@
       ],
       "temporada": "Julio - Noviembre",
       "interes_gastronomico": "Medio - Alto",
-      "talla_promedio_cm": "25 cm",
+      "talla_promedio_cm": "25",
       "talla_maxima_cm": "45",
       "descripcion": "Sargo plateado común en el Atlántico sudoccidental, se pesca con caña ligera y se reconoce por su cuerpo plateado con barras oscuras y mancha en el pedúnculo caudal. Con presencia en costas uruguayas.",
       "caracteristicas": {
@@ -334,7 +334,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "Maruseigo N° 16",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "35 cm"
         },
@@ -362,8 +362,8 @@
       ],
       "temporada": "Todo el año",
       "interes_gastronomico": "Bajo",
-      "talla_promedio_cm": "30 - 40 cm",
-      "talla_maxima_cm": "50 cm",
+      "talla_promedio_cm": "35",
+      "talla_maxima_cm": "50",
       "descripcion": "Lisa, pez de la familia de los mújiles, común en zonas costeras y salobres de Uruguay, capturada con carnadas simples e importante para pesca deportiva local.",
       "caracteristicas": {
         "combatividad": "Baja",
@@ -380,7 +380,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "Robador",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0",
           "largo": "0"
         },
@@ -408,8 +408,8 @@
       ],
       "temporada": "Primavera / Otoño",
       "interes_gastronomico": "Alto",
-      "talla_promedio_cm": 20,
-      "talla_maxima_cm": 45,
+      "talla_promedio_cm": "20",
+      "talla_maxima_cm": "45",
       "descripcion": "Burriqueta o salmerón, especie de interés pesquero en Uruguay, de talla menor y cuerpo con bandas, capturada cerca del fondo marino.",
       "caracteristicas": {
         "combatividad": "Media",
@@ -426,7 +426,7 @@
         "cantidad_anzuelos": "1 o 2",
         "anzuelo": "N.º 1 a 3",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "30 - 50 cm"
         },
@@ -472,7 +472,7 @@
         "cantidad_anzuelos": "1 o 2",
         "anzuelo": "N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "60 - 80 cm"
         },
@@ -506,7 +506,7 @@
       "talla_maxima_cm": "40",
       "descripcion": "El Pampanito (Stromateus brasiliensis) es un pez marino de cuerpo ovalado y comprimido que habita en las costas atlánticas de Sudamérica, incluyendo los departamentos costeros de Maldonado y Rocha en Uruguay.",
       "caracteristicas": {
-        "combatividad": "?",
+        "combatividad": "Baja",
         "dieta": "Carnívoro",
         "profundidad_recomendada_m": "?"
       },
@@ -520,7 +520,7 @@
         "cantidad_anzuelos": "2",
         "anzuelo": "Pata Larga N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "40 - 50 cm"
         },
@@ -550,8 +550,8 @@
       ],
       "temporada": "Primavera - Verano",
       "interes_gastronomico": "Medio",
-      "talla_promedio_cm": 60,
-      "talla_maxima_cm": 120,
+      "talla_promedio_cm": "60",
+      "talla_maxima_cm": "120",
       "descripcion": "Corvina negra, escienido de gran tamaño y alta combatividad, muy valorada en la pesca deportiva uruguaya y costera. Su carne es sabrosa y se pesca en aguas poco profundas y estuarios.",
       "caracteristicas": {
         "combatividad": "Muy alta",
@@ -568,7 +568,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 - 0.70 mm",
           "largo": "40 - 60 cm"
         },
@@ -597,16 +597,16 @@
       ],
       "temporada": "Diciembre - Marzo",
       "interes_gastronomico": "Muy Alto",
-      "talla_promedio_cm": 30,
-      "talla_maxima_cm": 70,
-      "descripcion": "Lenguado, pez plano típico del Atlántico suroccidental presente en Uruguay y Argentina, muy apreciado por su carne y capturado en fondos arenosos y estuarios. Estudios locales confirman su presencia y hábitos alimentarios en costas uruguayas. :contentReference[oaicite:0]{index=0}",
+      "talla_promedio_cm": "30",
+      "talla_maxima_cm": "70",
+      "descripcion": "Lenguado, pez plano típico del Atlántico suroccidental presente en Uruguay y Argentina, muy apreciado por su carne y capturado en fondos arenosos y estuarios. Estudios locales confirman su presencia y hábitos alimentarios en costas uruguayas.",
       "caracteristicas": {
         "combatividad": "Media - Alta",
         "dieta": "Piscívoro bentónico",
         "profundidad_recomendada_m": "10–60"
       },
       "arreglo": {
-        "nombre": "Spinnig con dos anzuelos",
+        "nombre": "Spinning con dos anzuelos",
         "descripción": "",
         "imagen": "./Fotos/Arreglos/lenguado.webp",
         "carga_de_reel": "0.40 - 0.50 mm",
@@ -615,7 +615,7 @@
         "cantidad_anzuelos": "2",
         "anzuelo": "Pata Larga N.º 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": " 80 - 100 cm"
         },
@@ -639,14 +639,14 @@
       "carnadas": [
         "Camarón",
         "Mejillón",
-        "Pequeños Molúscos",
+        "Pequeños Moluscos",
         "Anchoita"
       ],
       "temporada": "Junio - Octubre",
       "interes_gastronomico": "Alto",
       "talla_promedio_cm": "30",
       "talla_maxima_cm": "45",
-      "descripcion": "Pargo blanco, especie capturada en la costa uruguaya y reportada en estadísticas pesqueras nacionales. :contentReference[oaicite:1]{index=1}",
+      "descripcion": "Pargo blanco, especie capturada en la costa uruguaya y reportada en estadísticas pesqueras nacionales.",
       "caracteristicas": {
         "combatividad": "Media",
         "dieta": "Carnívoro bentónico",
@@ -662,7 +662,7 @@
         "cantidad_anzuelos": "1 o 2",
         "anzuelo": "N.º 1/0 a 3/0",
         "brazolada": {
-          "linga_acero": "True",
+          "linga_acero": true,
           "diametro": "0.50 - 0.60 mm",
           "largo": "30 - 50 cm"
         },
@@ -693,7 +693,7 @@
       "interes_gastronomico": "Alto",
       "talla_promedio_cm": "35",
       "talla_maxima_cm": "90",
-      "descripcion": "Pargo rosado o pagro, conocido popularmente en Uruguay también como besugo. Especie activa, voraz y cazadora. Suele encontrarse en el litral atlántico de Maldonado y Rocha generalmente alejdos de la costa. ",
+      "descripcion": "Pargo rosado o pagro, conocido popularmente en Uruguay también como besugo. Especie activa, voraz y cazadora. Suele encontrarse en el litoral atlántico de Maldonado y Rocha generalmente alejados de la costa. ",
       "caracteristicas": {
         "combatividad": "Alta",
         "dieta": "Carnívoro Depredador",
@@ -709,7 +709,7 @@
         "cantidad_anzuelos": "2",
         "anzuelo": "2/0 a 4/0",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 - 0.60 mm",
           "largo": "60 - 80 cm"
         },
@@ -734,7 +734,7 @@
         "Peces medianos",
         "Caballa",
         "Lisa",
-        "Peerrey",
+        "Pejerrey",
         "Calamar"
       ],
       "temporada": "Septiembre - Abril",
@@ -757,7 +757,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 8/0 a 9/0",
         "brazolada": {
-          "linga_acero": "True",
+          "linga_acero": true,
           "diametro": "0.45 mm",
           "largo": "40 - 60 cm"
         },
@@ -788,7 +788,7 @@
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "80",
       "talla_maxima_cm": "120",
-      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local.",
       "caracteristicas": {
         "combatividad": "Alta",
         "dieta": "Carnívoro bentónico",
@@ -804,12 +804,12 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "3/0 a 5/0",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 - 0.80 mm",
           "largo": "50 - 80 cm"
         },
         "plomada": {
-          "tipo": "Cono, Píramide o Destrabe",
+          "tipo": "Cono, Pirámide o Destrabe",
           "peso": "100 - 150 g"
         }
       },
@@ -850,7 +850,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "2/0 a 4/0",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "50 - 80 cm"
         },
@@ -896,7 +896,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "2/0 a 4/0",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "50 - 80 cm"
         },
@@ -908,7 +908,7 @@
       "notas_adicionales": ""
     },
     {
-      "id": "Pez Guitarra",
+      "id": "pez_guitarra",
       "nombre_comun": "Pez Guitarra",
       "nombre_cientifico": "Pseudobatos horkelii",
       "familia": "Rhinobatidae",
@@ -925,36 +925,16 @@
       "temporada": "Verano",
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "55",
-      "talla_maxima_cm": "?",
+      "talla_maxima_cm": "130",
       "descripcion": "El pez guitarra es una raya con aspecto de tiburón que habita las aguas costeras de Uruguay y se encuentra en peligro crítico de extinción. Tiene el cuerpo plano como una raya, pero la cabeza y la cola de un tiburón.",
       "caracteristicas": {
         "combatividad": "Alta",
         "dieta": "Carnívoro",
         "profundidad_recomendada_m": "?"
-      },
-      "arreglo": {
-        "nombre": "A Fondo",
-        "descripción": "",
-        "imagen": "./Fotos/Arreglos/guitarra.webp",
-        "carga_de_reel": "0,30  - 0.40 mm",
-        "chicote": "0.50 - 0.60 mm",
-        "linea_madre": "0.60 mm",
-        "cantidad_anzuelos": "1",
-        "anzuelo": "N.º 2 a 4",
-        "brazolada": {
-          "linga_acero": "True",
-          "diametro": "0.60 mm",
-          "largo": "50 - 80 cm"
-        },
-        "plomada": {
-          "tipo": "Acorde a la corriente",
-          "peso": "100 - 150 g"
-        }
-      },
-      "notas_adicionales": "NO PESCAR"
+      }
     },
     {
-      "id": "Congrio",
+      "id": "congrio",
       "nombre_comun": "Congrio",
       "nombre_cientifico": "Conger orbignyanus",
       "familia": "Congridae",
@@ -972,7 +952,7 @@
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "60",
       "talla_maxima_cm": "110",
-      "descripcion": "Congrio argentino/ojo de serpiente, especie de congrio encontrada en aguas uruguayas en pesca recreativa y artesanal. :contentReference[oaicite:5]{index=5}",
+      "descripcion": "Congrio argentino/ojo de serpiente, especie de congrio encontrada en aguas uruguayas en pesca recreativa y artesanal.",
       "caracteristicas": {
         "combatividad": "Baja",
         "dieta": "Carnívoro",
@@ -988,7 +968,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "N.º 2 a 4",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.60 mm",
           "largo": "50 - 80 cm"
         },
@@ -1000,7 +980,7 @@
       "notas_adicionales": ""
     },
     {
-      "id": "Pez Rubio",
+      "id": "pez_rubio",
       "nombre_comun": "Rubio",
       "nombre_cientifico": "Prionotus punctatus",
       "familia": "Triglidae",
@@ -1018,7 +998,7 @@
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "40",
-      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local. :contentReference[oaicite:4]{index=4}",
+      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local.",
       "caracteristicas": {
         "combatividad": "Baja",
         "dieta": "Carnívoro",
@@ -1034,7 +1014,7 @@
         "cantidad_anzuelos": "1",
         "anzuelo": "1/0 a 2/0",
         "brazolada": {
-          "linga_acero": "False",
+          "linga_acero": false,
           "diametro": "0.50 mm",
           "largo": "30 - 50 cm"
         },
