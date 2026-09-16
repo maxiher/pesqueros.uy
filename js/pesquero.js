@@ -89,7 +89,7 @@ function renderPesquero(pesquero) {
     <h2>Especies frecuentes</h2>
 
     <p class="aclaracion-especies">
-        Las estrellas indican la frecuencia habitual de captura.
+        Las estrellas indican la frecuencia habitual de captura en temporada.
     </p>
 
     <div class="lista-especies">
