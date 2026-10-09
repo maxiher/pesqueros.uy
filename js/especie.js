@@ -78,59 +78,44 @@ fetch("./data/especies.json")
 
 //Renderizado de Arreglo Recomendado
 
+
 function renderArreglo(arreglo) {
   const section = document.getElementById("arreglo-section");
   const container = document.getElementById("arreglo-container");
 
   if (!arreglo) {
+    section.hidden = true;
     return;
   }
 
-
   section.hidden = false;
 
+  const datos = [
+    ["Línea madre", arreglo.linea_madre],
+    ["Chicote", arreglo.chicote],
+    ["Anzuelo", arreglo.anzuelo],
+    ["Brazolada", `${arreglo.brazolada?.diametro ?? "-"} · ${arreglo.brazolada?.largo ?? "-"}`],
+    ["Plomada", `${arreglo.plomada?.tipo ?? "-"} · ${arreglo.plomada?.peso ?? "-"}`]
+  ];
+
   container.innerHTML = `
-    <div class="row align-items-center g-4">
-      
-      <div class="col-md-6">
+    <div class="arreglo-contenido">
+      <div class="arreglo-datos">
+        ${datos.map(([titulo, valor]) => `
+          <div class="arreglo-dato">
+            <strong>${titulo}</strong>
+            <span>${valor ?? "-"}</span>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="arreglo-imagen">
         <img
           src="${arreglo.imagen}"
-          alt="Arreglo recomendado para la pesca"
-          class="img-fluid rounded"
+          alt="Esquema del arreglo recomendado"
+          loading="lazy"
         >
       </div>
-
-      <div class="col-md-6">
-        <ul class="list-group list-group-flush">
-          
-          <li class="list-group-item">
-            <strong>Línea madre:</strong>
-            ${arreglo.linea_madre}
-          </li>
-
-          <li class="list-group-item">
-            <strong>Chicote:</strong>
-            ${arreglo.chicote}
-          </li>
-
-          <li class="list-group-item">
-            <strong>Anzuelo:</strong>
-            ${arreglo.anzuelo}
-          </li>
-
-          <li class="list-group-item">
-            <strong>Brazolada:</strong>
-            ${arreglo.brazolada.diametro} · ${arreglo.brazolada.largo}
-          </li>
-
-          <li class="list-group-item">
-            <strong>Plomada:</strong>
-            ${arreglo.plomada.tipo} · ${arreglo.plomada.peso}
-          </li>
-
-        </ul>
-      </div>
-
     </div>
   `;
 }
