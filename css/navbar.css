@@ -1,3 +1,7 @@
+html {
+    scrollbar-gutter: stable;
+}
+
 /* --- Reset y Variables básicas --- */
 :root {
     --color-primary: #0a3d62;
@@ -7,10 +11,22 @@
     --bg-white: #ffffff;
 }
 
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    padding: 0;
+}
+
 #navbar-container {
-    margin: 0 3px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    ;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .main-header {
