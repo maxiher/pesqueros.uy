@@ -239,6 +239,54 @@ renderWeather();
 
 
 
+// Efecto de desplazamiento del Hero
+
+const hero = document.querySelector(".hero");
+const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+);
+
+if (hero && !reduceMotion.matches) {
+    let ticking = false;
+
+    function updateHeroScroll() {
+        const rect = hero.getBoundingClientRect();
+
+        const progress = Math.min(
+            1,
+            Math.max(0, -rect.top / rect.height)
+        );
+
+        hero.style.setProperty(
+            "--hero-video-y",
+            `${progress * 25}px`
+        );
+
+        hero.style.setProperty(
+            "--hero-text-opacity",
+            1 - progress
+        );
+
+        hero.style.setProperty(
+            "--hero-text-y",
+            `${progress * 25}px`
+        );
+
+        ticking = false;
+    }
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            requestAnimationFrame(updateHeroScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    updateHeroScroll();
+}
+
+
+
 
 // DEPARTAMENTOS
 
