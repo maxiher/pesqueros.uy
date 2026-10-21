@@ -512,7 +512,7 @@
         "descripcion": "Frente a El Aguila, un emblematico monumento ubicado en el balneario Villa Argentina, se suelen dar muy buenas pescas ya que cuenta con algunas zonas mas profundas que las playas aledañas. ",
         "ambiente": "Playa",
         "agua": "salada",
-        "acceso": "Medio",
+        "acceso": "Fácil",
         "profundidad": 2,
         "enganche": 1,
         "mejorViento": "S",
@@ -521,8 +521,9 @@
         "imagenes": [
             "Fotos/pesqueros/MansaDeAtlantida.webp",
             "Fotos/pesqueros/MansaDeAtlantida2.webp",
-            "Fotos/pesqueros/MansaDeAtlantida4.webp",
-            "Fotos/pesqueros/MansaDeAtlantida5.webp"
+            "Fotos/pesqueros/MansaAtlantida4.webp",
+            "Fotos/pesqueros/MansaAtlantida5.webp",
+            "Fotos/pesqueros/MansaAtlantida3.webp"
         ],
         "especies": [
             {
@@ -570,7 +571,7 @@
         "portada": "Fotos/pesqueros/PiedraLisa.webp",
         "imagenes": [
             "Fotos/pesqueros/PiedraLisa.webp",
-            "Fotos/pesqueros/piedralisa2",
+            "Fotos/pesqueros/piedralisa2.webp",
             "Fotos/pesqueros/BajadaDelCholo1.webp",
             "Fotos/pesqueros/BajadaDelCholo2.webp",
             "Fotos/pesqueros/BajadaDelCholo3.webp",
@@ -579,7 +580,7 @@
             "Fotos/pesqueros/IslaAtlantida2.webp",
             "Fotos/pesqueros/IslaAtlantida3.webp",
             "Fotos/pesqueros/EspañolaAtlantida.webp",
-            "Fotos/pesqueros/MuellePuedraLisa.webp"
+            "Fotos/pesqueros/MuellePiedraLisa.webp"
 
         ],
         "especies": [
@@ -762,9 +763,10 @@
         "enganche": 3,
         "mejorViento": "SE",
         "nivel": 3,
-        "portada": "Fotos/pesqueros/CostaAzul.webp",
+        "portada": "Fotos/pesqueros/CostaAzul2.webp",
         "imagenes": [
-            "Fotos/pesqueros/CostaAzul2"
+            "Fotos/pesqueros/CostaAzul.webp",
+            "Fotos/pesqueros/CostaAzul2.webp"
         ],
         "especies": [
             {
@@ -829,7 +831,7 @@
             "Fotos/pesqueros/SantaLuciaDelEste3.webp",
             "Fotos/pesqueros/Araminda.webp",
             "Fotos/pesqueros/araminda3.webp",
-            "Fotos/pesqueros/araminda5"
+            "Fotos/pesqueros/araminda5.webp"
         ],
         "especies": [
             {
@@ -981,7 +983,8 @@
         "nivel": 3,
         "portada": "Fotos/pesqueros/balnearioSolis.webp",
         "imagenes": [
-            "Fotos/pesqueros/BalnearioSolis2.webp"
+            "Fotos/pesqueros/BalnearioSolis2.webp",
+            "Fotos/pesqueros/balnearioSolis.webp"
         ],
         "especies": [
             {
@@ -1045,13 +1048,14 @@
         "enganche": 4,
         "mejorViento": "SE",
         "nivel": 4,
-        "portada": "Fotos/pesqueros/bellaVistaPortada.webp",
+        "portada": "Fotos/pesqueros/bellaVista2.webp",
         "imagenes": [
-            "Fotos/pesqueros/Bella Vista.webp",
+            "Fotos/pesqueros/BellaVista5.webp",
             "Fotos/pesqueros/BellaVista.webp",
             "Fotos/pesqueros/BellaVista2.webp",
             "Fotos/pesqueros/BellaVista3.webp",
-            "Fotos/pesqueros/BellaVista4.webp"
+            "Fotos/pesqueros/BellaVista4.webp",
+            "Fotos/pesqueros/BellaVistaPortada.webp"
         ],
         "especies": [
             {
@@ -1101,7 +1105,7 @@
         "portada": "Fotos/pesqueros/playaVerde.webp",
         "imagenes": [
             "Fotos/pesqueros/playaVerde1.webp",
-            "Fotos/pesqueros/playaVerde2.webp",
+            "Fotos/pesqueros/playaVerde.webp",
             "Fotos/pesqueros/playaVerde3.webp",
             "Fotos/pesqueros/playaVerde4.webp"
         ],
@@ -1196,10 +1200,24 @@
                 "nivel": 2
             }
         ],
-        "ubicaciones": {
+        "ubicaciones": [
+            {
+            "nombre": "Puerto de Piriápolis",
             "lat": -34.874314,
             "lng": -55.282634
+        },
+        {
+            "nombre": "Vertigo",
+            "lat": -34.854290,
+            "lng": -55.302372
+        },
+        {
+            "nombre": "Playa Mansa",
+            "lat": -34.858482,
+            "lng": -55.288125
         }
+
+    ]
     },
     {
         "nombre": "Punta Colorada",
@@ -1218,7 +1236,6 @@
         "portada": "Fotos/pesqueros/PuntaColorada.webp",
         "imagenes": [
             "Fotos/pesqueros/PuntaColorada.webp",
-            "Fotos/pesqueros/PuntaColorada1.webp",
             "Fotos/pesqueros/PuntaColorada2.webp",
             "Fotos/pesqueros/PuntaColorada3.webp",
             "Fotos/pesqueros/PuntaColorada4.webp",
@@ -1349,10 +1366,10 @@
         "descripcion": "Lugar muy concurrido, ideal para pesca costera.",
         "ambiente": "Playa",
         "agua": "salada",
-        "acceso": 3,
-        "profundidad": 2,
+        "acceso": 2,
+        "profundidad": 3,
         "enganche": 1,
-        "mejorViento": "E",
+        "mejorViento": "E / SE",
         "nivel": 3,
         "portada":"Fotos/pesqueros/OceanPark.webp",
         "imagenes": [
@@ -1411,14 +1428,14 @@
         "ambiente": "Piedra",
         "agua": "salada",
         "acceso": 3,
-        "profundidad": 3,
+        "profundidad": 4,
         "enganche": 4,
         "mejorViento": "SE",
         "nivel": 5,
         "portada": "Fotos/pesqueros/PuntaBallena.webp",
         "imagenes": [
-            "Fotos/pesqueros/PuntaBallena2.webp",
             "Fotos/pesqueros/PuntaBallena3.webp",
+            "Fotos/pesqueros/PuntaBallena2.webp",
             "Fotos/pesqueros/PuntaBallena4.webp"
         ],
         "especies": [
@@ -1516,7 +1533,7 @@
         "ambiente": "Playa",
         "agua": "salada",
         "acceso": "Facil",
-        "profundidad": 2,
+        "profundidad": 3,
         "enganche": 1,
         "mejorViento": "E",
         "nivel": 5,
@@ -1575,7 +1592,12 @@
                 "nombre": "La Barra",
                 "lat": -34.917441,
                 "lng": -54.865739
-            }
+            },
+            {
+            "nombre": "Isla Gorriti",
+            "lat": -34.948256,
+            "lng": -54.977072
+        }
         ]
     },
     {
@@ -1692,8 +1714,18 @@
         "ubicaciones": [
             {
                 "nombre": "Los Palitos",
-                "lat": -34.846220,
-                "lng": -54.630949
+                "lat": -34.844485,
+                "lng": -54.678661
+            },
+            {
+                "nombre": "Mansa de José Ignacio",
+                "lat": -34.839773,
+                "lng": -54.646351
+            },
+            {
+                "nombre": "Desmbocadura Laguna José Ignacio",
+                "lat": -34.843140,
+                "lng": -54.672824
             }
         ]
     },
@@ -1801,6 +1833,16 @@
             "nombre": "Escollera de La Paloma",    
             "lat": -34.651348,
             "lng": -54.141587
+        },
+        {
+            "nombre": "PLaya Los Botes",
+            "lat": -34.663740,
+            "lng": -54.173662
+        },
+        {
+            "nombre": "La Balconada",
+            "lat": -34.665150,
+            "lng": -54.162817
         }
     ]
     },
@@ -1853,9 +1895,24 @@
         ],
         "ubicaciones": [
             {
-            "nombre": "Playa La Pedre",
+            "nombre": "Playa La Pedrera",
                 "lat": -34.593673,
             "lng": -54.121311
+        },
+        {
+            "nombre": "Playa del Barco",
+            "lat": -34.595438,
+            "lng": -54.123842
+        },
+        {
+            "nombre": "Punta Rubia",
+            "lat": -34.579358,
+            "lng": -54.114226
+        },
+        {
+            "nombre": "Santa Isabel",
+            "lat": -34.569261,
+            "lng": -54.102462
         }
     ]
     },
@@ -1873,9 +1930,13 @@
         "enganche": 1,
         "mejorViento": "N",
         "nivel": 2,
-        "portada": "Fotos/pesqueros/Rocha/laesmeralda.webp",
+        "portada": "Fotos/pesqueros/Rocha/LaEsmeralda.webp",
         "imagenes": [
-            "Fotos/rocha/laesmeralda.webp"
+            "Fotos/pesqueros/Rocha/LaEsmeralda.webp",
+            "Fotos/pesqueros/Rocha/LaEsmeralda2.webp",
+            "Fotos/pesqueros/Rocha/LaEsmeralda3.webp",
+            "Fotos/pesqueros/Rocha/LaEsmeralda4.webp",
+            "Fotos/pesqueros/Rocha/LaEsmeralda5.webp"
         ],
         "especies": [
             {
