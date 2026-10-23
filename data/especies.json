@@ -81,7 +81,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -182,7 +182,7 @@
       "arreglo": {
         "nombre": "A Fondo Con Boya Elevadora",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/boya_elevadora.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -231,7 +231,7 @@
       "arreglo": {
         "nombre": "A Fondo Con Boya Elevadora",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/boya_elevadora.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -278,7 +278,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -419,7 +419,7 @@
       "arreglo": {
         "nombre": "A Fondo Con Boya Elevadora",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/doble_anzuelo_chico.webp",
         "carga_de_reel": "0,25  - 0.35 mm",
         "chicote": "0.50 mm",
         "linea_madre": "0.50 - 0.60 mm",
