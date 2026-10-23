@@ -23,27 +23,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -96,16 +96,15 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
                 "id": "corvina_blanca",
-                "nombre": "Corvina Blanca",
                 "nivel": 2
             }
         ],
@@ -143,19 +142,19 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             }
         ],
@@ -203,23 +202,23 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -261,19 +260,19 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             }
         ],
@@ -328,19 +327,19 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             }
         ],
@@ -398,23 +397,23 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 2
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             }
         ],
@@ -461,27 +460,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 1
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 1
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 1
             }
         ],
@@ -527,19 +526,19 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 1
             }
         ],
@@ -585,23 +584,23 @@
         ],
         "especies": [
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 4
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Negra",
+                "id": "corvina_negra",
                 "nivel": 2
             }
         ],
@@ -646,23 +645,23 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina",
+                "id": "corvina_blanca",
                 "nivel": 5
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 4
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 3
             }
         ],
@@ -715,19 +714,19 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             }
         ],
@@ -770,27 +769,27 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Pescadilla",
+                "id": "pescadilla",
                 "nivel": 2
             },
             {
-                "nombre": "Sargo",
+                "id": "sargo",
                 "nivel": 2
             }
         ],
@@ -835,27 +834,27 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Pescadilla",
+                "id": "pescadilla",
                 "nivel": 2
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             }
         ],
@@ -906,31 +905,31 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Lenguado",
+                "id": "lenguado",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Negra",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Pescadilla",
+                "id": "pescadilla",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 4
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 1
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             }
         ],
@@ -988,31 +987,31 @@
         ],
         "especies": [
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Negra",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Pescadilla",
+                "id": "pescadilla",
                 "nivel": 3
             },
             {
-                "nombre": "Lenguado",
+                "id": "lenguado",
                 "nivel": "3"
             }
         ],
@@ -1059,27 +1058,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1111,27 +1110,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1176,27 +1175,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1247,27 +1246,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             },
             {
-                "nombre": "Pescadilla",
+                "id": "pescadilla",
                 "nivel": 2
             },
             {
-                "nombre": "Sargo",
+                "id": "sargo",
                 "nivel": 3
             }
         ],
@@ -1311,31 +1310,31 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 2
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Sargo",
+                "id": "sargo",
                 "nivel": 4
             },
             {
-                "nombre": "Lenguado",
+                "id": "lenguado",
                 "nivel": 3
             }
         ],
@@ -1380,23 +1379,23 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             }
         ],
@@ -1440,23 +1439,23 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 5
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 5
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 3
             }
         ],
@@ -1548,27 +1547,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1622,27 +1621,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 2
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 4
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1687,27 +1686,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1749,27 +1748,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 3
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 3
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1804,27 +1803,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1869,27 +1868,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1940,27 +1939,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 4
             },
             {
-                "nombre": "Brótola",
+                "id": "brotola",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 3
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -1998,27 +1997,27 @@
         ],
         "especies": [
             {
-                "nombre": "Burriqueta",
+                "id": "burriqueta",
                 "nivel": 2
             },
             {
-                "nombre": "Mochuelo",
+                "id": "mochuelo",
                 "nivel": 3
             },
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 2
             },
             {
-                "nombre": "Chucho",
+                "id": "chucho_ray",
                 "nivel": 2
             },
             {
-                "nombre": "Anchoa",
+                "id": "anchoa",
                 "nivel": 2
             }
         ],
@@ -2050,20 +2049,20 @@
         ],
         "especies": [
             {
-                "nombre": "Chucho",
+                "id": "chucho_ray",
                 "nivel": 4
             },
             
             {
-                "nombre": "Pejerrey",
+                "id": "pejerrey",
                 "nivel": 4
             },
             {
-                "nombre": "Tambera",
+                "id": "corvina_negra",
                 "nivel": 2
             },
             {
-                "nombre": "Corvina Blanca",
+                "id": "corvina_blanca",
                 "nivel": 2
             }
            

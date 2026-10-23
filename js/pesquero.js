@@ -1,9 +1,18 @@
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("id");
 
-fetch("./data/pesqueros.json")
-    .then(response => response.json())
-    .then(pesqueros => {
+Promise.all([
+    fetch("./data/pesqueros.json").then(response => {
+        if (!response.ok) throw new Error("Error al cargar pesqueros.json");
+        return response.json();
+    }),
+    fetch("./data/especies.json").then(response => {
+        if (!response.ok) throw new Error("Error al cargar especies.json");
+        return response.json();
+    })
+])
+    .then(([pesqueros, datosEspecies]) => {
+
         const pesquero = pesqueros.find(p => p.slug === slug);
 
         if (!pesquero) {
@@ -12,21 +21,43 @@ fetch("./data/pesqueros.json")
             return;
         }
 
-        renderPesquero(pesquero);
+        const especiesPorId = new Map(
+            datosEspecies.especies.map(especie => [especie.id, especie])
+        );
+
+        renderPesquero(pesquero, especiesPorId);
+
     })
     .catch(error => {
-        console.error("Error al cargar el pesquero:", error);
+        console.error("Error al cargar los datos:", error);
+        document.getElementById("pesquero-contenido").innerHTML =
+            "<p>No se pudieron cargar los datos del pesquero.</p>";
     });
 
 
 
-function renderPesquero(pesquero) {
+function renderPesquero(pesquero, especiesPorId) {
     document.title = `${pesquero.nombre} | PesquerosUY`;
 
     const contenedor = document.getElementById("pesquero-contenido");
 
     const especiesOrdenadas = [...pesquero.especies]
-    .sort((a, b) => b.nivel - a.nivel);
+        .sort((a, b) => b.nivel - a.nivel)
+        .map(especie => {
+
+            const datosEspecie = especiesPorId.get(especie.id);
+
+            if (!datosEspecie) {
+                console.warn(`Especie no encontrada: ${especie.id}`);
+            }
+
+            return {
+                ...especie,
+                nombre: datosEspecie?.nombre_comun ?? especie.id,
+                tieneFicha: Boolean(datosEspecie)
+            };
+
+        });
 
     contenedor.innerHTML = `
     <a href="pesqueros.html" class="volver-lista">
@@ -96,10 +127,16 @@ function renderPesquero(pesquero) {
         ${especiesOrdenadas.map(especie => `
             <div class="especie-frecuente">
 
-                <a
-            href="especie.html?id=${especie.id}"
-            class="link-especie"
-        >
+                ${especie.tieneFicha ? `
+  <a
+    href="especie.html?id=${especie.id}"
+    class="link-especie"
+  >
+    ${especie.nombre}
+  </a>
+` : `
+  <span class="link-especie">${especie.nombre}</span>
+`} 
             ${especie.nombre}
         </a>
 
@@ -156,10 +193,10 @@ function iniciarCarrusel() {
 
     function mostrarImagen(indice) {
         imagenes.forEach(img => img.classList.remove("activa"));
-    indicadores.forEach(indicador => indicador.classList.remove("activo"));
+        indicadores.forEach(indicador => indicador.classList.remove("activo"));
 
-    imagenes[indice].classList.add("activa");
-    indicadores[indice].classList.add("activo");
+        imagenes[indice].classList.add("activa");
+        indicadores[indice].classList.add("activo");
     }
 
     btnSiguiente.addEventListener("click", () => {
@@ -183,16 +220,16 @@ function iniciarCarrusel() {
     });
 
     indicadores.forEach((indicador, index) => {
-    indicador.addEventListener("click", () => {
-        indiceActual = index;
-        mostrarImagen(indiceActual);
+        indicador.addEventListener("click", () => {
+            indiceActual = index;
+            mostrarImagen(indiceActual);
+        });
     });
-});
 }
 
 function iniciarMapa(pesquero) {
     const ubicaciones = pesquero.ubicaciones;
-    
+
 
     if (!ubicaciones || ubicaciones.length === 0) {
         return;
@@ -214,21 +251,21 @@ function iniciarMapa(pesquero) {
 
         const contenidoPopup = crearPopupUbicacion(ubicacion);
 
-const marcador = L.marker(coordenada)
-    .addTo(mapa)
-    .bindPopup(contenidoPopup);
-    marcadores.push(marcador);
-});
+        const marcador = L.marker(coordenada)
+            .addTo(mapa)
+            .bindPopup(contenidoPopup);
+        marcadores.push(marcador);
+    });
 
     mapa.fitBounds(coordenadas, {
         padding: [30, 30]
     });
 
-    
+
 
     const listaUbicaciones = document.getElementById("lista-ubicaciones");
 
-listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => `
+    listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => `
     <div class="ubicacion-item">
         <div>
             <strong>📍 ${ubicacion.nombre}</strong>
@@ -240,7 +277,7 @@ listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => `
     </div>
 `).join("");
 
-document.querySelectorAll(".ver-en-mapa").forEach(boton => {
+    document.querySelectorAll(".ver-en-mapa").forEach(boton => {
         boton.addEventListener("click", () => {
             const index = Number(boton.dataset.index);
             const ubicacion = ubicaciones[index];
