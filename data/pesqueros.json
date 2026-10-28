@@ -52,29 +52,28 @@
       "nombre": "La Farola",
       "lat": -34.906,
       "lng": -56.215,
-      "profundidad": 5
+      "restriccion": 1
     },
     {
       "nombre": "El Caballete",
       "lat": -34.9056,
-      "lng": -56.2148
+      "lng": -56.2148,
+      "restriccion": 1
     },
     {
       "nombre": "Las Tres Piedras",
       "lat": -34.904,
       "lng": -56.213,
-      "enganche": 1
+      "restriccion": 1
     },
     {
       "nombre": "La Redonda",
       "lat": -34.903,
       "lng": -56.212,
-      "profundidad": 5
+      "restriccion": 1
     }
-],
-            
-    "normativa": "libre"
-    },
+]
+},
     {
         "nombre": "Parque Rodó",
         "id": 2,
@@ -110,15 +109,18 @@
         ],
         "ubicaciones": [
             {
+                "nombre": "?",
                 "lat": -34.91,
-                "lng": -56.16
+                "lng": -56.16,
+                "restriccion": 1
             },
             {
+                "nombre": "?",
                 "lat": -34.915084,
-                "lng": -56.178712
+                "lng": -56.178712,
+                "restriccion": 1
             }
-        ],
-        "normativa": "libre"
+        ]
     },
     {
         "nombre": "Punta Carretas",
@@ -161,22 +163,25 @@
         "ubicaciones": [
             {
                 "lat": -34.921344,
-                "lng": -56.172319
+                "lng": -56.172319,
+                "restriccion": 1
             },
             {
                 "lat": -34.925191,
-                "lng": -56.172694
+                "lng": -56.172694,
+                "restriccion": 1
             },
             {
                 "lat": -34.937665,
-                "lng": -56.160160
+                "lng": -56.160160,
+                "restriccion": 1
             },
             {
                 "lat": -34.928395,
-                "lng": -56.156382
+                "lng": -56.156382,
+                "restriccion": 1
             }
-        ],
-        "normativa": "libre"
+        ]
     },
     {
         "nombre": "Puerto del Buceo",
@@ -225,15 +230,18 @@
         "ubicaciones": [
             {
                 "lat": -34.911326,
-                "lng": -56.129881
+                "lng": -56.129881,
+                "restriccion": 1
             },
             {
                 "lat": -34.909208,
-                "lng": -56.127990
+                "lng": -56.127990,
+                "restriccion": 1
             },
             {
                 "lat": -34909235,
-                "lng": -56.126335
+                "lng": -56.126335,
+                "restriccion": 1
             }
         ]
     },
@@ -280,30 +288,34 @@
             {
                 "nombre": "Playa Malvin",
                 "lat": -34.897204,
-                "lng": -56.110191
+                "lng": -56.110191,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa Malvin",
                 "lat": -34.899498,
-                "lng": -56.100756
+                "lng": -56.100756,
+                "restriccion": 1
             },
             {
                 "nombre": "Muelle Playa Honda",
                 "lat": -34.896395,
-                "lng": -56.088825
+                "lng": -56.088825,
+                "restriccion": 1
             },
             {
                 "nombre": "Virgilio",
                 "lat": -34.900400,
-                "lng": -56.082185
+                "lng": -56.082185,
+                "restriccion": 1
             },
             {
                 "nombre": "Náutico",
                 "lat": -34.899567,
-                "lng": -56.072796
+                "lng": -56.072796,
+                "restriccion": 1
             }
-        ],
-        "normativa": "????????"
+        ]
     },
     {
         "nombre": "Carrasco",
@@ -347,34 +359,28 @@
             {
                 "nombre": "Club Naútico",
                 "lat": -34.899603,
-                "lng": -56.072818
+                "lng": -56.072818,
+                "restriccion": 1
             },
             {
                 "nombre": "La Mulata",
                 "lat": -34.900070,
-                "lng": -56.067217
+                "lng": -56.067217,
+                "restriccion": 1
             },
             {
                 "nombre": "La Restinga",
                 "lat": -34.898802,
-                "lng": -56.063308
+                "lng": -56.063308,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa Carrasco",
                 "lat": -34.888195,
-                "lng": -56.046628
+                "lng": -56.046628,
+                "restriccion": 1
             }
-        ],
-
-    "normativa": {
-            "temporadaBañistas": {
-                "pescaPermitida": "todo el dia",
-                "desde": "19:00",
-                "hasta": "08:00",
-                "lat": -34.92,
-                "lng": -56.15
-            }
-        }
+        ]
     },
     {
         "nombre": "Ciudad de la Costa",
@@ -421,17 +427,20 @@
             {
                 "nombre": "Bajada 24",
                 "lat": -34.832814,
-                "lng": -55.944938
+                "lng": -55.944938,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa Solymar",
                 "lat": -34.843448,
-                "lng": -55.965406
+                "lng": -55.965406,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa El Pinar",
                 "lat": -34.802992,
-                "lng": -55.888346
+                "lng": -55.888346,
+                "restriccion": 1
             }
         ]
     },
@@ -488,17 +497,20 @@
             {
                 "nombre": "Desembocadura Arroyo Pando",
                 "lat": -34.780292,
-                "lng": -55.826212
+                "lng": -55.826212,
+                "restriccion": 1
             },
         {
             "nombre": "Playa Marindia",
             "lat": -34.779703,
-            "lng": -55.818539
+            "lng": -55.818539,
+            "restriccion": 1
         },
         {
             "nombre": "El Fortín",
             "lat": -34.774720,
-            "lng": -55.803013
+            "lng": -55.803013,
+            "restriccion": 1
         }
         ]
     },
@@ -546,12 +558,14 @@
             {
                 "nombre": "El Águila",
                 "lat": -34.771324,
-                "lng": -55.780153
+                "lng": -55.780153,
+                "restriccion": 1
             },
             {
                 "nombre": "Mansa de Altántida",
                 "lat": -34.771808,
-                "lng": -55.775277
+                "lng": -55.775277,
+                "restriccion": 1
             }
         ]
     },
@@ -608,17 +622,20 @@
             {
                 "nombre": "El Cholo",
                 "lat": -34.780006,
-                "lng": -56.2148
+                "lng": -56.2148,
+                "restriccion": 1
             },
             {
                 "nombre": "La Isla",
                 "lat": -34.781835,
-                "lng": -55.760512
+                "lng": -55.760512,
+                "restriccion": 1
             },
             {
                 "nombre": "Muelle Piedra Lisa",
                 "lat": -34.781804,
-                "lng": -55.751973
+                "lng": -55.751973,
+                "restriccion": 1
             }
         ]
     },
@@ -669,22 +686,26 @@
             {
                 "nombre": "La Casa Hundida",
                 "lat": -34.777195,
-                "lng": -55.742160
+                "lng": -55.742160,
+                "restriccion": 2
             },
             {
                 "nombre": "Bajada F",
                 "lat": -34.771783,
-                "lng": -55.728454
+                "lng": -55.728454,
+                "restriccion": 2
             },
             {
                 "nombre": "Central",
                 "lat": -34.775226,
-                "lng": -55.737561
+                "lng": -55.737561,
+                "restriccion": 1
             },
             {
                 "nombre": "La Guitarrita",
                 "lat": -34.773540,
-                "lng": -55.733076
+                "lng": -55.733076,
+                "restriccion": 2
             }
         ]
     },
@@ -734,17 +755,20 @@
             {
                 "nombre": "Playa Las Vegas",
                 "lat": -34.762824,
-                "lng": -55.695646
+                "lng": -55.695646,
+                "restriccion": 1
             },
             {
                 "nombre": "Los Chuchos",
                 "lat": -34.761983,
-                "lng": -55.686917
+                "lng": -55.686917,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa La Floresta",
                 "lat": -34.762369,
-                "lng": -55.678687
+                "lng": -55.678687,
+                "restriccion": 1
             }
         ]
     },
@@ -797,12 +821,14 @@
             {
                 "nombre": "Pesquero Costa Azul",
                 "lat": -34.773983,
-                "lng": -55.658255
+                "lng": -55.658255,
+                "restriccion": 2
             },
             {
                 "nombre": "Los Cornalitos",
                 "lat": -34.777463,
-                "lng": -55.652280
+                "lng": -55.652280,
+                "restriccion": 1
             }
         ]
     },
@@ -862,22 +888,26 @@
             {
                 "nombre": "Playa San Luis",
                 "lat": -34.773548,
-                "lng": -55.594609
+                "lng": -55.594609,
+                "restriccion": 1
             },
             {
                 "nombre": "Las Terceras",
                 "lat": -34.782738,
-                "lng": -55.577763
+                "lng": -55.577763,
+                "restriccion": 1
             },
             {
                 "nombre": "Araminda",
                 "lat": -34.789728,
-                "lng": -55.554994
+                "lng": -55.554994,
+                "restriccion": 1
             },
             {
                 "nombre": "Los Corralitos",
                 "lat": -34.797708,
-                "lng": -55.533979
+                "lng": -55.533979,
+                "restriccion": 1
             }
         ]
     },
@@ -937,32 +967,38 @@
             {
                 "nombre": "Muelle Club Náutico",
                 "lat": -34.7984800,
-                "lng": -55.497606
+                "lng": -55.497606,
+                "restriccion": 2
             },
             {
                 "nombre": "Playa de los Pescadores",
                 "lat": -34.798425,
-                "lng": -55.495346
+                "lng": -55.495346,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa Sierras del Mar",
                 "lat": -34.798352,
-                "lng": -55.490609
+                "lng": -55.490609,
+                "restriccion": 1
             },
             {
                 "nombre": "Balneario Argentino",
                 "lat": -34.792651,
-                "lng": -55.446402
+                "lng": -55.446402,
+                "restriccion": 1
             },
             {
                 "nombre": "Paraíso Suizo",
                 "lat": -34.791661,
-                "lng": -55.430502
+                "lng": -55.430502,
+                "restriccion": 1
             },
             {
                 "nombre": "Desembocadura Solís Grande",
                 "lat": -34.790665,
-                "lng": -55.399008
+                "lng": -55.399008,
+                "restriccion": 1
             }
         ]
     },
@@ -1019,17 +1055,20 @@
             {
                 "nombre": "Desembocadura Solís Grande",
                 "lat": -34.791356,
-                "lng": -55.394069
+                "lng": -55.394069,
+                "restriccion": 1
             },
             {
                 "nombre": "Los Rieles",
                 "lat": -34.802499,
-                "lng": -55.385343
+                "lng": -55.385343,
+                "restriccion": 2
             },
             {
                 "nombre": "La Colorada",
                 "lat": -34.800684,
-                "lng": -55.386056
+                "lng": -55.386056,
+                "restriccion": 1
             }
         ]
     },
@@ -1138,17 +1177,20 @@
             {
                 "nombre": "Piedra Brava",
                 "lat": -34.830522,
-                "lng": -55.315949
+                "lng": -55.315949,
+                "restriccion": 1
             },
             {
                 "nombre": "Muelle del Pato",
                 "lat": -34.827333,
-                "lng": -55.317507
+                "lng": -55.317507,
+                "restriccion": 1
             },
             {
                 "nombre": "El Espejo",
                 "lat": -34.832768,
-                "lng": -55.313838
+                "lng": -55.313838,
+                "restriccion": 1
             }
         ]
     },
@@ -1203,17 +1245,20 @@
             {
             "nombre": "Puerto de Piriápolis",
             "lat": -34.874314,
-            "lng": -55.282634
+            "lng": -55.282634,
+            "restriccion": 1
         },
         {
             "nombre": "Vertigo",
             "lat": -34.854290,
-            "lng": -55.302372
+            "lng": -55.302372,
+            "restriccion": 1
         },
         {
             "nombre": "Playa Mansa",
             "lat": -34.858482,
-            "lng": -55.288125
+            "lng": -55.288125,
+            "restriccion": 2
         }
 
     ]
@@ -1275,17 +1320,19 @@
                 "nombre": "La Haragana",
                 "lat": -34.898384,
                 "lng": -55.260158,
-                "mejorViento": "E"
+                "restriccion": 1
             },
             {
                 "nombre": "Piedra Alta",
                 "lat": -34.900513,
-                "lng": -55.261496
+                "lng": -55.261496,
+                "restriccion": 1
             },
             {
                 "nombre": "La Batidora",
                 "lat": -34.903229,
-                "lng": -55.257106
+                "lng": -55.257106,
+                "restriccion": 1
             }
         ]
     },
@@ -1342,17 +1389,20 @@
             {
                 "nombre": "Piedra Mora",
                 "lat": -34.904133,
-                "lng": -55.236875
+                "lng": -55.236875,
+                "restriccion": 1
             },
             {
                 "nombre": "las Gemelas",
                 "lat": -34.898920,
-                "lng": -55.230095
+                "lng": -55.230095,
+                "restriccion": 1
             },
             {
                 "nombre": "Moonlight",
                 "lat": -34.888568,
-                "lng": -55.199251
+                "lng": -55.199251,
+                "restriccion": 1
             }
         ]
     },
@@ -1403,17 +1453,20 @@
             {
                 "nombre": "Playa Ocean Park",
                 "lat": -34.879650,
-                "lng": -55.123184
+                "lng": -55.123184,
+                "restriccion": 2
             },
             {
                 "nombre": "Chihuahua",
                 "lat": -34.877608,
-                "lng": -55.094088
+                "lng": -55.094088,
+                "restriccion": 2
             },
             {
                 "nombre": "Tio Tom",
                 "lat": -34.877608,
-                "lng": -55.094088
+                "lng": -55.094088,
+                "restriccion": 2
             }
         ]
     },
@@ -1463,62 +1516,74 @@
             {
                 "nombre": "Islote Las Cañas",
                 "lat": -34.912787,
-                "lng": -55.046479
+                "lng": -55.046479,
+                "restriccion": 1
             },
             {
                 "nombre": "El Morro",
                 "lat": -34.913212,
-                "lng": -55.046479
+                "lng": -55.046479,
+                "restriccion": 1
             },
             {
                 "nombre": "La Losa",
                 "lat": -34.913551,
-                "lng": -55.046806
+                "lng": -55.046806,
+                "restriccion": 1
             },
             {
                 "nombre": "La Islada",
                 "lat": -34.914543,
-                "lng": -55.047497
+                "lng": -55.047497,
+                "restriccion": 1
             },
             {
                 "nombre": "Botiquín",
                 "lat": -34.915683,
-                "lng": -55.047781
+                "lng": -55.047781,
+                "restriccion": 1
             },
             {
                 "nombre": "El Islote",
                 "lat": -34.916862,
-                "lng": -55.047691
+                "lng": -55.047691,
+                "restriccion": 1
             },
             {
                 "nombre": "Islote de las Corvinas",
                 "lat": -34.916641,
-                "lng": -55.046205
+                "lng": -55.046205,
+                "restriccion": 1
             },
             {
                 "nombre": "Boquerón Grande",
                 "lat": -34.915473,
-                "lng": -55.045955
+                "lng": -55.045955,
+                "restriccion": 1
             },
             {
                 "nombre": "Boquerón Chico",
                 "lat": -34.914564,
-                "lng": -55.045314
+                "lng": -55.045314,
+                "restriccion": 1
             },
             {
                 "nombre": "La Partida",
                 "lat": -34.9123331,
-                "lng": -55.043811
+                "lng": -55.043811,
+                "restriccion": 1
             },
             {
                 "nombre": "Las Grutas",
                 "lat": -34.911989,
-                "lng": -55.043626
+                "lng": -55.043626,
+                "restriccion": 1
             },
             {
                 "nombre": "La Colorada",
                 "lat": -34.911569,
-                "lng": -55.043304
+                "lng": -55.043304,
+                "restriccion": 1
             }
         ]
     },
@@ -1580,22 +1645,26 @@
             {
                 "nombre": "Piedra del Chileno",
                 "lat": -34.912278,
-                "lng": -55.014962
+                "lng": -55.014962,
+                "restriccion": 1
             },
             {
                 "nombre": "Playa Mansa",
                 "lat": -34.935959,
-                "lng": -54.953454
+                "lng": -54.953454,
+                "restriccion": 2
             },
             {
                 "nombre": "La Barra",
                 "lat": -34.917441,
-                "lng": -54.865739
+                "lng": -54.865739,
+                "restriccion": 1
             },
             {
             "nombre": "Isla Gorriti",
             "lat": -34.948256,
-            "lng": -54.977072
+            "lng": -54.977072,
+            "restriccion": 2
         }
         ]
     },
@@ -1649,17 +1718,20 @@
             {
                 "nombre": "Santa Monica",
                 "lat": -34.850178,
-                "lng": -54.698470
+                "lng": -54.698470,
+                "restriccion": 1
             },
             {
                 "nombre": "Piedra del Toto",
                 "lat": -34.909016,
-                "lng": -54.825243
+                "lng": -54.825243,
+                "restriccion": 1
             },
             {
                 "nombre": "Balneario Buenos Aires",
                 "lat": -34.888959,
-                "lng": -54.781822
+                "lng": -54.781822,
+                "restriccion": 2
             }
         ]
     },
@@ -1714,17 +1786,20 @@
             {
                 "nombre": "Los Palitos",
                 "lat": -34.844485,
-                "lng": -54.678661
+                "lng": -54.678661,
+                "restriccion": 2
             },
             {
                 "nombre": "Mansa de José Ignacio",
                 "lat": -34.839773,
-                "lng": -54.646351
+                "lng": -54.646351,
+                "restriccion": 2
             },
             {
                 "nombre": "Desmbocadura Laguna José Ignacio",
                 "lat": -34.843140,
-                "lng": -54.672824
+                "lng": -54.672824,
+                "restriccion": 2
             }
         ]
     },
@@ -1776,7 +1851,8 @@
             {
             "nombre": "Playa Las garzas",
             "lat": -34.729899,
-            "lng": -54.400800
+            "lng": -54.400800,
+            "restriccion": 1
         }
     ]
     },
@@ -1831,17 +1907,20 @@
             {
             "nombre": "Escollera de La Paloma",    
             "lat": -34.651348,
-            "lng": -54.141587
+            "lng": -54.141587,
+            "restriccion": 1
         },
         {
-            "nombre": "PLaya Los Botes",
+            "nombre": "Playa Los Botes",
             "lat": -34.663740,
-            "lng": -54.173662
+            "lng": -54.173662,
+            "restriccion": 2
         },
         {
             "nombre": "La Balconada",
             "lat": -34.665150,
-            "lng": -54.162817
+            "lng": -54.162817,
+            "restriccion": 2
         }
     ]
     },
@@ -1896,22 +1975,26 @@
             {
             "nombre": "Playa La Pedrera",
                 "lat": -34.593673,
-            "lng": -54.121311
+            "lng": -54.121311,
+            "restriccion": 2
         },
         {
             "nombre": "Playa del Barco",
             "lat": -34.595438,
-            "lng": -54.123842
+            "lng": -54.123842,
+            "restriccion": 2
         },
         {
             "nombre": "Punta Rubia",
             "lat": -34.579358,
-            "lng": -54.114226
+            "lng": -54.114226,
+            "restriccion": 2
         },
         {
             "nombre": "Santa Isabel",
             "lat": -34.569261,
-            "lng": -54.102462
+            "lng": -54.102462,
+            "restriccion": 2
         }
     ]
     },
@@ -1967,7 +2050,8 @@
             {
             "nombre": "Playa La Esmeralda",
                 "lat": -34.169003,
-            "lng": -53.683653
+            "lng": -53.683653,
+            "restriccion": 2
         }
         ]
     },
@@ -2025,8 +2109,22 @@
             {
             "nombre": "La Viuda",
                 "lat": -34.044613,
-            "lng": -53.534582
+            "lng": -53.534582,
+            "restriccion": 2
+        },
+        {
+            "nombre": "Monumento a Artigas",
+            "lat": -34.044258,
+            "lng": -53.534233,
+            "restriccion": 2
+        }, 
+        {
+            "nombre": "El Cabito",
+            "lat": -24.031446,
+            "lng": -53.536023,
+            "restriccion": 2
         }
+
     ]
     },
     {
@@ -2071,7 +2169,26 @@
             {
                 "nombre": "Playa La Coronilla",
             "lat": -33.897275,
-            "lng": -53.508131
+            "lng": -53.508131,
+            "restriccion": 2
+        },
+        {
+            "nombre": "Cerro Verde",
+            "lat": -33.945818,
+            "lng": -53.506014,
+            "restriccion": 1
+        },
+        {
+            "nombre": "Palmares de la Coronilla",
+            "lat": -33.848447,
+            "lng": -53.476015,
+            "restriccion": 1
+        },
+        {
+            "nombre": "Barra del Chuy",
+            "lat": -33.756948,
+            "lng": -53.386681,
+            "restriccion": 2
         }
     ]
     }
