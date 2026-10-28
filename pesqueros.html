@@ -21,18 +21,41 @@
             ← Volver al inicio
         </a>
         
-        <h1>Pesqueros de Uruguay</h1>
-        <p>Seleccioná un departamento para explorar sus pesqueros o buscalos aqui.</p>
-        <div class="search-controls">
-            <input type="text" id="search-input" placeholder="Buscar pesqueros...">
+        
+<h1>Explorá los pesqueros de Uruguay</h1>
+<p>Descubrí lugares de pesca y encontrá el ideal para tu próxima salida.</p>
 
-            <button type="button" id="btn-filtro">
-                Filtros
-            </button>
-        </div>
+<div class="search-controls">
+  <input type="search" id="search-input"
+         placeholder="Buscar pesqueros...">
 
-        <div id="grid"></div>
-        <div id="results-container"></div>
+  <select id="filtro-departamento">
+    <option value="">Todos los departamentos</option>
+  </select>
+</div>
+
+<section id="seccion-recomendados" hidden>
+  <h2>Más favorables hoy</h2>
+  <p>Pesqueros destacados según las condiciones actuales.</p>
+
+  <div id="recomendados-container"></div>
+</section>
+
+<section id="seccion-todos">
+  <div class="listado-header">
+    <h2>Todos los pesqueros</h2>
+    <span id="results-count"></span>
+  </div>
+
+  <div id="results-container"></div>
+
+  <div class="ver-mas-container">
+    <button id="btn-ver-mas" type="button" hidden>
+      Ver más pesqueros
+    </button>
+  </div>
+</section>
+
     </div>
 
     <script src="js/pesqueros.js"></script>

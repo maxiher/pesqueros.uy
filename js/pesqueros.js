@@ -3,6 +3,11 @@ let PESQUEROS_CACHE = null;
 let selectedDepartment = null;
 let searchTerm = "";
 
+const CANTIDAD_POR_PAGINA = 6;
+let cantidadVisible = CANTIDAD_POR_PAGINA;
+let recomendadosHoy = [];
+
+
 //Cargar pesqueros
 async function loadPesqueros() {
      if (PESQUEROS_CACHE) {
@@ -20,58 +25,6 @@ async function loadPesqueros() {
   } 
 
 
-function getDepartmentStats(pesqueros) {
-
-  const stats = {};
-
-  pesqueros.forEach(p => {
-    const dep = p.departamento;   
-
-    if (!stats[dep]) {
-      stats[dep] = 0;
-    }
-
-    if (Array.isArray(p.ubicaciones)) {
-      stats[dep] += p.ubicaciones.length;
-    }  else if (p.ubicaciones || p.ubicacion) {
-      stats[dep] += 1;
-    }
-  });
-
-  return stats;
-}
-
-function renderDepartments(stats) {
-  const container = document.getElementById("grid");
-
-  container.innerHTML = "";
-
-   Object.entries(stats).forEach(([dep, count]) => {
-    const card = document.createElement("div");
-    card.className = "department-card";
-    
-    console.log(dep.ubicaciones)
-
-    card.innerHTML = `<h3>🎣${dep}</h3>
-    <p>${count} pesqueros</p>
-    <a>Explorar ➡️</a>`;
-
-    card.onclick = () => {
-
-  if (selectedDepartment === dep) {
-    selectedDepartment = null;
-  } else {
-    selectedDepartment = dep;
-  }
-
-  updateResults();
-};
-
-    container.appendChild(card);
-  });
-}
-
-
 function generarEstrellas(nivel) {
   const llenas = "⭐".repeat(nivel);
   const vacias = "☆".repeat(5 - nivel);
@@ -79,9 +32,8 @@ function generarEstrellas(nivel) {
   return llenas + vacias;
 }
 
-function renderResults(pesqueros) {
-  const container = document.getElementById("results-container");
-
+function renderResults(pesqueros, containerId = "results-container") {
+  const container = document.getElementById(containerId);
   container.innerHTML = "";
 
   pesqueros.forEach(p => {
@@ -93,7 +45,9 @@ function renderResults(pesqueros) {
         class="link-pesquero"
     >
     <div class="card-pesquero">
-    <img src=${p.portada}>
+    
+<img src="${p.portada}" alt="Vista de ${p.nombre}" loading="lazy">
+
       <h3>${p.nombre}</h3>
       <div id="nivel">
       ${generarEstrellas(p.nivel)}
@@ -109,31 +63,35 @@ function renderResults(pesqueros) {
   });
 }
 
+
 function updateResults() {
+  const todos = filtrarPesqueros(PESQUEROS_CACHE);
+  const recomendados = filtrarPesqueros(recomendadosHoy);
 
-  if (!selectedDepartment && !searchTerm.trim()) {
-    document.getElementById("results-container").innerHTML = "";
-    return;
-  }
+  // Recomendados
+  const seccion = document.getElementById("seccion-recomendados");
 
-  let filtered = [...PESQUEROS_CACHE];
+  seccion.hidden = recomendados.length === 0;
 
-  if (selectedDepartment) {
-    filtered = filtered.filter(
-      p => p.departamento === selectedDepartment
-    );
-  }
+  renderResults(
+    recomendados.slice(0, 6),
+    "recomendados-container"
+  );
 
-  if (searchTerm.trim()) {
-    filtered = filtered.filter(p =>
-      p.nombre.toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    );
-  }
+  // Todos los pesqueros
+  renderResults(
+    todos.slice(0, cantidadVisible),
+    "results-container"
+  );
 
+  document.getElementById("results-count").textContent =
+    `${todos.length} pesqueros`;
 
-  renderResults(filtered);
+  document.getElementById("btn-ver-mas").hidden =
+    cantidadVisible >= todos.length;
 }
+
+
 
 async function init() {
 
@@ -141,21 +99,45 @@ async function init() {
 
   PESQUEROS_CACHE = pesqueros;
 
-  const stats = getDepartmentStats(pesqueros);
 
-  renderDepartments(stats);
+  const selectDepartamento =
+  document.getElementById("filtro-departamento");
 
+  const departamentos = [
+  ...new Set(pesqueros.map(p => p.departamento))
+];
+
+departamentos.forEach(dep => {
+  const option = document.createElement("option");
+  option.value = dep;
+  option.textContent = dep;
+  selectDepartamento.appendChild(option);
+});
+
+selectDepartamento.addEventListener("change", e => {
+  selectedDepartment = e.target.value || null;
+  cantidadVisible = CANTIDAD_POR_PAGINA;
   updateResults();
 
-  const searchInput =
-    document.getElementById("search-input");
-
-  searchInput.addEventListener("input", e => {
-
-    searchTerm = e.target.value;
-    updateResults();
   });
 }
+
+
+function filtrarPesqueros(lista) {
+  return lista.filter(p => {
+    const coincideDepartamento =
+      !selectedDepartment ||
+      p.departamento === selectedDepartment;
+
+    const coincideBusqueda =
+      p.nombre.toLowerCase().includes(
+        searchTerm.trim().toLowerCase()
+      );
+
+    return coincideDepartamento && coincideBusqueda;
+  });
+}
+
 
 init();
 

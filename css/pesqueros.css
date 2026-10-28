@@ -123,6 +123,49 @@ h1 {
     display: block;
 }
 
+
+.listado-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.listado-header h2 {
+  color: rgb(11, 60, 93);
+  margin: 0;
+}
+
+
+#results-container {
+  margin: 1rem 0 2rem;
+}
+
+#search-input {
+  width: 100%;
+  max-width: 460px;
+}
+
+
+#results-container,
+#recomendados-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+#seccion-recomendados {
+  margin: 2rem 0 3rem;
+}
+
+#seccion-recomendados[hidden],
+#btn-ver-mas[hidden] {
+  display: none;
+}
+
+
 /* Responsive */
 
 @media (max-width: 600px) {
@@ -165,6 +208,11 @@ h1 {
         margin-bottom: 0.4rem;
         margin-top: 0;
     }
+
+     #results-container,
+  #recomendados-container {
+    grid-template-columns: 1fr;
+  }
 
     .department-card p {
         font-size: 0.9rem;
