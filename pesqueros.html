@@ -25,14 +25,96 @@
 <h1>Explorá los pesqueros de Uruguay</h1>
 <p>Descubrí lugares de pesca y encontrá el ideal para tu próxima salida.</p>
 
-<div class="search-controls">
-  <input type="search" id="search-input"
-         placeholder="Buscar pesqueros...">
 
-  <select id="filtro-departamento">
-    <option value="">Todos los departamentos</option>
-  </select>
+<div class="search-controls">
+  <input
+    type="search"
+    id="search-input"
+    placeholder="Buscar pesqueros..."
+  >
+
+  <button type="button" id="btn-filtro"
+          aria-expanded="false"
+          aria-controls="panel-filtros">
+    ⚙ Filtros
+  </button>
 </div>
+
+<section id="panel-filtros" class="panel-filtros" hidden>
+
+  <div class="filtros-grid">
+
+    <div class="filtro-campo">
+      <label for="filtro-departamento">Departamento</label>
+      <select id="filtro-departamento">
+        <option value="">Todos</option>
+      </select>
+    </div>
+
+    <div class="filtro-campo">
+      <label for="filtro-especie">Especie</label>
+      <select id="filtro-especie">
+        <option value="">Todas</option>
+      </select>
+    </div>
+
+    <div class="filtro-campo">
+      <label for="filtro-ambiente">Ambiente</label>
+      <select id="filtro-ambiente">
+        <option value="">Todos</option>
+      </select>
+    </div>
+
+    <div class="filtro-campo">
+      <label for="filtro-profundidad">Profundidad mínima</label>
+      <select id="filtro-profundidad">
+        <option value="">Cualquiera</option>
+        <option value="1">Nivel 1</option>
+        <option value="2">Nivel 2</option>
+        <option value="3">Nivel 3</option>
+        <option value="4">Nivel 4</option>
+        <option value="5">Nivel 5</option>
+      </select>
+    </div>
+
+    <div class="filtro-campo">
+      <label for="filtro-enganche">Enganche máximo</label>
+      <select id="filtro-enganche">
+        <option value="">Cualquiera</option>
+        <option value="1">Nivel 1</option>
+        <option value="2">Nivel 2</option>
+        <option value="3">Nivel 3</option>
+        <option value="4">Nivel 4</option>
+        <option value="5">Nivel 5</option>
+      </select>
+    </div>
+
+  </div>
+
+  <fieldset class="filtro-temporada">
+    <legend>Temporada de bañistas</legend>
+
+    <label>
+      <input type="radio" name="temporada-filtro"
+             value="todos" checked>
+      Todos los pesqueros
+    </label>
+
+    <label>
+      <input type="radio" name="temporada-filtro"
+             value="24h">
+      Pesca habilitada 24 h
+    </label>
+  </fieldset>
+
+  <div class="filtros-acciones">
+    <button type="button" id="btn-limpiar">
+      Limpiar filtros
+    </button>
+  </div>
+
+</section>
+
 
 <section id="seccion-recomendados" hidden>
   <h2>Más favorables hoy</h2>

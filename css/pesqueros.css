@@ -187,6 +187,107 @@ h1 {
 }
 
 
+/* Panel de filtros */
+
+.panel-filtros {
+  background: white;
+  border: 1px solid #dce7ed;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.panel-filtros[hidden] {
+  display: none;
+}
+
+.filtros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.filtro-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filtro-campo label {
+  font-weight: 600;
+  color: #0b3c5d;
+}
+
+.filtro-campo select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.65rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+}
+
+.filtro-temporada {
+  margin: 1.5rem 0 0;
+  padding: 1rem 0 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filtro-temporada legend {
+  font-weight: 600;
+  color: #0b3c5d;
+  padding-right: 0.5rem;
+}
+
+.filtro-temporada label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.filtros-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+#btn-limpiar {
+  background: transparent;
+  border: 1px solid #0b3c5d;
+  color: #0b3c5d;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+#btn-limpiar:hover {
+  background: #edf5f9;
+}
+
+@media (max-width: 900px) {
+  .filtros-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .filtros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-filtros {
+    padding: 1rem;
+  }
+}
+
+
 
 /* Responsive */
 

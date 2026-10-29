@@ -115,13 +115,85 @@ departamentos.forEach(dep => {
 });
 
 
+// Ambientes disponibles
+const selectAmbiente = document.getElementById("filtro-ambiente");
 
-selectDepartamento.addEventListener("change", e => {
-  selectedDepartment = e.target.value || null;
-  cantidadVisible = CANTIDAD_POR_PAGINA;
-  updateResults();
+const ambientes = [...new Set(
+  pesqueros.map(p => p.ambiente).filter(Boolean)
+)];
 
+ambientes.sort((a, b) => a.localeCompare(b, "es"));
+
+ambientes.forEach(ambiente => {
+  const option = document.createElement("option");
+  option.value = ambiente;
+  option.textContent = ambiente;
+  selectAmbiente.appendChild(option);
+});
+
+// Especies presentes en los pesqueros
+const resEspecies = await fetch("./data/especies.json");
+if (!resEspecies.ok) {
+  throw new Error("No se pudo cargar especies.json");
+}
+
+const { especies } = await resEspecies.json();
+const selectEspecie = document.getElementById("filtro-especie");
+
+const idsPresentes = new Set(
+  pesqueros.flatMap(p => (p.especies ?? []).map(e => e.id))
+);
+
+especies
+  .filter(e => idsPresentes.has(e.id))
+  .sort((a, b) => a.nombre_comun.localeCompare(b.nombre_comun, "es"))
+  .forEach(especie => {
+    const option = document.createElement("option");
+    option.value = especie.id;
+    option.textContent = especie.nombre_comun;
+    selectEspecie.appendChild(option);
   });
+
+
+// Abrir y cerrar el panel
+const btnFiltro = document.getElementById("btn-filtro");
+const panelFiltros = document.getElementById("panel-filtros");
+
+btnFiltro.addEventListener("click", () => {
+  panelFiltros.hidden = !panelFiltros.hidden;
+  btnFiltro.setAttribute(
+    "aria-expanded",
+    String(!panelFiltros.hidden)
+  );
+});
+
+// Aplicar cambios en cualquiera de los filtros
+document.querySelectorAll(
+  "#panel-filtros select, #panel-filtros input[type='radio']"
+).forEach(control => {
+  control.addEventListener("change", () => {
+    selectedDepartment = selectDepartamento.value || null;
+    cantidadVisible = CANTIDAD_POR_PAGINA;
+    updateResults();
+  });
+});
+
+// Restablecer filtros
+document.getElementById("btn-limpiar")
+  .addEventListener("click", () => {
+    document.querySelectorAll("#panel-filtros select")
+      .forEach(select => select.value = "");
+
+    document.querySelector(
+      'input[name="temporada-filtro"][value="todos"]'
+    ).checked = true;
+
+    selectedDepartment = null;
+    cantidadVisible = CANTIDAD_POR_PAGINA;
+    updateResults();
+  });
+
+
   
 document.getElementById("search-input")
   .addEventListener("input", e => {
@@ -139,25 +211,55 @@ document.getElementById("search-input")
 }
 
 
+
 function filtrarPesqueros(lista) {
+  const especie = document.getElementById("filtro-especie").value;
+  const ambiente = document.getElementById("filtro-ambiente").value;
+  const profundidad = document.getElementById("filtro-profundidad").value;
+  const enganche = document.getElementById("filtro-enganche").value;
+
+  const solo24h = document.querySelector(
+    'input[name="temporada-filtro"]:checked'
+  ).value === "24h";
+
+  const termino = searchTerm.trim().toLowerCase();
+
   return lista.filter(p => {
+    const ubicaciones = Array.isArray(p.ubicaciones)
+      ? p.ubicaciones
+      : [];
+
     const coincideDepartamento =
-      !selectedDepartment ||
-      p.departamento === selectedDepartment;
+      !selectedDepartment || p.departamento === selectedDepartment;
 
-    const termino = searchTerm.trim().toLowerCase();
+    const coincideBusqueda =
+      p.nombre.toLowerCase().includes(termino) ||
+      ubicaciones.some(u =>
+        (u.nombre ?? "").toLowerCase().includes(termino)
+      );
 
-    const coincideNombre =
-      p.nombre.toLowerCase().includes(termino);
+    const coincideEspecie =
+      !especie || p.especies?.some(e => e.id === especie);
 
-    
-const coincideUbicacion = p.ubicaciones?.some(ubicacion =>
-  (ubicacion.nombre ?? "").toLowerCase().includes(termino)
-) ?? false;
+    const coincideAmbiente =
+      !ambiente || p.ambiente === ambiente;
 
+    const coincideProfundidad =
+      !profundidad || Number(p.profundidad) >= Number(profundidad);
+
+    const coincideEnganche =
+      !enganche || Number(p.enganche) <= Number(enganche);
+
+    const coincideTemporada =
+      !solo24h || ubicaciones.some(u => Number(u.restriccion) === 1);
 
     return coincideDepartamento &&
-      (coincideNombre || coincideUbicacion);
+      coincideBusqueda &&
+      coincideEspecie &&
+      coincideAmbiente &&
+      coincideProfundidad &&
+      coincideEnganche &&
+      coincideTemporada;
   });
 }
 
