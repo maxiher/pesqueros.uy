@@ -114,12 +114,28 @@ departamentos.forEach(dep => {
   selectDepartamento.appendChild(option);
 });
 
+
+
 selectDepartamento.addEventListener("change", e => {
   selectedDepartment = e.target.value || null;
   cantidadVisible = CANTIDAD_POR_PAGINA;
   updateResults();
 
   });
+  
+document.getElementById("search-input")
+  .addEventListener("input", e => {
+    searchTerm = e.target.value;
+    cantidadVisible = CANTIDAD_POR_PAGINA;
+    updateResults();
+  });
+
+  document.getElementById("btn-ver-mas").addEventListener("click", () => {
+    cantidadVisible += CANTIDAD_POR_PAGINA;
+    updateResults();
+  });
+
+  updateResults();
 }
 
 
@@ -129,12 +145,19 @@ function filtrarPesqueros(lista) {
       !selectedDepartment ||
       p.departamento === selectedDepartment;
 
-    const coincideBusqueda =
-      p.nombre.toLowerCase().includes(
-        searchTerm.trim().toLowerCase()
-      );
+    const termino = searchTerm.trim().toLowerCase();
 
-    return coincideDepartamento && coincideBusqueda;
+    const coincideNombre =
+      p.nombre.toLowerCase().includes(termino);
+
+    
+const coincideUbicacion = p.ubicaciones?.some(ubicacion =>
+  (ubicacion.nombre ?? "").toLowerCase().includes(termino)
+) ?? false;
+
+
+    return coincideDepartamento &&
+      (coincideNombre || coincideUbicacion);
   });
 }
 

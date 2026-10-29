@@ -1121,10 +1121,12 @@
                 "nivel": 2
             }
         ],
-        "ubicaciones": {
+        "ubicaciones": [
+            {
             "lat": -34.806123,
             "lng": -55.353851
         }
+    ]
     },
     {
         "nombre": "Playa Verde",

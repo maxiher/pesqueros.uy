@@ -165,6 +165,28 @@ h1 {
   display: none;
 }
 
+.ver-mas-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+#btn-ver-mas {
+  padding: 0.8rem 2rem;
+  border: 1px solid #0b3c5d;
+  border-radius: 8px;
+  background: transparent;
+  color: #0b3c5d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btn-ver-mas:hover {
+  background: #0b3c5d;
+  color: white;
+}
+
+
 
 /* Responsive */
 
