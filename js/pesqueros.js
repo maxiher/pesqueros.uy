@@ -13,17 +13,13 @@ async function loadPesqueros() {
      if (PESQUEROS_CACHE) {
     return PESQUEROS_CACHE;
   }
-      const res = await fetch("./data/pesqueros.json");
-
-  if (!res.ok) {
-    throw new Error("Error cargando JSON: " + res.status);
-    }
-
-    PESQUEROS_CACHE = await res.json();
+  PESQUEROS_CACHE = await cargarJSON("./data/pesqueros.json");
+  if (!Array.isArray(PESQUEROS_CACHE)) {
+    PESQUEROS_CACHE = null;
+    throw new Error("Formato de pesqueros inválido");
+  }
   return PESQUEROS_CACHE;
-
-  } 
-
+}
 
 function generarEstrellas(nivel) {
   const llenas = "⭐".repeat(nivel);
@@ -37,7 +33,7 @@ function renderResults(pesqueros, containerId = "results-container") {
   container.innerHTML = "";
 
   pesqueros.forEach(p => {
-    const card = document.createElement("div");   
+    const card = document.createElement("div");
 
     card.innerHTML = `
      <a
@@ -45,7 +41,7 @@ function renderResults(pesqueros, containerId = "results-container") {
         class="link-pesquero"
     >
     <div class="card-pesquero">
-    
+
 <img src="${p.portada}" alt="Vista de ${p.nombre}" loading="lazy">
 
       <h3>${p.nombre}</h3>
@@ -57,7 +53,7 @@ function renderResults(pesqueros, containerId = "results-container") {
     </a>
       `;
 
-      
+
 
     container.appendChild(card);
   });
@@ -67,6 +63,9 @@ function renderResults(pesqueros, containerId = "results-container") {
 function updateResults() {
   const todos = filtrarPesqueros(PESQUEROS_CACHE);
   const recomendados = filtrarPesqueros(recomendadosHoy);
+
+  document.getElementById("results-container").hidden = false;
+  mostrarEstadoDatos(mensajeResultados()?.mensaje ?? "");
 
   // Recomendados
   const seccion = document.getElementById("seccion-recomendados");
@@ -95,7 +94,15 @@ function updateResults() {
 
 async function init() {
 
-  const pesqueros = await loadPesqueros();
+  const [pesqueros, datosEspecies] = await Promise.all([
+    loadPesqueros(), cargarJSON("./data/especies.json")
+  ]);
+  const { especies } = datosEspecies;
+  if (!Array.isArray(especies)) throw new Error("Formato de especies inválido");
+  for (const id of ["filtro-departamento", "filtro-ambiente", "filtro-especie"]) {
+    const select = document.getElementById(id);
+    while (select.options.length > 1) select.remove(1);
+  }
 
   PESQUEROS_CACHE = pesqueros;
 
@@ -132,12 +139,6 @@ ambientes.forEach(ambiente => {
 });
 
 // Especies presentes en los pesqueros
-const resEspecies = await fetch("./data/especies.json");
-if (!resEspecies.ok) {
-  throw new Error("No se pudo cargar especies.json");
-}
-
-const { especies } = await resEspecies.json();
 const selectEspecie = document.getElementById("filtro-especie");
 
 const idsPresentes = new Set(
@@ -194,7 +195,7 @@ document.getElementById("btn-limpiar")
   });
 
 
-  
+
 document.getElementById("search-input")
   .addEventListener("input", e => {
     searchTerm = e.target.value;
@@ -264,7 +265,20 @@ function filtrarPesqueros(lista) {
 }
 
 
-init();
+function mensajeResultados() {
+  if (PESQUEROS_CACHE.length === 0) return { mensaje: "No hay pesqueros disponibles." };
+  if (filtrarPesqueros(PESQUEROS_CACHE).length === 0) {
+    return { mensaje: "No encontramos pesqueros con esos filtros." };
+  }
+}
 
-console.log(selectedDepartment);
-console.log(searchTerm)
+cargarVistaDatos({
+  contenido: "#results-container",
+  cargando: "Cargando pesqueros...",
+  error: "No se pudieron cargar los pesqueros.",
+  cargar: async () => {
+    await init();
+    // Los filtros permanecen visibles incluso cuando no hay coincidencias.
+    return mensajeResultados();
+  }
+});

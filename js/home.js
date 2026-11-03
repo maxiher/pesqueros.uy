@@ -34,13 +34,16 @@ fecha.textContent =
 
 
 // TEMPORAL
-//Funcion Fase Lunar
+// Fase lunar aproximada; no determina el instante exacto de cada fase.
 function getMoonPhase(date = new Date()) {
-  const year = date.getFullYear();
+  let year = date.getFullYear();
   let month = date.getMonth() + 1;
   const day = date.getDate();
 
-  let c = e = jd = b = 0;
+  let c = 0;
+  let e = 0;
+  let jd = 0;
+  let b = 0;
 
   if (month < 3) {
     year--;
