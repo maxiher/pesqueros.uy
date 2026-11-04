@@ -52,15 +52,12 @@ body{
 
 .hero {
     position: relative;
-
+    background-color: #0a3d62;
     height: 500px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     overflow: hidden;
 }
 

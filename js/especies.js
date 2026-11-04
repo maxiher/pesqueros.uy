@@ -1,17 +1,22 @@
 const contenedor = document.getElementById("contenedor-especies");
 
-fetch("./data/especies.json")
-  .then(response => response.json())
-  .then(data => {
-
+cargarVistaDatos({
+  contenido: "#contenedor-especies",
+  cargando: "Cargando especies...",
+  error: "No se pudieron cargar las especies.",
+  cargar: async () => {
+    const data = await cargarJSON("./data/especies.json");
+    if (!Array.isArray(data.especies)) throw new Error("Formato de datos inválido");
+    contenedor.replaceChildren();
+    if (data.especies.length === 0) return { mensaje: "No hay especies disponibles." };
     data.especies.forEach(especie => {
       const card = document.createElement("div");
 
       card.classList.add("card-especie");
 
       card.innerHTML = `
-        <img 
-          src="${especie.imagen}" 
+        <img
+          src="${especie.imagen}"
           alt="${especie.nombre_comun}"
           class="card-especie-img"
         >
@@ -32,16 +37,14 @@ fetch("./data/especies.json")
           </a>
         </div>
       `
-      
+
       ;
 
       contenedor.appendChild(card);
-      
+
     });
 
-  })
-  .catch(error => {
-    console.error("Error al cargar las especies:", error);
-  });
 
-  
+  }
+});
+

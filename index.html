@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/estado-datos.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
     loop
     playsinline
     preload="auto"
-    poster="imagenes/hero.jpg"
+    poster="Fotos/General/hero.webp"
 >
     <source src="video/hero.mp4?v=2" type="video/mp4">
 </video>
@@ -69,7 +70,7 @@
 
         <div class="weather-content">
             <span id="weather-icon">--</span>
-            <strong id="weather-condition">Cargando...</strong>
+            <strong id="weather-condition">--</strong>
             <span id="temperature">--°C</span>
         </div>
     </div>
@@ -99,7 +100,7 @@
     </div>
 
 </div>
-        
+        <div id="estado-meteorologia" role="status" aria-live="polite" hidden></div>
 
        
 
@@ -168,6 +169,7 @@
 
     </section>
 
+    <script src="js/datos.js"></script>
     <script src="js/home.js"></script>
     <script src="js/navbar.js"></script>
 

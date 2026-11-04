@@ -2074,7 +2074,6 @@
         "portada": "Fotos/pesqueros/PuntaDelDiablo.webp",
         "imagenes": [
             "Fotos/pesqueros/PuntaDelDiablo.webp",
-            "Fotos/pesqueros/PuntaDelDiablo1.webp",
             "Fotos/pesqueros/PuntaDelDiablo2.webp",
             "Fotos/pesqueros/PuntaDelDiablo3.webp",
             "Fotos/pesqueros/PuntaDelDiablo4.webp",
@@ -2143,9 +2142,9 @@
         "enganche": 1,
         "mejorViento": "E - N",
         "nivel": 2,
-        "portada": "Fotos/pesqueros/Rocha/lacoronilla.webp",
+        "portada": "Fotos/pesqueros/Rocha/LaCoronilla.webp",
         "imagenes": [
-            "Fotos/rocha/lacoronilla.webp"
+            "Fotos/rocha/LaCoronilla.webp"
         ],
         "especies": [
             {

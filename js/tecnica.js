@@ -1,17 +1,27 @@
 const params = new URLSearchParams(window.location.search);
 const idTecnica = params.get("id");
 
-fetch("./data/tecnicas.json")
-    .then(response => response.json())
-    .then(data => {
+cargarVistaDatos({
+  contenido: ".detalle-tecnica",
+  cargando: "Cargando técnica...",
+  error: "No se pudo cargar la técnica.",
+  cargar: async () => {
+    if (!idTecnica) return { mensaje: "Técnica no encontrada.", enlace: "tecnicas.html" };
+    const data = await cargarJSON("./data/tecnicas.json");
+    if (!Array.isArray(data)) throw new Error("Formato de datos inválido");
+
 
         const tecnica = data.find(
             tecnica => tecnica.id === idTecnica
         );
 
         if (!tecnica) {
-            throw new Error("Técnica no encontrada");
+            return { mensaje: "Técnica no encontrada.", enlace: "tecnicas.html" };
         }
+        document.getElementById("equipo-recomendado").replaceChildren();
+        document.getElementById("galeria-tecnica").replaceChildren();
+        document.getElementById("seccion-galeria").hidden = true;
+
 
         // TÍTULO
         document.title = `${tecnica.nombre} | PesquerosUY`;
@@ -71,7 +81,6 @@ fetch("./data/tecnicas.json")
             });
         }
 
-    })
-    .catch(error => {
-        console.error("Error al cargar la técnica:", error);
-    });
+
+  }
+});

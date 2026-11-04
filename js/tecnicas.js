@@ -1,10 +1,15 @@
 const contenedor = document.getElementById("contenedor-tecnicas");
 
-fetch("./data/tecnicas.json")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        data.forEach(tecnica => {
+cargarVistaDatos({
+  contenido: "#contenedor-tecnicas",
+  cargando: "Cargando técnicas...",
+  error: "No se pudieron cargar las técnicas.",
+  cargar: async () => {
+    const data = await cargarJSON("./data/tecnicas.json");
+    if (!Array.isArray(data)) throw new Error("Formato de datos inválido");
+    contenedor.replaceChildren();
+    if (data.length === 0) return { mensaje: "No hay técnicas disponibles." };
+    data.forEach(tecnica => {
 
             const card = document.createElement("a");
 
@@ -37,7 +42,6 @@ fetch("./data/tecnicas.json")
             contenedor.appendChild(card);
         });
 
-    })
-    .catch(error => {
-        console.error("Error al cargar las técnicas:", error);
-    });
+
+  }
+});

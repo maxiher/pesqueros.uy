@@ -11,6 +11,7 @@
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 />
+    <link rel="stylesheet" href="css/estado-datos.css">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -18,6 +19,7 @@
     <div id="navbar-container"></div>
     </header>
  
+    <div id="estado-datos" role="status" aria-live="polite" hidden></div>
     <main class="pesquero-detalle">
     <section id="pesquero-contenido">
         <!-- Se carga desde JS -->
@@ -29,6 +31,7 @@
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 </script>
 
+    <script src="js/datos.js"></script>
     <script src="js/pesquero.js"></script>
     <script src="js/navbar.js"></script>
 </body>

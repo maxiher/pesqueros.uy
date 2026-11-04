@@ -3,6 +3,10 @@ html {
 }
 
 /* --- Reset y Variables básicas --- */
+[hidden] {
+    display: none !important;
+}
+
 :root {
     --color-primary: #0a3d62;
     /* El azul oscuro de tu texto */

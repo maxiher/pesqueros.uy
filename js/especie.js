@@ -3,15 +3,23 @@
 const params = new URLSearchParams(window.location.search);
 const idEspecie = params.get("id");
 
-fetch("./data/especies.json")
-  .then(response => response.json())
-  .then(data => {
+cargarVistaDatos({
+  contenido: ".detalle-especie",
+  cargando: "Cargando especie...",
+  error: "No se pudo cargar la especie.",
+  cargar: async () => {
+    if (!idEspecie) return { mensaje: "Especie no encontrada.", enlace: "especies.html" };
+    const data = await cargarJSON("./data/especies.json");
+    if (!Array.isArray(data.especies)) throw new Error("Formato de datos inválido");
+
 
     const especie = data.especies.find(
       especie => especie.id === idEspecie
     );
 
-    console.log(especie);
+    if (!especie) return { mensaje: "Especie no encontrada.", enlace: "especies.html" };
+    document.getElementById("metodos-pesca").replaceChildren();
+    document.getElementById("carnadas").replaceChildren();
 
     document.title = `${especie.nombre_comun} | PesquerosUY`;
 
@@ -70,10 +78,9 @@ fetch("./data/especies.json")
 
     renderArreglo(especie.arreglo);
 
-  })
-  .catch(error => {
-    console.error("Error al cargar la especie:", error);
-  });
+
+  }
+});
 
 
 //Renderizado de Arreglo Recomendado

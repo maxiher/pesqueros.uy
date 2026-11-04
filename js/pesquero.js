@@ -1,40 +1,25 @@
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("id");
 
-Promise.all([
-    fetch("./data/pesqueros.json").then(response => {
-        if (!response.ok) throw new Error("Error al cargar pesqueros.json");
-        return response.json();
-    }),
-    fetch("./data/especies.json").then(response => {
-        if (!response.ok) throw new Error("Error al cargar especies.json");
-        return response.json();
-    })
-])
-    .then(([pesqueros, datosEspecies]) => {
-
-        const pesquero = pesqueros.find(p => p.slug === slug);
-
-        if (!pesquero) {
-            document.getElementById("pesquero-contenido").innerHTML =
-                "<p>Pesquero no encontrado.</p>";
-            return;
-        }
-
-        const especiesPorId = new Map(
-            datosEspecies.especies.map(especie => [especie.id, especie])
-        );
-
-        renderPesquero(pesquero, especiesPorId);
-
-    })
-    .catch(error => {
-        console.error("Error al cargar los datos:", error);
-        document.getElementById("pesquero-contenido").innerHTML =
-            "<p>No se pudieron cargar los datos del pesquero.</p>";
-    });
-
-
+cargarVistaDatos({
+  contenido: "#pesquero-contenido",
+  cargando: "Cargando pesquero...",
+  error: "No se pudieron cargar los datos del pesquero.",
+  cargar: async () => {
+    if (!slug) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
+    const [pesqueros, datosEspecies] = await Promise.all([
+      cargarJSON("./data/pesqueros.json"),
+      cargarJSON("./data/especies.json")
+    ]);
+    if (!Array.isArray(pesqueros) || !Array.isArray(datosEspecies.especies)) {
+      throw new Error("Formato de datos inválido");
+    }
+    const pesquero = pesqueros.find(p => p.slug === slug);
+    if (!pesquero) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
+    const especiesPorId = new Map(datosEspecies.especies.map(especie => [especie.id, especie]));
+    renderPesquero(pesquero, especiesPorId);
+  }
+});
 
 function renderPesquero(pesquero, especiesPorId) {
     document.title = `${pesquero.nombre} | PesquerosUY`;
@@ -68,8 +53,8 @@ function renderPesquero(pesquero, especiesPorId) {
 
     <div class="carrusel-imagenes" id="carrusel-imagenes">
         ${pesquero.imagenes.map((imagen, index) => `
-            <img 
-                src="${imagen}" 
+            <img
+                src="${imagen}"
                 alt="${pesquero.nombre}"
                 class="carrusel-img ${index === 0 ? "activa" : ""}"
             >
@@ -89,7 +74,7 @@ function renderPesquero(pesquero, especiesPorId) {
         <section class="card-caracteristicas">
             <h2>Características</h2>
 
-            
+
 
             <div class="caracteristica">
                 <span>Accesibilidad</span>
@@ -114,7 +99,7 @@ function renderPesquero(pesquero, especiesPorId) {
                 <span>Mejor viento</span>
                 <strong>${pesquero.mejorViento}</strong>
             </div>
-            
+
         </section>
         <section class="card-especies">
     <h2>Especies frecuentes</h2>
@@ -136,9 +121,9 @@ function renderPesquero(pesquero, especiesPorId) {
   </a>
 ` : `
   <span class="link-especie">${especie.nombre}</span>
-`} 
-            ${especie.nombre}
-        </a>
+`}
+
+        
 
                 <div class="estrellas">
                     ${crearEstrellas(especie.nivel)}
@@ -146,7 +131,7 @@ function renderPesquero(pesquero, especiesPorId) {
             </div>
         `).join("")}
     </div>
-    
+
 </section>
 <section class="card-ubicaciones">
     <h2>Ubicaciones</h2>
@@ -155,9 +140,10 @@ function renderPesquero(pesquero, especiesPorId) {
 
     <div id="lista-ubicaciones"></div>
 </section>
-        
+
     `;
     iniciarCarrusel();
+    document.getElementById("pesquero-contenido").hidden = false;
     iniciarMapa(pesquero);
 }
 
