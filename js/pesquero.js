@@ -123,7 +123,7 @@ function renderPesquero(pesquero, especiesPorId) {
   <span class="link-especie">${especie.nombre}</span>
 `}
 
-        </a>
+        
 
                 <div class="estrellas">
                     ${crearEstrellas(especie.nivel)}
