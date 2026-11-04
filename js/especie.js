@@ -18,6 +18,15 @@ cargarVistaDatos({
     );
 
     if (!especie) return { mensaje: "Especie no encontrada.", enlace: "especies.html" };
+    const aviso = especie.aviso_pesca;
+    const reemplazaArreglo = ["conservacion", "prohibicion"].includes(aviso?.tipo);
+    // La dieta se conserva como dato biológico, sin recomendaciones de carnadas.
+    for (const id of ["metodos-pesca", "temporada", "interes-gastronomico"]) {
+      document.getElementById(id).closest("article").hidden = reemplazaArreglo;
+    }
+    document.getElementById("carnadas").hidden = reemplazaArreglo;
+    document.getElementById("carnadas").closest("article").querySelector("h2").textContent =
+      reemplazaArreglo ? "Alimentación" : "Carnadas";
     document.getElementById("metodos-pesca").replaceChildren();
     document.getElementById("carnadas").replaceChildren();
 
@@ -55,7 +64,7 @@ cargarVistaDatos({
     document.getElementById("combatividad").textContent =
       especie.caracteristicas.combatividad;
 
-    especie.metodos_de_pesca.forEach(metodo => {
+    if (!reemplazaArreglo) especie.metodos_de_pesca.forEach(metodo => {
       const tag = document.createElement("span");
       tag.classList.add("tag");
       tag.textContent = metodo;
@@ -68,7 +77,7 @@ cargarVistaDatos({
     document.getElementById("dieta").textContent =
       especie.caracteristicas.dieta;
 
-    especie.carnadas.forEach(carnada => {
+    if (!reemplazaArreglo) especie.carnadas.forEach(carnada => {
       const tag = document.createElement("span");
       tag.classList.add("tag");
       tag.textContent = carnada;
@@ -76,7 +85,7 @@ cargarVistaDatos({
       contenedorCarnadas.appendChild(tag);
     });
 
-    renderArreglo(especie.arreglo);
+    renderArreglo(especie.arreglo, aviso, reemplazaArreglo);
 
 
   }
@@ -86,16 +95,26 @@ cargarVistaDatos({
 //Renderizado de Arreglo Recomendado
 
 
-function renderArreglo(arreglo) {
+function renderArreglo(arreglo, aviso, reemplazaArreglo) {
   const section = document.getElementById("arreglo-section");
   const container = document.getElementById("arreglo-container");
 
-  if (!arreglo) {
+  container.replaceChildren();
+  section.querySelector("h2").textContent = reemplazaArreglo || (!arreglo && aviso)
+    ? "Pesca responsable y conservación"
+    : "Arreglo recomendado";
+
+  if (!arreglo && !aviso) {
     section.hidden = true;
     return;
   }
 
   section.hidden = false;
+
+  if (reemplazaArreglo || !arreglo) {
+    container.appendChild(crearAvisoPesca(aviso));
+    return;
+  }
 
   const datos = [
     ["Línea madre", arreglo.linea_madre],
@@ -125,7 +144,32 @@ function renderArreglo(arreglo) {
       </div>
     </div>
   `;
+
+  if (aviso) container.prepend(crearAvisoPesca(aviso));
 }
 
+function crearAvisoPesca(aviso) {
+  const div = document.createElement("div");
+  div.className = "aviso-pesca";
+
+  const titulo = document.createElement("h3");
+  titulo.textContent = aviso.titulo;
+  const mensaje = document.createElement("p");
+  mensaje.textContent = aviso.mensaje;
+  div.append(titulo, mensaje);
+
+  if (aviso.fuente && aviso.url) {
+    const url = new URL(aviso.url, window.location.href);
+    if (["https:", "http:"].includes(url.protocol)) {
+      const enlace = document.createElement("a");
+      enlace.href = url.href;
+      enlace.target = "_blank";
+      enlace.rel = "noopener noreferrer";
+      enlace.textContent = `Fuente: ${aviso.fuente}`;
+      div.appendChild(enlace);
+    }
+  }
+  return div;
+}
 
 
