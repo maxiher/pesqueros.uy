@@ -188,6 +188,10 @@ body {
   display: none;
 }
 
+.datos-especie article[hidden] {
+  display: none;
+}
+
 .arreglo-section h2 {
   margin: 0 0 15px;
   color: #06496d;
