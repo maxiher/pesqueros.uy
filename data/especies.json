@@ -48,7 +48,6 @@
       },
       "notas_adicionales": ""
     },
-
     {
       "id": "corvina_blanca",
       "nombre_comun": "Corvina Blanca",
@@ -99,7 +98,6 @@
       },
       "notas_adicionales": ""
     },
-
     {
       "id": "brotola",
       "nombre_comun": "Brotola",
@@ -151,7 +149,6 @@
       },
       "notas_adicionales": ""
     },
-
     {
       "id": "pescadilla",
       "nombre_comun": "Pescadilla",
@@ -200,7 +197,6 @@
       },
       "notas_adicionales": ""
     },
-
     {
       "id": "anchoa",
       "nombre_comun": "Anchoa",
@@ -249,7 +245,6 @@
       },
       "notas_adicionales": "Se recomienda colocar una Boya Elevadora en la brazolada del anzuelo para levantar la carnada del fondo dándole movimiento."
     },
-    
     {
       "id": "mochuelo",
       "nombre_comun": "Mochuelo (Bagre de Mar)",
@@ -465,7 +460,7 @@
       "arreglo": {
         "nombre": "A Fondo Con Boya Elevadora",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.60 mm",
         "linea_madre": "0.60 mm",
@@ -511,9 +506,9 @@
         "profundidad_recomendada_m": "?"
       },
       "arreglo": {
-        "nombre": "A Fondo Con Boya Elevadora",
+        "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.50 - 0.60 mm",
@@ -561,7 +556,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_negra.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0.40 - 0.50 mm",
         "chicote": "0.60 - 0.70 mm",
         "linea_madre": "0.60 - 0.70 mm",
@@ -576,6 +571,13 @@
           "tipo": "Acorde a la corriente",
           "peso": "80 - 150 g"
         }
+      },
+      "aviso_pesca": {
+        "tipo": "veda",
+        "titulo": "Restricciones de pesca vigentes",
+        "mensaje": "Desde el 1/10/2026 hasta el 1/1/2027 inclusive, está prohibida la extracción de corvina negra en los ríos y arroyos que desembocan en el Río de la Plata y el océano Atlántico, así como en las desembocaduras de las lagunas costeras atlánticas comprendidas por la normativa.",
+        "fuente": "DINARA - Resolución 238/2026",
+        "url": "https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/institucional/normativa/resolucion-n-238026-areas-vedadas-para-pesca-corvina-negra"
       },
       "notas_adicionales": ""
     },
@@ -655,7 +657,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/pargo_blanco .webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -702,7 +704,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/pargo_rosado.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -843,7 +845,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/raya_marmorada.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -889,7 +891,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/raya_erizo.webp",
+        "imagen": "./Fotos/Arreglos/basica_anzuelo_grande.webp",
         "carga_de_reel": "0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -931,6 +933,13 @@
         "combatividad": "Alta",
         "dieta": "Carnívoro",
         "profundidad_recomendada_m": "?"
+      },
+      "aviso_pesca": {
+        "tipo": "conservacion",
+        "titulo": "Especie en peligro crítico",
+        "mensaje": "El pez guitarra se encuentra en peligro crítico de extinción debido principalmente a la presión pesquera. PesquerosUY desaconseja su captura. Si se produce una captura accidental, recomendamos devolverlo al agua con el mayor cuidado posible.",
+        "fuente": "UICN - Lista Roja",
+        "url": "https://www.fishbase.org/summary/8732"
       }
     },
     {
@@ -961,7 +970,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/congrio.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
@@ -998,7 +1007,7 @@
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "40",
-      "descripcion": "Rayas y chuchos frecuentes en pesca costera uruguaya, agrupados en distintos géneros según referencia pesquera local.",
+      "descripcion": "En Uruguay, el pez rubio (también conocido como rubio de aletas azules, testolín o cabrinha) se refiere principalmente a la especie Prionotus punctatus, perteneciente a la familia de los tríglidos (Triglidae). En la industria pesquera y comercial de exportación local, el término también se utiliza para otra especie de profundidad conocida como Helicolenus dactylopterus lahillei.",
       "caracteristicas": {
         "combatividad": "Baja",
         "dieta": "Carnívoro",
@@ -1007,7 +1016,7 @@
       "arreglo": {
         "nombre": "A Fondo",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/basica.webp",
         "carga_de_reel": "0,30  - 0.40 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",

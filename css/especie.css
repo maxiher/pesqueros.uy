@@ -244,6 +244,31 @@ body {
 
 
 
+.aviso-pesca {
+  padding: 20px;
+  margin-bottom: 24px;
+  background: #fff5f5;
+  border-left: 5px solid #b91c1c;
+  border-radius: 10px;
+  color: #7f1d1d;
+  overflow-wrap: anywhere;
+}
+
+.aviso-pesca:last-child { margin-bottom: 0; }
+
+.aviso-pesca h3 {
+  margin: 0 0 10px;
+  color: #991b1b;
+}
+
+.aviso-pesca p { line-height: 1.7; }
+
+.aviso-pesca a {
+  display: inline-block;
+  color: #991b1b;
+  font-weight: 600;
+}
+
 @media (max-width: 800px) {
 
   .detalle-especie{
