@@ -123,6 +123,7 @@
     outline-offset: 4px;
 }
 
+
 @keyframes estado-datos-girar {
     to { transform: rotate(360deg); }
 }
@@ -151,4 +152,8 @@
     .estado-datos__pez-svg,
     .estado-datos__pez-cola { animation: none; }
     .estado-datos__accion { transition: none; }
+}
+
+[hidden] {
+    display: none !important;
 }
