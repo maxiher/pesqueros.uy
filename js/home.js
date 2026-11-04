@@ -94,7 +94,6 @@ moonIcon.textContent = `${phaseToArray[0]}`
 
 //Clima actual
 async function getWeather() {
-  try {
     const url =
       "https://api.open-meteo.com/v1/forecast" +
       "?latitude=-34.9011" +
@@ -102,13 +101,7 @@ async function getWeather() {
       "&current=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m" +
       "&timezone=auto";
 
-    const res = await fetch(url);
-
-    if (!res.ok) {
-      throw new Error("Error HTTP: " + res.status);
-    }
-
-    const data = await res.json();
+    const data = await cargarJSON(url);
 
     const weather = {
       temp: data.current.temperature_2m,
@@ -119,9 +112,6 @@ async function getWeather() {
 
     return weather;
 
-  } catch (error) {
-    console.error("Error clima:", error);
-  }
 }
 
 function getWindDirection(degrees) {
@@ -215,8 +205,6 @@ async function renderWeather() {
 
   const data = await getWeather();
 
-  if (!data) return;
-
   // CLIMA
   const condition = getWeatherCondition(data.code);
 
@@ -238,7 +226,13 @@ async function renderWeather() {
     `rotate(${arrowDirection}deg)`;
 }
 
-renderWeather();
+cargarVistaDatos({
+  contenido: ".weather-content, .wind-content",
+  estado: "estado-meteorologia",
+  cargando: "Cargando clima y viento...",
+  error: "No pudimos consultar el clima y el viento. Intentá nuevamente.",
+  cargar: renderWeather
+});
 
 
 

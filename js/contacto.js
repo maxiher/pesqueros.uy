@@ -5,11 +5,12 @@ const estado = document.querySelector("#estado-contacto");
 
 formulario.addEventListener("submit", async (evento) => {
   evento.preventDefault();
+  if (boton.disabled) return;
 
   boton.disabled = true;
   boton.textContent = "Enviando...";
-  estado.textContent = "";
-  estado.className = "mt-3";
+  formulario.setAttribute("aria-busy", "true");
+  mostrarEstadoDatos("Enviando tu mensaje...", null, null, "carga", "estado-contacto");
 
   try {
     const respuesta = await fetch(formulario.action, {
@@ -24,17 +25,23 @@ formulario.addEventListener("submit", async (evento) => {
       throw new Error("Error al enviar el formulario");
     }
 
+    estado.replaceChildren();
+    estado.className = "mt-3 text-success";
     estado.textContent = "¡Gracias! Tu mensaje fue enviado correctamente.";
-    estado.classList.add("text-success");
     formulario.reset();
 
   } catch (error) {
-    estado.textContent =
-      "No pudimos enviar tu mensaje. Intentá nuevamente.";
-    estado.classList.add("text-danger");
+    mostrarEstadoDatos(
+      "No pudimos enviar tu mensaje. Intentá nuevamente.",
+      () => formulario.requestSubmit(),
+      null,
+      "error",
+      "estado-contacto"
+    );
 
   } finally {
     boton.disabled = false;
     boton.textContent = "Enviar mensaje";
+    formulario.setAttribute("aria-busy", "false");
   }
 });
