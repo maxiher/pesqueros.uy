@@ -1,3 +1,99 @@
+// FECHAS PROVISIONALES: actualizar cada año antes de la próxima temporada.
+// Formato AAAA-MM-DD, extremos incluidos. Vigencia: hasta el día anterior
+// al inicio de la siguiente temporada anual. No se repiten fechas automáticamente.
+const TEMPORADAS_BANISTAS = {
+    Montevideo: { inicio: "2026-12-21", fin: "2027-03-21" },
+    Canelones: { inicio: "2026-12-21", fin: "2027-03-21" },
+    Maldonado: { inicio: "2026-12-21", fin: "2027-03-21" },
+    Rocha: { inicio: "2026-12-21", fin: "2027-03-21" }
+};
+
+function fechaCalendario(valor) {
+    if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(valor)) return null;
+    const fecha = new Date(`${valor}T00:00:00Z`);
+    return Number.isFinite(fecha.getTime()) && fecha.toISOString().slice(0, 10) === valor ? fecha : null;
+}
+
+function obtenerTemporada(departamento, ahora = new Date(), configuracion = TEMPORADAS_BANISTAS) {
+    const fechas = configuracion[departamento];
+    const inicio = fechaCalendario(fechas?.inicio);
+    const fin = fechaCalendario(fechas?.fin);
+    if (!inicio || !fin || fin < inicio || fin - inicio > 366 * 86400000 ||
+        !(ahora instanceof Date) || !Number.isFinite(ahora.getTime())) return { estado: "pendiente" };
+
+    // Comparar días civiles de Uruguay, independientemente de la zona del navegador.
+    const partes = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "America/Montevideo", year: "numeric", month: "2-digit", day: "2-digit"
+    }).formatToParts(ahora);
+    const parte = tipo => partes.find(p => p.type === tipo).value;
+    const hoy = fechaCalendario(`${parte("year")}-${parte("month")}-${parte("day")}`);
+    const vigenciaDesde = new Date(fin);
+    vigenciaDesde.setUTCFullYear(fin.getUTCFullYear() - 1);
+    const proximaTemporada = new Date(inicio);
+    proximaTemporada.setUTCFullYear(inicio.getUTCFullYear() + 1);
+    if (hoy <= vigenciaDesde || hoy >= proximaTemporada) return { estado: "pendiente" };
+    return { estado: hoy >= inicio && hoy <= fin ? "dentro" : "fuera", ...fechas };
+}
+
+function obtenerEstadoPesca(restriccion, temporada) {
+    if (restriccion === 1) return { clase: "habilitada", icono: "\u2713", texto: "Pesca habilitada 24 h" };
+    if (restriccion === 3) return { clase: "prohibida", icono: "\u2298", texto: "Pesca prohibida todo el año" };
+    if (restriccion === 2) {
+        if (temporada.estado === "dentro") return { clase: "restringida", icono: "\u25f7", texto: "Horario restringido por temporada" };
+        if (temporada.estado === "fuera") return { clase: "habilitada", icono: "\u2713", texto: "Sin restricción estacional" };
+        return { clase: "pendiente", icono: "?", texto: "Restricción estacional pendiente de verificación" };
+    }
+    return { clase: "pendiente", icono: "?", texto: "Información no disponible" };
+}
+
+function escaparTexto(texto) {
+    return String(texto).replace(/[&<>"']/g, caracter => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[caracter]));
+}
+
+function mostrarEstadoPesca(estado) {
+    return `<span class="estado-pesca estado-${estado.clase}"><span aria-hidden="true">${estado.icono}</span> ${estado.texto}</span>`;
+}
+
+
+function crearIconoMarcadorPesca(estado) {
+    const svgPez = `
+        <svg class="marcador-pesca-svg"
+             aria-hidden="true"
+             viewBox="0 0 48 62"
+             fill="none">
+
+            <!-- Silueta del marcador -->
+            <path
+                d="M24 1.5C11.55 1.5 2 11.05 2 23.5c0 16.2 22 36.5 22 36.5s22-20.3 22-36.5C46 11.05 36.45 1.5 24 1.5Z"
+                fill="currentColor"
+                stroke="white"
+                stroke-width="2.5"
+            />
+
+            <!-- Fondo blanco -->
+            <circle cx="24" cy="23.5" r="17.5" fill="white"/>
+
+            <!-- Pez -->
+            <path
+                d="M11.5 23.5c3.25-4.25 7.25-6.7 12.5-6.7 5 0 8.45 2.7 10.8 6.7-2.35 4-5.8 6.7-10.8 6.7-5.25 0-9.25-2.45-12.5-6.7Zm22.6 0L40 17.75v11.5l-5.9-5.75Z"
+                fill="currentColor"
+                transform="translate(-3, 0) "
+            />
+
+            <!-- Ojo -->
+            <circle cx="17.8" cy="22" r="1.45" fill="white"/>
+        </svg>`;
+
+    return L.divIcon({
+        className: `marcador-pesca estado-${estado.clase}`,
+        html: svgPez,
+        iconSize: [36, 47],
+        iconAnchor: [18, 47],
+        popupAnchor: [0, -45]
+    });
+}
+
+
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("id");
 
@@ -139,6 +235,7 @@ function renderPesquero(pesquero, especiesPorId) {
     <div id="map"></div>
 
     <div id="lista-ubicaciones"></div>
+    <div id="referencias-pesca" class="referencias-pesca"></div>
 </section>
 
     `;
@@ -214,7 +311,30 @@ function iniciarCarrusel() {
 }
 
 function iniciarMapa(pesquero) {
-    const ubicaciones = pesquero.ubicaciones;
+    const temporada = obtenerTemporada(pesquero.departamento);
+    const ubicaciones = (pesquero.ubicaciones || []).map((ubicacion, index) => ({
+        ...ubicacion,
+        nombre: typeof ubicacion.nombre === "string" && ubicacion.nombre.trim() ? ubicacion.nombre.trim() : `Punto ${index + 1}`,
+        estadoPesca: obtenerEstadoPesca(ubicacion.restriccion, temporada)
+    }));
+    const textoTemporada = temporada.estado === "pendiente"
+        ? "Temporada de ba\u00f1istas pendiente de verificar."
+        : `${temporada.estado === "dentro" ? "Dentro" : "Fuera"} de temporada de ba\u00f1istas.`;
+    const referencias = new Map(ubicaciones.map(({ estadoPesca }) => [estadoPesca.clase, estadoPesca]));
+    const etiquetas = {
+        habilitada: "Habilitada", restringida: "Restringida por temporada",
+        prohibida: "Prohibida", pendiente: "Sin verificar"
+    };
+    const omitirLeyenda = temporada.estado === "fuera" && referencias.size === 1 && referencias.has("habilitada");
+    document.getElementById("referencias-pesca").innerHTML = `
+        ${omitirLeyenda || !referencias.size ? "" : `
+        <ul class="leyenda-pesca" aria-label="Referencias de pesca">
+            ${[...referencias.values()].map(estado => `
+                <li class="estado-${estado.clase}"><span aria-hidden="true">${estado.icono}</span> ${etiquetas[estado.clase]}</li>
+            `).join("")}
+        </ul>`}
+        <p>${escaparTexto(pesquero.departamento)} &middot; ${textoTemporada}</p>
+        <p class="aclaracion-pesca">Fechas provisionales. Informaci\u00f3n sujeta a la normativa vigente.</p>`;
 
 
     if (!ubicaciones || ubicaciones.length === 0) {
@@ -237,7 +357,10 @@ function iniciarMapa(pesquero) {
 
         const contenidoPopup = crearPopupUbicacion(ubicacion);
 
-        const marcador = L.marker(coordenada)
+        const marcador = L.marker(coordenada, {
+            icon: crearIconoMarcadorPesca(ubicacion.estadoPesca),
+            title: `${ubicacion.nombre}: ${ubicacion.estadoPesca.texto}`
+        })
             .addTo(mapa)
             .bindPopup(contenidoPopup);
         marcadores.push(marcador);
@@ -251,23 +374,39 @@ function iniciarMapa(pesquero) {
 
     const listaUbicaciones = document.getElementById("lista-ubicaciones");
 
-    listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => `
-    <div class="ubicacion-item">
-        <div>
-            <strong>📍 ${ubicacion.nombre}</strong>
-        </div>
+    listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => {
+        const estado = ubicacion.estadoPesca;
+        const advertencia = estado.clase === "prohibida" ? "Pesca prohibida"
+            : estado.clase === "pendiente" ? "Informaci\u00f3n no verificada" : estado.texto;
+        const mostrarTexto = temporada.estado === "dentro" || estado.clase === "prohibida" || estado.clase === "pendiente";
+        const mostrarIconoEstado = estado.clase !== "habilitada";
+        return `
+        <article class="ubicacion-item estado-${estado.clase}" data-index="${index}">
+            <svg class="ubicacion-pin" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <span class="ubicacion-contenido">
+                <strong>${escaparTexto(ubicacion.nombre)}</strong>
+                ${mostrarTexto ? `<span class="ubicacion-advertencia">${advertencia}</span>` : ""}
+            </span>
+            ${mostrarIconoEstado ? `<span class="ubicacion-estado" aria-hidden="true">${estado.icono}</span>` : ""}
+            <button type="button" class="ver-en-mapa" data-index="${index}"
+                aria-label="Ver ${escaparTexto(ubicacion.nombre)} en el mapa">Ver en mapa</button>
+        </article>`;
+    }).join("");
 
-        <button class="ver-en-mapa" data-index="${index}">
-            Ver en el mapa
-        </button>
-    </div>
-`).join("");
+    function seleccionarUbicacion(index) {
+        listaUbicaciones.querySelectorAll(".ubicacion-item").forEach((card, cardIndex) => {
+            card.classList.toggle("ubicacion-seleccionada", cardIndex === index);
+        });
+    }
 
-    document.querySelectorAll(".ver-en-mapa").forEach(boton => {
+    listaUbicaciones.querySelectorAll(".ver-en-mapa").forEach(boton => {
         boton.addEventListener("click", () => {
             const index = Number(boton.dataset.index);
             const ubicacion = ubicaciones[index];
 
+            seleccionarUbicacion(index);
             mapa.setView(
                 [ubicacion.lat, ubicacion.lng],
                 16
@@ -275,6 +414,10 @@ function iniciarMapa(pesquero) {
 
             marcadores[index].openPopup();
         });
+    });
+
+    marcadores.forEach((marcador, index) => {
+        marcador.on("click", () => seleccionarUbicacion(index));
     });
 }
 
@@ -298,7 +441,8 @@ function crearPopupUbicacion(ubicacion) {
 
     return `
         <div class="popup-ubicacion">
-            <strong>${ubicacion.nombre}</strong>
+            <strong>${escaparTexto(ubicacion.nombre)}</strong>
+            <p>${mostrarEstadoPesca(ubicacion.estadoPesca)}</p>
 
             ${detalles}
 

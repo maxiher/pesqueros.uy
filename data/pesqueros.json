@@ -292,10 +292,10 @@
                 "restriccion": 1
             },
             {
-                "nombre": "Playa Malvin",
+                "nombre": "Pedregal Malvin",
                 "lat": -34.899498,
                 "lng": -56.100756,
-                "restriccion": 1
+                "restriccion": 2
             },
             {
                 "nombre": "Muelle Playa Honda",
@@ -498,19 +498,19 @@
                 "nombre": "Desembocadura Arroyo Pando",
                 "lat": -34.780292,
                 "lng": -55.826212,
-                "restriccion": 1
+                "restriccion": 2
             },
         {
             "nombre": "Playa Marindia",
             "lat": -34.779703,
             "lng": -55.818539,
-            "restriccion": 1
+            "restriccion": 2
         },
         {
             "nombre": "El Fortín",
             "lat": -34.774720,
             "lng": -55.803013,
-            "restriccion": 1
+            "restriccion": 2
         }
         ]
     },
@@ -559,13 +559,13 @@
                 "nombre": "El Águila",
                 "lat": -34.771324,
                 "lng": -55.780153,
-                "restriccion": 1
+                "restriccion": 2
             },
             {
                 "nombre": "Mansa de Altántida",
                 "lat": -34.771808,
                 "lng": -55.775277,
-                "restriccion": 1
+                "restriccion": 2
             }
         ]
     },
