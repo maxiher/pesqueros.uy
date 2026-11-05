@@ -54,6 +54,46 @@ function mostrarEstadoPesca(estado) {
     return `<span class="estado-pesca estado-${estado.clase}"><span aria-hidden="true">${estado.icono}</span> ${estado.texto}</span>`;
 }
 
+
+function crearIconoMarcadorPesca(estado) {
+    const svgPez = `
+        <svg class="marcador-pesca-svg"
+             aria-hidden="true"
+             viewBox="0 0 48 62"
+             fill="none">
+
+            <!-- Silueta del marcador -->
+            <path
+                d="M24 1.5C11.55 1.5 2 11.05 2 23.5c0 16.2 22 36.5 22 36.5s22-20.3 22-36.5C46 11.05 36.45 1.5 24 1.5Z"
+                fill="currentColor"
+                stroke="white"
+                stroke-width="2.5"
+            />
+
+            <!-- Fondo blanco -->
+            <circle cx="24" cy="23.5" r="17.5" fill="white"/>
+
+            <!-- Pez -->
+            <path
+                d="M11.5 23.5c3.25-4.25 7.25-6.7 12.5-6.7 5 0 8.45 2.7 10.8 6.7-2.35 4-5.8 6.7-10.8 6.7-5.25 0-9.25-2.45-12.5-6.7Zm22.6 0L40 17.75v11.5l-5.9-5.75Z"
+                fill="currentColor"
+                transform="translate(-3, 0) "
+            />
+
+            <!-- Ojo -->
+            <circle cx="17.8" cy="22" r="1.45" fill="white"/>
+        </svg>`;
+
+    return L.divIcon({
+        className: `marcador-pesca estado-${estado.clase}`,
+        html: svgPez,
+        iconSize: [36, 47],
+        iconAnchor: [18, 47],
+        popupAnchor: [0, -45]
+    });
+}
+
+
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("id");
 
@@ -278,18 +318,23 @@ function iniciarMapa(pesquero) {
         estadoPesca: obtenerEstadoPesca(ubicacion.restriccion, temporada)
     }));
     const textoTemporada = temporada.estado === "pendiente"
-        ? "Temporada de bañistas: pendiente de verificación."
-        : `${temporada.estado === "dentro" ? "Dentro" : "Fuera"} de temporada de bañistas (${temporada.inicio.split("-").reverse().join("/")} al ${temporada.fin.split("-").reverse().join("/")}).`;
+        ? "Temporada de ba\u00f1istas pendiente de verificar."
+        : `${temporada.estado === "dentro" ? "Dentro" : "Fuera"} de temporada de ba\u00f1istas.`;
+    const referencias = new Map(ubicaciones.map(({ estadoPesca }) => [estadoPesca.clase, estadoPesca]));
+    const etiquetas = {
+        habilitada: "Habilitada", restringida: "Restringida por temporada",
+        prohibida: "Prohibida", pendiente: "Sin verificar"
+    };
+    const omitirLeyenda = temporada.estado === "fuera" && referencias.size === 1 && referencias.has("habilitada");
     document.getElementById("referencias-pesca").innerHTML = `
-        <strong>Referencias</strong>
-        <ul class="leyenda-pesca">
-            <li class="estado-habilitada">&#10003; <span>Verde: pesca habilitada o sin restricción estacional.</span></li>
-            <li class="estado-restringida">&#9719; <span>Naranja: pesca restringida por temporada.</span></li>
-            <li class="estado-prohibida">&#8856; <span>Rojo: pesca prohibida.</span></li>
-            <li class="estado-pendiente">? <span>Gris: información no disponible o pendiente de verificación.</span></li>
-        </ul>
+        ${omitirLeyenda || !referencias.size ? "" : `
+        <ul class="leyenda-pesca" aria-label="Referencias de pesca">
+            ${[...referencias.values()].map(estado => `
+                <li class="estado-${estado.clase}"><span aria-hidden="true">${estado.icono}</span> ${etiquetas[estado.clase]}</li>
+            `).join("")}
+        </ul>`}
         <p>${escaparTexto(pesquero.departamento)} &middot; ${textoTemporada}</p>
-        <p class="aclaracion-pesca">Información sujeta a la normativa vigente. Las fechas configuradas son provisionales. Los colores indican restricciones de pesca, no banderas de seguridad para bañistas.</p>`;
+        <p class="aclaracion-pesca">Fechas provisionales. Informaci\u00f3n sujeta a la normativa vigente.</p>`;
 
 
     if (!ubicaciones || ubicaciones.length === 0) {
@@ -313,11 +358,7 @@ function iniciarMapa(pesquero) {
         const contenidoPopup = crearPopupUbicacion(ubicacion);
 
         const marcador = L.marker(coordenada, {
-            icon: L.divIcon({
-                className: `marcador-pesca estado-${ubicacion.estadoPesca.clase}`,
-                html: `<span aria-hidden="true">${ubicacion.estadoPesca.icono}</span>`,
-                iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -14]
-            }),
+            icon: crearIconoMarcadorPesca(ubicacion.estadoPesca),
             title: `${ubicacion.nombre}: ${ubicacion.estadoPesca.texto}`
         })
             .addTo(mapa)
@@ -333,23 +374,39 @@ function iniciarMapa(pesquero) {
 
     const listaUbicaciones = document.getElementById("lista-ubicaciones");
 
-    listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => `
-    <div class="ubicacion-item estado-${ubicacion.estadoPesca.clase}">
-        <div>
-            <strong>📍 ${ubicacion.nombre}</strong>
-        </div>
+    listaUbicaciones.innerHTML = ubicaciones.map((ubicacion, index) => {
+        const estado = ubicacion.estadoPesca;
+        const advertencia = estado.clase === "prohibida" ? "Pesca prohibida"
+            : estado.clase === "pendiente" ? "Informaci\u00f3n no verificada" : estado.texto;
+        const mostrarTexto = temporada.estado === "dentro" || estado.clase === "prohibida" || estado.clase === "pendiente";
+        const mostrarIconoEstado = estado.clase !== "habilitada";
+        return `
+        <article class="ubicacion-item estado-${estado.clase}" data-index="${index}">
+            <svg class="ubicacion-pin" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <span class="ubicacion-contenido">
+                <strong>${escaparTexto(ubicacion.nombre)}</strong>
+                ${mostrarTexto ? `<span class="ubicacion-advertencia">${advertencia}</span>` : ""}
+            </span>
+            ${mostrarIconoEstado ? `<span class="ubicacion-estado" aria-hidden="true">${estado.icono}</span>` : ""}
+            <button type="button" class="ver-en-mapa" data-index="${index}"
+                aria-label="Ver ${escaparTexto(ubicacion.nombre)} en el mapa">Ver en mapa</button>
+        </article>`;
+    }).join("");
 
-        <button class="ver-en-mapa" data-index="${index}">
-            Ver en el mapa
-        </button>
-    </div>
-`).join("");
+    function seleccionarUbicacion(index) {
+        listaUbicaciones.querySelectorAll(".ubicacion-item").forEach((card, cardIndex) => {
+            card.classList.toggle("ubicacion-seleccionada", cardIndex === index);
+        });
+    }
 
-    document.querySelectorAll(".ver-en-mapa").forEach(boton => {
+    listaUbicaciones.querySelectorAll(".ver-en-mapa").forEach(boton => {
         boton.addEventListener("click", () => {
             const index = Number(boton.dataset.index);
             const ubicacion = ubicaciones[index];
 
+            seleccionarUbicacion(index);
             mapa.setView(
                 [ubicacion.lat, ubicacion.lng],
                 16
@@ -357,6 +414,10 @@ function iniciarMapa(pesquero) {
 
             marcadores[index].openPopup();
         });
+    });
+
+    marcadores.forEach((marcador, index) => {
+        marcador.on("click", () => seleccionarUbicacion(index));
     });
 }
 
