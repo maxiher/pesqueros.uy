@@ -2142,9 +2142,11 @@
         "enganche": 1,
         "mejorViento": "E - N",
         "nivel": 2,
-        "portada": "Fotos/pesqueros/Rocha/LaCoronilla.webp",
+        "portada": "Fotos/pesqueros/LaCoronilla.webp",
         "imagenes": [
-            "Fotos/rocha/LaCoronilla.webp"
+            "Fotos/pesqueros/LaCoronilla.webp",
+            "Fotos/pesqueros/laCoronilla2.webp",
+            "Fotos/pesqueros/LaCoronilla3.webp"
         ],
         "especies": [
             {
