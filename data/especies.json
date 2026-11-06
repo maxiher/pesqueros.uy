@@ -822,7 +822,7 @@
       "nombre_comun": "Raya Marmorada",
       "nombre_cientifico": "Sympterygia bonapartii",
       "familia": "Dasyatidae / Myliobatidae",
-      "imagen": "Fotos/Especies/raya_marmorada.webp",
+      "imagen": "Fotos/Especies/marmorada.webp",
       "habitat": "Fondos marinos costeros",
       "metodos_de_pesca": [
         "Fondo"
@@ -863,52 +863,7 @@
       },
       "notas_adicionales": ""
     },
-    {
-      "id": "raya_erizo",
-      "nombre_comun": "Raya Erizo",
-      "nombre_cientifico": "Amblyraja doellojuradoi",
-      "familia": "Rajidae",
-      "imagen": "Fotos/Especies/raya_marmorada.webp",
-      "habitat": "Fondos marinos costeros",
-      "metodos_de_pesca": [
-        "Fondo"
-      ],
-      "carnadas": [
-        "Camarón",
-        "Langostino",
-        "Pez pequeño"
-      ],
-      "temporada": "Octubre - Marzo",
-      "interes_gastronomico": "Bajo",
-      "talla_promedio_cm": "40",
-      "talla_maxima_cm": "70",
-      "descripcion": "Una especie pequeña adaptada a aguas un poco más templadas-frías en el Cono Sur. Presenta un cuerpo redondeado, ojos grandes y pequeñas espinas ubicadas en la zona de los ojos, el dorso y la cola.",
-      "caracteristicas": {
-        "combatividad": "Media",
-        "dieta": "Carnívoro",
-        "profundidad_recomendada_m": "?"
-      },
-      "arreglo": {
-        "nombre": "A Fondo",
-        "descripción": "",
-        "imagen": "./Fotos/Arreglos/basica_anzuelo_grande.webp",
-        "carga_de_reel": "0.40 mm",
-        "chicote": "0.50 - 0.60 mm",
-        "linea_madre": "0.60 mm",
-        "cantidad_anzuelos": "1",
-        "anzuelo": "2/0 a 4/0",
-        "brazolada": {
-          "linga_acero": false,
-          "diametro": "0.60 mm",
-          "largo": "50 - 80 cm"
-        },
-        "plomada": {
-          "tipo": "Acorde a la corriente",
-          "peso": "100 - 150 g"
-        }
-      },
-      "notas_adicionales": ""
-    },
+    
     {
       "id": "pez_guitarra",
       "nombre_comun": "Pez Guitarra",
