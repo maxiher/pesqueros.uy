@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquero | PesquerosUY</title>
-    
+
     <link rel="stylesheet" href="css/pesquero.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="css/estado-datos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
     <!-- NAVBAR -->
-     <header>
-    <div id="navbar-container"></div>
+    <header>
+        <div id="navbar-container"></div>
     </header>
- 
+
     <div id="estado-datos" role="status" aria-live="polite" hidden></div>
     <main class="pesquero-detalle">
-    <section id="pesquero-contenido">
-        <!-- Se carga desde JS -->
-    </section>
-</main>
+        <section id="pesquero-contenido">
+            <!-- Se carga desde JS -->
+        </section>
+    </main>
 
-    
-    <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-</script>
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 
     <script src="js/datos.js"></script>
     <script src="js/navegacion.js"></script>
     <script src="js/pesquero.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+
 </body>
+
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/especies.css">
     <link rel="stylesheet" href="css/estado-datos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -29,14 +30,8 @@
                     <circle cx="11" cy="11" r="6.5"></circle>
                     <path d="m16 16 4 4"></path>
                 </svg>
-                <input
-                    type="search"
-                    id="search-input"
-                    placeholder="Buscar por nombre común o científico..."
-                    aria-label="Buscar especies por nombre común o científico"
-                    autocomplete="off"
-                    spellcheck="false"
-                >
+                <input type="search" id="search-input" placeholder="Buscar por nombre común o científico..."
+                    aria-label="Buscar especies por nombre común o científico" autocomplete="off" spellcheck="false">
             </div>
             <button type="button" id="btn-limpiar" hidden>Limpiar</button>
         </div>
@@ -44,10 +39,17 @@
         <div id="estado-datos" role="status" aria-live="polite" hidden></div>
         <div id="contenedor-especies" class="contenedor-especies"></div>
     </div>
-    <script src="js/navbar.js"></script>
-    <script src="js/datos.js"></script>
-    <script src="js/navegacion.js"></script>
-    <script src="js/especies.js"></script>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
 </body>
+
+<script src="js/navbar.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/especies.js"></script>
+<script src="js/footer.js"></script>
+
+
 
 </html>
