@@ -141,7 +141,7 @@ function renderPesquero(pesquero, especiesPorId) {
         });
 
     contenedor.innerHTML = `
-    <a href="pesqueros.html" class="volver-lista">
+    <a href="pesqueros.html" class="volver-lista" data-volver>
     ← Volver a lista
 </a>
     <section class="carrusel">

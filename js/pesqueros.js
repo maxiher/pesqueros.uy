@@ -6,6 +6,17 @@ let searchTerm = "";
 const CANTIDAD_POR_PAGINA = 6;
 let cantidadVisible = CANTIDAD_POR_PAGINA;
 let recomendadosHoy = [];
+let eventosInicializados = false;
+let estadoRestaurado = false;
+const estadoListado = crearEstadoListado("pesqueros", () => ({
+  busqueda: searchTerm,
+  filtros: Object.fromEntries(
+    [...document.querySelectorAll("#panel-filtros select")].map(select => [select.id, select.value])
+  ),
+  temporada: document.querySelector('input[name="temporada-filtro"]:checked').value,
+  cantidadVisible,
+  panelAbierto: !document.getElementById("panel-filtros").hidden
+}));
 
 
 //Cargar pesqueros
@@ -160,6 +171,28 @@ especies
 const btnFiltro = document.getElementById("btn-filtro");
 const panelFiltros = document.getElementById("panel-filtros");
 
+// Restaurar solamente después de generar las opciones dinámicas.
+if (!estadoRestaurado) {
+  const guardado = estadoListado.guardado;
+  document.querySelectorAll("#panel-filtros select").forEach(select => {
+    const valor = guardado?.filtros?.[select.id];
+    select.value = [...select.options].some(option => option.value === valor) ? valor : "";
+  });
+  document.querySelectorAll('input[name="temporada-filtro"]').forEach(radio => {
+    radio.checked = radio.value === (guardado?.temporada === "24h" ? "24h" : "todos");
+  });
+  searchTerm = typeof guardado?.busqueda === "string" ? guardado.busqueda : "";
+  document.getElementById("search-input").value = searchTerm;
+  selectedDepartment = selectDepartamento.value || null;
+  cantidadVisible = Number.isSafeInteger(guardado?.cantidadVisible)
+    ? Math.max(CANTIDAD_POR_PAGINA, Math.min(guardado.cantidadVisible, Math.max(pesqueros.length, CANTIDAD_POR_PAGINA)))
+    : CANTIDAD_POR_PAGINA;
+  panelFiltros.hidden = !guardado?.panelAbierto;
+  btnFiltro.setAttribute("aria-expanded", String(!panelFiltros.hidden));
+  estadoRestaurado = true;
+}
+
+if (!eventosInicializados) {
 btnFiltro.addEventListener("click", () => {
   panelFiltros.hidden = !panelFiltros.hidden;
   btnFiltro.setAttribute(
@@ -207,8 +240,11 @@ document.getElementById("search-input")
     cantidadVisible += CANTIDAD_POR_PAGINA;
     updateResults();
   });
+  eventosInicializados = true;
+}
 
   updateResults();
+  estadoListado.listo();
 }
 
 

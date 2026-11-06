@@ -2,149 +2,147 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesqueros | PesquerosUY</title>
-    <link rel="stylesheet" href="css/pesqueros.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/estado-datos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesqueros | PesquerosUY</title>
+  <link rel="stylesheet" href="css/pesqueros.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/estado-datos.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <div id="navbar-container"></div>
-    </header>
+  <!-- NAVBAR -->
+  <header>
+    <div id="navbar-container"></div>
+  </header>
 
-    <div id="container">
+  <div id="container">
 
-        <a href="index.html" class="volver-lista">
-            ← Volver al inicio
-        </a>
-        
-        
-<h1>Explorá los pesqueros de Uruguay</h1>
-<p>Descubrí lugares de pesca y encontrá el ideal para tu próxima salida.</p>
+    <a href="index.html" class="volver-lista">
+      ← Volver al inicio
+    </a>
 
 
-<div class="search-controls">
-  <input
-    type="search"
-    id="search-input"
-    placeholder="Buscar pesqueros..."
-  >
+    <h1>Explorá los pesqueros de Uruguay</h1>
+    <p>Descubrí lugares de pesca y encontrá el ideal para tu próxima salida.</p>
 
-  <button type="button" id="btn-filtro"
-          aria-expanded="false"
-          aria-controls="panel-filtros">
-    ⚙ Filtros
-  </button>
-</div>
 
-<section id="panel-filtros" class="panel-filtros" hidden>
+    <div class="search-controls">
+      <input type="search" id="search-input" placeholder="Buscar pesqueros...">
 
-  <div class="filtros-grid">
-
-    <div class="filtro-campo">
-      <label for="filtro-departamento">Departamento</label>
-      <select id="filtro-departamento">
-        <option value="">Todos</option>
-      </select>
+      <button type="button" id="btn-filtro" aria-expanded="false" aria-controls="panel-filtros">
+        ⚙ Filtros
+      </button>
     </div>
 
-    <div class="filtro-campo">
-      <label for="filtro-especie">Especie</label>
-      <select id="filtro-especie">
-        <option value="">Todas</option>
-      </select>
-    </div>
+    <section id="panel-filtros" class="panel-filtros" hidden>
 
-    <div class="filtro-campo">
-      <label for="filtro-ambiente">Ambiente</label>
-      <select id="filtro-ambiente">
-        <option value="">Todos</option>
-      </select>
-    </div>
+      <div class="filtros-grid">
 
-    <div class="filtro-campo">
-      <label for="filtro-profundidad">Profundidad mínima</label>
-      <select id="filtro-profundidad">
-        <option value="">Cualquiera</option>
-        <option value="1">Nivel 1</option>
-        <option value="2">Nivel 2</option>
-        <option value="3">Nivel 3</option>
-        <option value="4">Nivel 4</option>
-        <option value="5">Nivel 5</option>
-      </select>
-    </div>
+        <div class="filtro-campo">
+          <label for="filtro-departamento">Departamento</label>
+          <select id="filtro-departamento">
+            <option value="">Todos</option>
+          </select>
+        </div>
 
-    <div class="filtro-campo">
-      <label for="filtro-enganche">Enganche máximo</label>
-      <select id="filtro-enganche">
-        <option value="">Cualquiera</option>
-        <option value="1">Nivel 1</option>
-        <option value="2">Nivel 2</option>
-        <option value="3">Nivel 3</option>
-        <option value="4">Nivel 4</option>
-        <option value="5">Nivel 5</option>
-      </select>
-    </div>
+        <div class="filtro-campo">
+          <label for="filtro-especie">Especie</label>
+          <select id="filtro-especie">
+            <option value="">Todas</option>
+          </select>
+        </div>
+
+        <div class="filtro-campo">
+          <label for="filtro-ambiente">Ambiente</label>
+          <select id="filtro-ambiente">
+            <option value="">Todos</option>
+          </select>
+        </div>
+
+        <div class="filtro-campo">
+          <label for="filtro-profundidad">Profundidad mínima</label>
+          <select id="filtro-profundidad">
+            <option value="">Cualquiera</option>
+            <option value="1">Nivel 1</option>
+            <option value="2">Nivel 2</option>
+            <option value="3">Nivel 3</option>
+            <option value="4">Nivel 4</option>
+            <option value="5">Nivel 5</option>
+          </select>
+        </div>
+
+        <div class="filtro-campo">
+          <label for="filtro-enganche">Enganche máximo</label>
+          <select id="filtro-enganche">
+            <option value="">Cualquiera</option>
+            <option value="1">Nivel 1</option>
+            <option value="2">Nivel 2</option>
+            <option value="3">Nivel 3</option>
+            <option value="4">Nivel 4</option>
+            <option value="5">Nivel 5</option>
+          </select>
+        </div>
+
+      </div>
+
+      <fieldset class="filtro-temporada">
+        <legend>Temporada de bañistas</legend>
+
+        <label>
+          <input type="radio" name="temporada-filtro" value="todos" checked>
+          Todos los pesqueros
+        </label>
+
+        <label>
+          <input type="radio" name="temporada-filtro" value="24h">
+          Pesca habilitada 24 h
+        </label>
+      </fieldset>
+
+      <div class="filtros-acciones">
+        <button type="button" id="btn-limpiar">
+          Limpiar filtros
+        </button>
+      </div>
+
+    </section>
+
+
+    <section id="seccion-recomendados" hidden>
+      <h2>Más favorables hoy</h2>
+      <p>Pesqueros destacados según las condiciones actuales.</p>
+
+      <div id="recomendados-container"></div>
+    </section>
+
+    <section id="seccion-todos">
+      <div class="listado-header">
+        <h2>Todos los pesqueros</h2>
+        <span id="results-count"></span>
+      </div>
+
+      <div id="estado-datos" role="status" aria-live="polite" hidden></div>
+      <div id="results-container"></div>
+
+      <div class="ver-mas-container">
+        <button id="btn-ver-mas" type="button" hidden>
+          Ver más pesqueros
+        </button>
+      </div>
+    </section>
 
   </div>
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
 
-  <fieldset class="filtro-temporada">
-    <legend>Temporada de bañistas</legend>
+  <script src="js/datos.js"></script>
+  <script src="js/navegacion.js"></script>
+  <script src="js/pesqueros.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
 
-    <label>
-      <input type="radio" name="temporada-filtro"
-             value="todos" checked>
-      Todos los pesqueros
-    </label>
-
-    <label>
-      <input type="radio" name="temporada-filtro"
-             value="24h">
-      Pesca habilitada 24 h
-    </label>
-  </fieldset>
-
-  <div class="filtros-acciones">
-    <button type="button" id="btn-limpiar">
-      Limpiar filtros
-    </button>
-  </div>
-
-</section>
-
-
-<section id="seccion-recomendados" hidden>
-  <h2>Más favorables hoy</h2>
-  <p>Pesqueros destacados según las condiciones actuales.</p>
-
-  <div id="recomendados-container"></div>
-</section>
-
-<section id="seccion-todos">
-  <div class="listado-header">
-    <h2>Todos los pesqueros</h2>
-    <span id="results-count"></span>
-  </div>
-
-        <div id="estado-datos" role="status" aria-live="polite" hidden></div>
-  <div id="results-container"></div>
-
-  <div class="ver-mas-container">
-    <button id="btn-ver-mas" type="button" hidden>
-      Ver más pesqueros
-    </button>
-  </div>
-</section>
-
-    </div>
-
-    <script src="js/datos.js"></script>
-    <script src="js/pesqueros.js"></script>
-    <script src="js/navbar.js"></script>
 </body>
 
 </html>

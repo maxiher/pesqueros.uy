@@ -2,6 +2,8 @@ const contenedor = document.getElementById("contenedor-especies");
 const buscador = document.getElementById("search-input");
 const botonLimpiar = document.getElementById("btn-limpiar");
 let especiesCargadas = null;
+let busquedaRestaurada = false;
+const estadoListado = crearEstadoListado("especies", () => ({ busqueda: buscador.value }));
 
 function normalizarTexto(texto) {
   return String(texto ?? "")
@@ -85,9 +87,16 @@ cargarVistaDatos({
     const data = await cargarJSON("./data/especies.json");
     if (!Array.isArray(data.especies)) throw new Error("Formato de datos inválido");
     especiesCargadas = data.especies;
+    if (!busquedaRestaurada) {
+      buscador.value = typeof estadoListado.guardado?.busqueda === "string"
+        ? estadoListado.guardado.busqueda : "";
+      busquedaRestaurada = true;
+    }
+    botonLimpiar.hidden = buscador.value.length === 0;
     contenedor.replaceChildren();
     if (especiesCargadas.length === 0) return { mensaje: "No hay especies disponibles." };
     renderizarEspecies();
+    estadoListado.listo();
   }
 });
 
