@@ -16,9 +16,6 @@ body{
     margin-bottom: 5%;
 }
 
-
-/*Probando
-
 /* Efecto de scroll del hero */
 
 .hero-video {
@@ -45,7 +42,7 @@ body{
         opacity: 1;
     }
 }
-/*Probe
+
 
 /* Clase que añadiremos con JavaScript para mostrar el menú */
 
@@ -122,7 +119,8 @@ section{
 
 h2{
     font-size:2.3rem;
-    margin-bottom:30px;
+    margin-bottom:25px;
+    
 }
 
 .info-grid{
@@ -234,77 +232,87 @@ h2{
     border-radius:8px;
 }
 
-.explore-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+
+
+/* CARDS EXPLORAR */
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.guide-card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-
-    box-shadow:
-    0 6px 20px rgba(0,0,0,.08);
+.guide-card {
+    display: block;
+    color: #0d3b66;
+    text-decoration: none;
 }
 
-.guide-card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+.guide-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-.guide-content{
-    padding:20px;
+.guide-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.guide-content h3{
-    margin-bottom:20px;
+.guide-card h3 {
+    margin: 14px 0 0;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 600;
 }
 
-.guide-content button{
-    background:#0d3b66;
-    color:white;
+/* Efecto zoom */
+@media (hover: hover) and (pointer: fine) {
+    .guide-card:hover .guide-image img {
+        transform: scale(1.07);
+    }
 
-    border:none;
-
-    padding:12px 25px;
-
-    border-radius:10px;
-
-    cursor:pointer;
+    .guide-card:hover h3 {
+        color: #227c9d;
+    }
 }
 
-.departamentos-grid{
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fill,minmax(250px,1fr));
-
-    gap:20px;
+/* Navegación con teclado */
+.guide-card:focus-visible {
+    outline: 3px solid #227c9d;
+    outline-offset: 5px;
+    border-radius: 18px;
 }
 
-.departamento-card{
-    background:white;
-
-    padding:25px;
-
-    border-radius:18px;
-
-    box-shadow:
-    0 6px 20px rgba(0,0,0,.08);
+/* Responsive */
+@media (max-width: 900px) {
+    .explore-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
 }
 
-.departamento-card h3{
-    margin-bottom:15px;
+@media (max-width: 600px) {
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.departamento-card a{
-    text-decoration:none;
-    color:#227c9d;
-    font-weight:600;
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .guide-image img {
+        transition: none;
+    }
+
+    .guide-card:hover .guide-image img {
+        transform: none;
+    }
 }
+
+
 
 @media(max-width:900px){
 
@@ -316,9 +324,6 @@ h2{
         grid-template-columns:1fr;
     }
 
-    .explore-grid{
-        grid-template-columns:1fr;
-    }
 }
 
 @media (max-width: 600px) {
@@ -356,14 +361,6 @@ h2{
 
     .card {
         padding: 20px;
-    }
-
-    .guide-card img {
-        height: 200px;
-    }
-
-    .guide-content {
-        padding: 18px;
     }
 
     .departamento-card {
