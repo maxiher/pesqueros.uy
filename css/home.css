@@ -107,12 +107,6 @@ body{
     font-size:1.4rem;
 }
 
-.intro{
-    text-align:center;
-    padding:60px 0;
-    max-width:900px;
-}
-
 section{
     margin-bottom:80px;
 }
@@ -222,23 +216,18 @@ h2{
 
 .alert-box{
     margin-top:25px;
-
     background:#bde8f5;
-
     border-left:5px solid #227c9d;
-
     padding:20px;
-
     border-radius:8px;
 }
-
-
 
 /* CARDS EXPLORAR */
 
 .explore-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
 }
 
 .guide-card {
@@ -346,9 +335,6 @@ h2{
         font-size: 1.05rem;
     }
 
-    .intro {
-        padding: 40px 0;
-    }
 
     section {
         margin-bottom: 50px;
@@ -363,7 +349,4 @@ h2{
         padding: 20px;
     }
 
-    .departamento-card {
-        padding: 20px;
-    }
 }
