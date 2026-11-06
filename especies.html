@@ -21,11 +21,24 @@
             ← Volver al inicio
         </a>
         <h1>Especies de Uruguay</h1>
-        <p>Seleccioná una especie para explorar sus características o buscala aqui.</p>
+        <p>Seleccioná una especie para explorar sus características o buscala aquí.</p>
 
         <div class="search-controls">
-            <input type="text" id="search-input" placeholder="Buscar especie...">
-            <button type="button" id="btn-filtro">Filtrar</button>
+            <div class="search-field">
+                <svg class="search-field__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="6.5"></circle>
+                    <path d="m16 16 4 4"></path>
+                </svg>
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Buscar por nombre común o científico..."
+                    aria-label="Buscar especies por nombre común o científico"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+            </div>
+            <button type="button" id="btn-limpiar" hidden>Limpiar</button>
         </div>
 
         <div id="estado-datos" role="status" aria-live="polite" hidden></div>

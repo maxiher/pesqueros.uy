@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li><a href="pesqueros.html">Pesqueros</a></li>
                         <li><a href="especies.html">Especies</a></li>
                         <li><a href="tecnicas.html">Técnicas y Equipos</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <!-- <li><a href="shop.html">Shop</a></li> --> 
                         <li><a href="contacto.html">Contáctanos</a></li>
                     </ul>
                 </nav>

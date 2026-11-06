@@ -43,37 +43,89 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    width: 100%;
+    max-width: 680px;
     margin-bottom: 2rem;
 }
 
-#search-input {
-    width: 320px;
-    max-width: 100%;
-    height: 2.2rem;
-    padding: 0 0.75rem;
-
-    border: 1px solid #ccc;
-    border-radius: 6px;
-
-    font-size: 0.95rem;
+.search-field {
+    position: relative;
+    flex: 1;
+    min-width: 0;
 }
 
-#btn-filtro {
-    height: 2.35rem;
-    padding: 0 1rem;
+.search-field__icon {
+    position: absolute;
+    top: 50%;
+    left: 0.9rem;
+    width: 1.15rem;
+    height: 1.15rem;
+    transform: translateY(-50%);
+    stroke: #52788d;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    pointer-events: none;
+}
 
-    border: none;
-    border-radius: 6px;
+#search-input {
+    width: 100%;
+    height: 2.75rem;
+    box-sizing: border-box;
+    padding: 0 1rem 0 2.75rem;
 
-    background-color: #0b3c5d;
-    color: white;
+    border: 1px solid #b8ccd7;
+    border-radius: 9px;
+    background-color: #fff;
+    color: #243943;
 
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-input::placeholder {
+    color: #718793;
+}
+
+.search-field:focus-within .search-field__icon {
+    stroke: #0b5f8a;
+}
+
+#search-input:focus {
+    border-color: #16739a;
+    box-shadow: 0 0 0 3px rgba(22, 115, 154, 0.16);
+}
+
+/* Oculta el control nativo para mantener una sola acción de limpieza. */
+#search-input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+#btn-limpiar {
+    height: 2.75rem;
+    padding: 0 1.1rem;
+
+    border: 1px solid #8fb2c4;
+    border-radius: 9px;
+
+    background-color: #eef7fb;
+    color: #0b5f8a;
+
+    font: inherit;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-#btn-filtro:hover {
-    opacity: 0.9;
+#btn-limpiar:hover {
+    border-color: #5f94ad;
+    background-color: #deeff7;
+}
+
+#btn-limpiar:focus-visible {
+    outline: 3px solid rgba(22, 115, 154, 0.22);
+    outline-offset: 2px;
 }
 
 
@@ -83,6 +135,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+.sin-coincidencias {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 2rem 1.25rem;
+    border: 1px solid #d6e4eb;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #4c6673;
+    text-align: center;
 }
 
 
@@ -185,18 +248,12 @@ h1 {
     }
 
     .search-controls {
-        width: 100%;
         gap: 0.5rem;
     }
 
-    #search-input {
-        flex: 1;
-        width: auto;
-        min-width: 0;
-    }
-
-    #btn-filtro {
+    #btn-limpiar {
         flex-shrink: 0;
+        padding: 0 0.85rem;
     }
 
     .contenedor-especies {
