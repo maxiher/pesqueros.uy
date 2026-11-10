@@ -17,7 +17,7 @@
         "Langostino",
         "Hígado de pollo"
       ],
-      "temporada": "Mayo - Septiembre",
+      "temporada": ["Invierno"],
       "interes_gastronomico": "Medio",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "40",
@@ -67,7 +67,7 @@
         "Mejillon",
         "Pejerrey"
       ],
-      "temporada": "Septiembre - Abril",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Medio",
       "talla_promedio_cm": "40",
       "talla_maxima_cm": "60",
@@ -118,7 +118,7 @@
         "Cangrejos",
         "Peces de agua dulce"
       ],
-      "temporada": "Abril - Octubre",
+      "temporada": ["Otoño", "Invierno"],
       "interes_gastronomico": "Alto",
       "talla_promedio_cm": "40",
       "talla_maxima_cm": "60",
@@ -214,7 +214,7 @@
         "Filet de pescado",
         "Cebo vivo pequeño"
       ],
-      "temporada": "Marzo - Noviembre",
+      "temporada": ["Invierno", "Primavera"],
       "interes_gastronomico": "Medio",
       "talla_promedio_cm": "15",
       "talla_maxima_cm": "50",
@@ -309,7 +309,7 @@
         "Mejillón",
         "Almeja"
       ],
-      "temporada": "Julio - Noviembre",
+      "temporada": ["Invierno", "Primavera"],
       "interes_gastronomico": "Medio - Alto",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "45",
@@ -401,7 +401,7 @@
         "Langostino",
         "Lisa"
       ],
-      "temporada": "Primavera / Otoño",
+      "temporada": ["Primavera", "Otoño"],
       "interes_gastronomico": "Alto",
       "talla_promedio_cm": "20",
       "talla_maxima_cm": "45",
@@ -495,7 +495,7 @@
         "Pejerrey",
         "Camarón"
       ],
-      "temporada": "Primavera - Verano",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "40",
@@ -543,7 +543,7 @@
         "Mejillón",
         "Muergo"
       ],
-      "temporada": "Primavera - Verano",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Medio",
       "talla_promedio_cm": "60",
       "talla_maxima_cm": "120",
@@ -597,7 +597,7 @@
         "Carnada Blanca",
         "Langostino"
       ],
-      "temporada": "Diciembre - Marzo",
+      "temporada": "Verano",
       "interes_gastronomico": "Muy Alto",
       "talla_promedio_cm": "30",
       "talla_maxima_cm": "70",
@@ -644,7 +644,7 @@
         "Pequeños Moluscos",
         "Anchoita"
       ],
-      "temporada": "Junio - Octubre",
+      "temporada": "Invierno",
       "interes_gastronomico": "Alto",
       "talla_promedio_cm": "30",
       "talla_maxima_cm": "45",
@@ -739,7 +739,7 @@
         "Pejerrey",
         "Calamar"
       ],
-      "temporada": "Septiembre - Abril",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "120",
       "talla_maxima_cm": "180",
@@ -786,7 +786,7 @@
         "Langostino",
         "Camarón"
       ],
-      "temporada": "Noviembre - Marzo",
+      "temporada": "Verano",
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "80",
       "talla_maxima_cm": "120",
@@ -832,7 +832,7 @@
         "Langostino",
         "Pez pequeño"
       ],
-      "temporada": "Octubre - Marzo",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "55",
       "talla_maxima_cm": "90",
@@ -958,7 +958,7 @@
         "Pez pequeño",
         "Carnada Blanca"
       ],
-      "temporada": "Primavera - Verano",
+      "temporada": ["Primavera", "Verano"],
       "interes_gastronomico": "Bajo",
       "talla_promedio_cm": "25",
       "talla_maxima_cm": "40",

@@ -229,11 +229,13 @@
         ],
         "ubicaciones": [
             {
+                "nombre": "Club de Pesca",
                 "lat": -34.911326,
                 "lng": -56.129881,
                 "restriccion": 1
             },
             {
+                "nombre": "Faro Punta Carretas",
                 "lat": -34.909208,
                 "lng": -56.127990,
                 "restriccion": 1
@@ -257,7 +259,7 @@
         "acceso": "Fácil",
         "profundidad": 3,
         "enganche": 3,
-        "mejorViento": "VARIOS",
+        "mejorViento": "SE",
         "nivel": 2,
         "portada": "Fotos/pesqueros/PuntaGorda1.webp",
         "imagenes": [
@@ -1277,7 +1279,7 @@
         "acceso": "Medio",
         "profundidad": 3,
         "enganche": 4,
-        "mejorViento": "SE",
+        "mejorViento": "E",
         "nivel": 5,
         "portada": "Fotos/pesqueros/PuntaColorada.webp",
         "imagenes": [
@@ -1420,7 +1422,7 @@
         "acceso": "Fácil",
         "profundidad": 3,
         "enganche": 1,
-        "mejorViento": "E / SE",
+        "mejorViento": ["E", "SE"],
         "nivel": 3,
         "portada":"Fotos/pesqueros/OceanPark.webp",
         "imagenes": [
@@ -1460,14 +1462,14 @@
             },
             {
                 "nombre": "Chihuahua",
-                "lat": -34.877608,
-                "lng": -55.094088,
+                "lat": -34.877802,
+                "lng": -55.095981,
                 "restriccion": 2
             },
             {
                 "nombre": "Tio Tom",
-                "lat": -34.877608,
-                "lng": -55.094088,
+                "lat": -34.878089,
+                "lng": -55.079017,
                 "restriccion": 2
             }
         ]
@@ -1601,7 +1603,7 @@
         "acceso": "Fácil",
         "profundidad": 3,
         "enganche": 1,
-        "mejorViento": "E",
+        "mejorViento": ["E", "S"],
         "nivel": 5,
         "portada": "Fotos/pesqueros/MansaPuntaDelEste.webp",
         "imagenes": [
@@ -2069,7 +2071,7 @@
         "acceso": "Fácil",
         "profundidad": 2,
         "enganche": 3,
-        "mejorViento": "E - N",
+        "mejorViento": ["E", "N"],
         "nivel": 2,
         "portada": "Fotos/pesqueros/PuntaDelDiablo.webp",
         "imagenes": [
@@ -2140,7 +2142,7 @@
         "acceso": "Fácil",
         "profundidad": 2,
         "enganche": 1,
-        "mejorViento": "E - N",
+        "mejorViento": ["E", "N"],
         "nivel": 2,
         "portada": "Fotos/pesqueros/LaCoronilla.webp",
         "imagenes": [
