@@ -124,9 +124,48 @@ h2{
 }
 
 
-.info-date {
-    margin-top: -20px;
+.conditions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-bottom: 15px;
+}
+
+.conditions-header h2 {
+    margin: 0;
+}
+
+.weather-zone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.weather-zone label {
+    font-weight: 600;
+}
+
+.weather-zone select {
+    min-height: 44px;
+    max-width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #0d3b66;
+    font: inherit;
+}
+
+.weather-zone select:focus-visible {
+    outline: 3px solid #227c9d;
+    outline-offset: 3px;
+}
+
+.info-date,
+.weather-reference {
+    margin: 0 0 15px;
     color: #5f7183;
     font-size: 1rem;
 }
@@ -316,6 +355,16 @@ h2{
 }
 
 @media (max-width: 600px) {
+
+    .weather-zone {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .weather-zone select {
+        flex: 1;
+        min-width: 0;
+    }
 
     .container {
         width: 92%;

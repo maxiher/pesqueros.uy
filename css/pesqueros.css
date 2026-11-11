@@ -160,6 +160,22 @@ h1 {
   margin: 2rem 0 3rem;
 }
 
+.recomendados-nota {
+  color: #526775;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.recomendados-nota a {
+  color: #0b5f8a;
+  text-underline-offset: 2px;
+}
+
+.recomendados-nota a:focus-visible {
+  outline: 3px solid #227c9d;
+  outline-offset: 3px;
+}
+
 #seccion-recomendados[hidden],
 #btn-ver-mas[hidden] {
   display: none;

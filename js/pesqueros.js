@@ -6,6 +6,10 @@ let searchTerm = "";
 const CANTIDAD_POR_PAGINA = 6;
 let cantidadVisible = CANTIDAD_POR_PAGINA;
 let recomendadosHoy = [];
+let consultaRecomendados = 0;
+let temporizadorRecomendados;
+let recomendadosVigentesHasta = 0;
+let diaRecomendados = '';
 let eventosInicializados = false;
 let estadoRestaurado = false;
 const estadoListado = crearEstadoListado("pesqueros", () => ({
@@ -73,20 +77,11 @@ function renderResults(pesqueros, containerId = "results-container") {
 
 function updateResults() {
   const todos = filtrarPesqueros(PESQUEROS_CACHE);
-  const recomendados = filtrarPesqueros(recomendadosHoy);
 
   document.getElementById("results-container").hidden = false;
   mostrarEstadoDatos(mensajeResultados()?.mensaje ?? "");
 
-  // Recomendados
-  const seccion = document.getElementById("seccion-recomendados");
-
-  seccion.hidden = recomendados.length === 0;
-
-  renderResults(
-    recomendados.slice(0, 6),
-    "recomendados-container"
-  );
+  renderRecomendados();
 
   // Todos los pesqueros
   renderResults(
@@ -101,6 +96,14 @@ function updateResults() {
     cantidadVisible >= todos.length;
 }
 
+function renderRecomendados() {
+  if (Date.now() >= recomendadosVigentesHasta || diaRecomendados !== Temporadas.fechaUruguay()) {
+    recomendadosHoy = [];
+  }
+  const recomendados = filtrarPesqueros(recomendadosHoy).slice(0, 3);
+  document.getElementById('seccion-recomendados').hidden = recomendados.length === 0;
+  renderResults(recomendados, 'recomendados-container');
+}
 
 
 async function init() {
@@ -240,11 +243,49 @@ document.getElementById("search-input")
     cantidadVisible += CANTIDAD_POR_PAGINA;
     updateResults();
   });
+  document.addEventListener('visibilitychange', () => {
+    cargarRecomendados(pesqueros, especies);
+  });
+  window.addEventListener('pageshow', evento => {
+    if (evento.persisted) cargarRecomendados(pesqueros, especies);
+  });
+  window.addEventListener('pagehide', () => {
+    clearTimeout(temporizadorRecomendados);
+    consultaRecomendados++;
+  });
   eventosInicializados = true;
 }
 
   updateResults();
   estadoListado.listo();
+  // La lista completa se muestra sin esperar a los servicios meteorológicos.
+  cargarRecomendados(pesqueros, especies);
+}
+
+async function cargarRecomendados(pesqueros, especies) {
+  const consulta = ++consultaRecomendados;
+  clearTimeout(temporizadorRecomendados);
+  recomendadosHoy = [];
+  renderRecomendados();
+  if (document.hidden) return;
+  const inicio = Date.now();
+  const dia = Temporadas.fechaUruguay(new Date(inicio));
+  let resultado;
+  try {
+    resultado = await Recomendaciones.calcular(pesqueros, especies);
+  } catch {
+    resultado = [];
+  }
+  if (consulta !== consultaRecomendados) return;
+  recomendadosHoy = resultado;
+  recomendadosVigentesHasta = inicio + 300000;
+  diaRecomendados = dia;
+  // Solo se actualiza esta sección: el listado conserva sus nodos y su paginación.
+  renderRecomendados();
+  // Revalidar cada cinco minutos y al cambiar de hora (incluida medianoche).
+  const espera = Math.max(1000, Math.min(recomendadosVigentesHasta - Date.now(),
+    3600000 - Date.now() % 3600000));
+  temporizadorRecomendados = setTimeout(() => cargarRecomendados(pesqueros, especies), espera);
 }
 
 
