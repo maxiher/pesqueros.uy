@@ -100,7 +100,7 @@ const Meteorologia = (() => {
       if (!codigosValidos.has(codigo)) return null;
       if (codigosTormenta.has(codigo)) tormenta = true;
     }
-    return tormenta;
+    return tormenta || codigosTormenta.has(datos?.current?.weather_code);
   }
 
   return { zonas, consultar, tormentasRestantes, actualValido };
