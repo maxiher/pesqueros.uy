@@ -184,6 +184,8 @@ h1 {
 }
 
 #map {
+    position: relative;
+    z-index: 0;
     width: 100%;
     height: 450px;
     border-radius: 10px;
