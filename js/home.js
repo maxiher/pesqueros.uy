@@ -1,36 +1,43 @@
-// FECHA
+// El fondo estatico permanece visible hasta que el navegador confirma la reproduccion.
+(() => {
+  const video = document.querySelector('.hero-video');
+  if (!video) return;
 
-const fecha = document.getElementById("fecha");
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const hideVideo = () => video.classList.remove('is-playing');
 
-const hoy = new Date();
+  video.addEventListener('playing', () => {
+    if (!motion.matches && !video.paused) video.classList.add('is-playing');
+  });
+  video.addEventListener('pause', hideVideo);
+  video.addEventListener('error', hideVideo);
+  video.querySelector('source')?.addEventListener('error', hideVideo);
 
-const dias = [
-  "Domingo",
-  "Lunes",
-  "Martes",
-  "Miércoles",
-  "Jueves",
-  "Viernes",
-  "Sábado"
-];
+  async function updatePlayback() {
+    hideVideo();
+    if (motion.matches) {
+      video.pause();
+      return;
+    }
 
-const meses = [
-  "enero",
-  "febrero",
-  "marzo",
-  "abril",
-  "mayo",
-  "junio",
-  "julio",
-  "agosto",
-  "septiembre",
-  "octubre",
-  "noviembre",
-  "diciembre"
-];
+    video.muted = true;
+    try {
+      await video.play();
+    } catch {
+      // Safari puede rechazar play(), por ejemplo en modo de bajo consumo.
+      hideVideo();
+    }
+  }
 
-fecha.textContent =
-  `${dias[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]}`;
+  motion.addEventListener('change', updatePlayback);
+  updatePlayback();
+})();
+
+// Fecha de Uruguay, independiente del huso horario del navegador.
+document.getElementById("fecha").textContent = new Intl.DateTimeFormat('es-UY', {
+  timeZone: Temporadas.zonaHoraria,
+  weekday: 'long', day: 'numeric', month: 'long'
+}).format(new Date());
 
 
 // TEMPORAL
@@ -92,26 +99,17 @@ faseLunar.textContent = phaseToArray.slice(1).join(" ");
 moonIcon.textContent = `${phaseToArray[0]}`
 
 
-//Clima actual
-async function getWeather() {
-    const url =
-      "https://api.open-meteo.com/v1/forecast" +
-      "?latitude=-34.9011" +
-      "&longitude=-56.1645" +
-      "&current=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m" +
-      "&timezone=auto";
-
-    const data = await cargarJSON(url);
-
-    const weather = {
-      temp: data.current.temperature_2m,
-      wind: data.current.wind_speed_10m,
-      windDirection: data.current.wind_direction_10m,
-      code: data.current.weather_code
-    };
-
-    return weather;
-
+// Datos de un punto costero representativo por departamento.
+async function getWeather(departamento) {
+  const zona = Meteorologia.zonas[departamento];
+  if (!zona) throw new Error('Zona costera desconocida');
+  const data = await Meteorologia.consultar(zona.lat, zona.lng);
+  return {
+    temp: data.current.temperature_2m,
+    wind: data.current.wind_speed_10m,
+    windDirection: data.current.wind_direction_10m,
+    code: data.current.weather_code
+  };
 }
 
 function getWindDirection(degrees) {
@@ -194,7 +192,7 @@ function getWeatherCondition(code) {
   };
 }
 
-async function renderWeather() {
+function renderWeather(data) {
   const weatherIcon = document.getElementById("weather-icon");
   const weatherCondition = document.getElementById("weather-condition");
   const temperature = document.getElementById("temperature");
@@ -202,8 +200,6 @@ async function renderWeather() {
   const windSpeed = document.getElementById("wind-speed");
   const windDirection = document.getElementById("wind-direction");
   const windArrow = document.getElementById("wind-arrow");
-
-  const data = await getWeather();
 
   // CLIMA
   const condition = getWeatherCondition(data.code);
@@ -226,14 +222,42 @@ async function renderWeather() {
     `rotate(${arrowDirection}deg)`;
 }
 
-cargarVistaDatos({
-  contenido: ".weather-content, .wind-content",
-  estado: "estado-meteorologia",
-  cargando: "Cargando clima y viento...",
-  error: "No pudimos consultar el clima y el viento. Intentá nuevamente.",
-  cargar: renderWeather
-});
+const selectorClima = document.getElementById('zona-clima');
+const contenidosClima = document.querySelectorAll('.weather-content, .wind-content');
+let consultaClima = 0;
 
+async function actualizarZonaClima() {
+  const consulta = ++consultaClima;
+  const departamento = selectorClima.value;
+  const zona = Meteorologia.zonas[departamento];
+  document.getElementById('referencia-clima').textContent =
+    `Referencia costera: ${zona.nombre}. No representa todo el departamento.`;
+  contenidosClima.forEach(contenido => {
+    contenido.hidden = true;
+    contenido.setAttribute('aria-busy', 'true');
+  });
+  mostrarEstadoDatos(`Cargando clima y viento de ${departamento}...`, null, null,
+    'carga', 'estado-meteorologia');
+  try {
+    const datos = await getWeather(departamento);
+    // Una respuesta anterior nunca debe reemplazar la zona recién elegida.
+    if (consulta !== consultaClima) return;
+    renderWeather(datos);
+    mostrarEstadoDatos('', null, null, 'vacio', 'estado-meteorologia');
+    contenidosClima.forEach(contenido => { contenido.hidden = false; });
+  } catch {
+    if (consulta !== consultaClima) return;
+    mostrarEstadoDatos(`No pudimos consultar el clima y el viento de ${departamento}. Intentá nuevamente.`,
+      actualizarZonaClima, null, 'error', 'estado-meteorologia');
+  } finally {
+    if (consulta === consultaClima) {
+      contenidosClima.forEach(contenido => contenido.setAttribute('aria-busy', 'false'));
+    }
+  }
+}
+
+selectorClima.addEventListener('change', actualizarZonaClima);
+actualizarZonaClima();
 
 
 // Efecto de desplazamiento del Hero

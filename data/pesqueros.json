@@ -241,7 +241,7 @@
                 "restriccion": 1
             },
             {
-                "lat": -34909235,
+                "lat": -34.909235,
                 "lng": -56.126335,
                 "restriccion": 1
             }
@@ -2123,7 +2123,7 @@
         }, 
         {
             "nombre": "El Cabito",
-            "lat": -24.031446,
+            "lat": -34.031446,
             "lng": -53.536023,
             "restriccion": 2
         }

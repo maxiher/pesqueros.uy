@@ -52,7 +52,7 @@ cargarVistaDatos({
       especie.habitat;
 
     document.getElementById("temporada").textContent =
-      especie.temporada;
+      Temporadas.texto(especie.temporada);
 
     document.getElementById("interes-gastronomico").textContent =
       especie.interes_gastronomico;

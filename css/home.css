@@ -10,6 +10,14 @@ body{
     color:#0d3b66;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#explorar {
+    scroll-margin-top: 80px;
+}
+
 .container{
     width:min(1200px,90%);
     margin:auto;
@@ -31,7 +39,7 @@ body{
 /* Reducir efectos en móviles y para usuarios
    que prefieren menos movimiento */
 
-@media (max-width: 700px),
+@media (max-width: 900px),
        (prefers-reduced-motion: reduce) {
     .hero-video,
     .hero-overlay {
@@ -49,8 +57,9 @@ body{
 
 .hero {
     position: relative;
-    background-color: #0a3d62;
+    background: #0a3d62 url("../Fotos/General/hero.webp") center / cover no-repeat;
     height: 500px;
+    padding: 100px 20px 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +78,22 @@ body{
     object-position: center;
 
     z-index: 0;
+    /* El elemento completo permanece oculto hasta reproducirse, incluidos sus controles nativos. */
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero-video.is-playing {
+    visibility: visible;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 20, 35, .5), rgba(0, 20, 35, .35));
 }
 
 .hero::after {
@@ -94,6 +119,42 @@ body{
     z-index: 2;
 
     padding: 0 20px;
+    max-width: 900px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .65);
+}
+
+.hero-explore {
+    position: absolute;
+    z-index: 3;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    min-height: 64px;
+    padding: 6px 16px;
+    color: #0d3b66;
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.hero-explore:focus-visible {
+    outline: 3px solid #227c9d;
+    outline-offset: 3px;
+}
+
+.hero-explore svg {
+    animation: hero-arrow 2s ease-in-out infinite;
+}
+
+@keyframes hero-arrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
 }
 
 .hero h1{
@@ -124,9 +185,48 @@ h2{
 }
 
 
-.info-date {
-    margin-top: -20px;
+.conditions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-bottom: 15px;
+}
+
+.conditions-header h2 {
+    margin: 0;
+}
+
+.weather-zone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.weather-zone label {
+    font-weight: 600;
+}
+
+.weather-zone select {
+    min-height: 44px;
+    max-width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #0d3b66;
+    font: inherit;
+}
+
+.weather-zone select:focus-visible {
+    outline: 3px solid #227c9d;
+    outline-offset: 3px;
+}
+
+.info-date,
+.weather-reference {
+    margin: 0 0 15px;
     color: #5f7183;
     font-size: 1rem;
 }
@@ -292,6 +392,18 @@ h2{
 
 /* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-video.is-playing {
+        visibility: hidden;
+    }
+
+    .hero-explore svg {
+        animation: none;
+    }
+
     .guide-image img {
         transition: none;
     }
@@ -305,6 +417,13 @@ h2{
 
 @media(max-width:900px){
 
+    .home-page .hero {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        margin-bottom: 24px;
+    }
+
     .hero h1{
         font-size:2.5rem;
     }
@@ -317,17 +436,22 @@ h2{
 
 @media (max-width: 600px) {
 
+    .weather-zone {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .weather-zone select {
+        flex: 1;
+        min-width: 0;
+    }
+
     .container {
         width: 92%;
     }
 
-    .hero {
-        height: 380px;
-        padding: 0 20px;
-    }
-
     .hero h1 {
-        font-size: 2rem;
+        font-size: clamp(2rem, 8vw, 2.5rem);
         line-height: 1.15;
     }
 
