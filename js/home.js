@@ -1,3 +1,38 @@
+// El fondo estatico permanece visible hasta que el navegador confirma la reproduccion.
+(() => {
+  const video = document.querySelector('.hero-video');
+  if (!video) return;
+
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const hideVideo = () => video.classList.remove('is-playing');
+
+  video.addEventListener('playing', () => {
+    if (!motion.matches && !video.paused) video.classList.add('is-playing');
+  });
+  video.addEventListener('pause', hideVideo);
+  video.addEventListener('error', hideVideo);
+  video.querySelector('source')?.addEventListener('error', hideVideo);
+
+  async function updatePlayback() {
+    hideVideo();
+    if (motion.matches) {
+      video.pause();
+      return;
+    }
+
+    video.muted = true;
+    try {
+      await video.play();
+    } catch {
+      // Safari puede rechazar play(), por ejemplo en modo de bajo consumo.
+      hideVideo();
+    }
+  }
+
+  motion.addEventListener('change', updatePlayback);
+  updatePlayback();
+})();
+
 // Fecha de Uruguay, independiente del huso horario del navegador.
 document.getElementById("fecha").textContent = new Intl.DateTimeFormat('es-UY', {
   timeZone: Temporadas.zonaHoraria,

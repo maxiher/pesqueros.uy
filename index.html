@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesqueros de Uruguay</title>
+    <link rel="preload" as="image" href="Fotos/General/hero.webp">
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -23,7 +24,7 @@
 
     <section class="hero">
 
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="Fotos/General/hero.webp">
+        <video class="hero-video" muted loop playsinline preload="none" poster="Fotos/General/hero.webp" aria-hidden="true" tabindex="-1">
             <source src="video/hero.mp4?v=2" type="video/mp4">
         </video>
 
@@ -35,11 +36,18 @@
             </p>
         </div>
 
+        <a class="hero-explore" href="#explorar">
+            <span>Explorar</span>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="m6 5 6 6 6-6M6 12l6 6 6-6" />
+            </svg>
+        </a>
+
     </section>
 
 
     <!-- EXPLORAR -->
-<section class="container">
+<section class="container" id="explorar">
 
     <div class="explore-grid">
 
