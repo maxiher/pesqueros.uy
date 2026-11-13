@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <nav id="navbar-menu" class="nav-menu" aria-label="Navegación principal">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="pesqueros.html">Pesqueros</a></li>
                         <li><a href="especies.html">Especies</a></li>
                         <li><a href="tecnicas.html">Técnicas y Equipos</a></li>
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Los detalles pertenecen a la misma sección que su listado.
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const sectionPages = {
-            'index.html': 'index.html',
             'pesqueros.html': 'pesqueros.html',
             'pesquero.html': 'pesqueros.html',
             'especies.html': 'especies.html',
