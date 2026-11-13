@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <nav id="navbar-menu" class="nav-menu" aria-label="Navegación principal">
                     <ul>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="pesqueros.html">Pesqueros</a></li>
                         <li><a href="especies.html">Especies</a></li>
                         <li><a href="tecnicas.html">Técnicas y Equipos</a></li>
@@ -33,6 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 </nav>
             </div>
         `;
+
+        // Los detalles pertenecen a la misma sección que su listado.
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const sectionPages = {
+            'index.html': 'index.html',
+            'pesqueros.html': 'pesqueros.html',
+            'pesquero.html': 'pesqueros.html',
+            'especies.html': 'especies.html',
+            'especie.html': 'especies.html',
+            'tecnicas.html': 'tecnicas.html',
+            'tecnica.html': 'tecnicas.html',
+            'contacto.html': 'contacto.html'
+        };
+        const sectionPage = sectionPages[currentPage];
+        const currentLink = navbarContainer.querySelector(`.nav-menu a[href="${sectionPage}"]`);
+        if (currentLink) {
+            currentLink.setAttribute('aria-current', currentPage === sectionPage ? 'page' : 'location');
+        }
 
         // Lógica de apertura/cierre
         const menuToggle = navbarContainer.querySelector('.menu-toggle');

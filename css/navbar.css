@@ -61,24 +61,28 @@ body {
 }
 
 .logo-container {
+    --logo-height: 58px;
     flex-shrink: 0;
 }
 
 .logo-container a {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: block;
+    width: calc(var(--logo-height) * 900 / 427);
+    height: var(--logo-height);
+    overflow: hidden;
     border-radius: 6px;
 }
 
 .logo {
+    /* Área visible del WebP: x=80, y=76, ancho=900, alto=427 (1046x656). */
+    position: absolute;
+    left: calc(var(--logo-height) * -80 / 427);
+    top: calc(var(--logo-height) * -76 / 427);
     display: block;
     width: auto;
-    height: 58px;
-    transition: transform 0.2s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
+    max-width: none;
+    height: calc(var(--logo-height) * 656 / 427);
 }
 
 .menu-toggle {
@@ -158,14 +162,46 @@ body {
     outline-offset: 3px;
 }
 
+@media (min-width: 901px) {
+    .nav-menu {
+        display: flex;
+        align-self: stretch;
+    }
+
+    .nav-menu ul {
+        align-items: stretch;
+    }
+
+    .nav-menu ul li {
+        display: flex;
+    }
+
+    .nav-menu ul li a {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu a[aria-current]::after {
+        content: "";
+        position: absolute;
+        left: 13px;
+        right: 13px;
+        bottom: -6px;
+        height: 2px;
+        background-color: #ffffff;
+        pointer-events: none;
+    }
+}
+
 @media (max-width: 900px) {
     .main-header {
         justify-content: space-between;
         padding: 5px 15px;
     }
 
-    .logo {
-        height: 52px;
+    .logo-container {
+        --logo-height: 52px;
     }
 
     .menu-toggle {
@@ -216,11 +252,14 @@ body {
         border-radius: 0;
         white-space: normal;
     }
+
+    .nav-menu a[aria-current] {
+        font-weight: 700;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .main-header,
-    .logo,
     .menu-toggle,
     .bar,
     .nav-menu,
