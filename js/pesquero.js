@@ -98,23 +98,23 @@ const params = new URLSearchParams(window.location.search);
 const slug = params.get("id");
 
 cargarVistaDatos({
-  contenido: "#pesquero-contenido",
-  cargando: "Cargando pesquero...",
-  error: "No se pudieron cargar los datos del pesquero.",
-  cargar: async () => {
-    if (!slug) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
-    const [pesqueros, datosEspecies] = await Promise.all([
-      cargarJSON("./data/pesqueros.json"),
-      cargarJSON("./data/especies.json")
-    ]);
-    if (!Array.isArray(pesqueros) || !Array.isArray(datosEspecies.especies)) {
-      throw new Error("Formato de datos inválido");
+    contenido: "#pesquero-contenido",
+    cargando: "Cargando pesquero...",
+    error: "No se pudieron cargar los datos del pesquero.",
+    cargar: async () => {
+        if (!slug) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
+        const [pesqueros, datosEspecies] = await Promise.all([
+            cargarJSON("./data/pesqueros.json"),
+            cargarJSON("./data/especies.json")
+        ]);
+        if (!Array.isArray(pesqueros) || !Array.isArray(datosEspecies.especies)) {
+            throw new Error("Formato de datos inválido");
+        }
+        const pesquero = pesqueros.find(p => p.slug === slug);
+        if (!pesquero) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
+        const especiesPorId = new Map(datosEspecies.especies.map(especie => [especie.id, especie]));
+        renderPesquero(pesquero, especiesPorId);
     }
-    const pesquero = pesqueros.find(p => p.slug === slug);
-    if (!pesquero) return { mensaje: "Pesquero no encontrado.", enlace: "pesqueros.html" };
-    const especiesPorId = new Map(datosEspecies.especies.map(especie => [especie.id, especie]));
-    renderPesquero(pesquero, especiesPorId);
-  }
 });
 
 function renderPesquero(pesquero, especiesPorId) {
@@ -362,7 +362,9 @@ function iniciarMapa(pesquero) {
             title: `${ubicacion.nombre}: ${ubicacion.estadoPesca.texto}`
         })
             .addTo(mapa)
-            .bindPopup(contenidoPopup);
+            .bindPopup(contenidoPopup, {
+                autoPan: false
+            });
         marcadores.push(marcador);
     });
 
@@ -402,19 +404,25 @@ function iniciarMapa(pesquero) {
     }
 
     listaUbicaciones.querySelectorAll(".ver-en-mapa").forEach(boton => {
-        boton.addEventListener("click", () => {
-            const index = Number(boton.dataset.index);
-            const ubicacion = ubicaciones[index];
+    boton.addEventListener("click", () => {
+        const index = Number(boton.dataset.index);
 
-            seleccionarUbicacion(index);
-            mapa.setView(
-                [ubicacion.lat, ubicacion.lng],
-                16
-            );
+        seleccionarUbicacion(index);
+        marcadores[index].openPopup();
 
-            marcadores[index].openPopup();
-        });
+        // En móviles, desplazar la página hasta el mapa.
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            const reducirMovimiento = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+            document.getElementById("map").scrollIntoView({
+                behavior: reducirMovimiento ? "instant" : "smooth",
+                block: "start"
+            });
+        }
     });
+});
 
     marcadores.forEach((marcador, index) => {
         marcador.on("click", () => seleccionarUbicacion(index));
