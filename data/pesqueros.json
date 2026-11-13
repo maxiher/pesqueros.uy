@@ -109,13 +109,11 @@
         ],
         "ubicaciones": [
             {
-                "nombre": "?",
                 "lat": -34.91,
                 "lng": -56.16,
                 "restriccion": 1
             },
             {
-                "nombre": "?",
                 "lat": -34.915084,
                 "lng": -56.178712,
                 "restriccion": 1
