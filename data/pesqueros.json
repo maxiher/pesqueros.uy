@@ -18,8 +18,8 @@
             "Fotos/pesqueros/EscolleraSarandi.webp",
             "Fotos/pesqueros/EscolleraSarandi1.webp",
             "Fotos/pesqueros/EscolleraSarandi2.webp",
-            "Fotos/pesqueros/EscolleraSarandi3.webp",
-            "Fotos/pesqueros/EscolleraSarandi4.webp"
+            "Fotos/pesqueros/escolleraSArandi3.webp",
+            "Fotos/pesqueros/escolleraSarandi4.webp"
         ],
         "especies": [
             {
@@ -331,7 +331,7 @@
         "enganche": 1,
         "mejorViento": "SE",
         "nivel": 2,
-        "portada": "Fotos/pesqueros/carrasco2.webp",
+        "portada": "Fotos/pesqueros/Carrasco2.webp",
         "imagenes": [
             "Fotos/pesqueros/carrasco.webp",
             "Fotos/pesqueros/Carrasco2.webp",
@@ -1086,14 +1086,14 @@
         "enganche": 4,
         "mejorViento": "SE",
         "nivel": 4,
-        "portada": "Fotos/pesqueros/bellaVista2.webp",
+        "portada": "Fotos/pesqueros/BellaVista2.webp",
         "imagenes": [
             "Fotos/pesqueros/BellaVista5.webp",
             "Fotos/pesqueros/BellaVista.webp",
             "Fotos/pesqueros/BellaVista2.webp",
             "Fotos/pesqueros/BellaVista3.webp",
             "Fotos/pesqueros/BellaVista4.webp",
-            "Fotos/pesqueros/BellaVistaPortada.webp"
+            "Fotos/pesqueros/bellaVistaPortada.webp"
         ],
         "especies": [
             {
@@ -1123,8 +1123,10 @@
         ],
         "ubicaciones": [
             {
+                "nombre": "Playa Bella Vista",
             "lat": -34.806123,
-            "lng": -55.353851
+            "lng": -55.353851,
+            "Restriccion": 1
         }
     ]
     },
@@ -1210,9 +1212,9 @@
         "enganche": 2,
         "mejorViento": "SO",
         "nivel": 4,
-        "portada":"Fotos/pesqueros/piria2.webp",
+        "portada":"Fotos/pesqueros/Piria2.webp",
         "imagenes": [
-            "Fotos/pesqueros/piria2.webp",
+            "Fotos/pesqueros/Piria2.webp",
             "Fotos/pesqueros/piria3.webp",
             "Fotos/pesqueros/PuertoPiria.webp",
             "Fotos/pesqueros/EscolleraPiria.webp"
@@ -1642,7 +1644,8 @@
             {
                 "nombre": "Puerto de Punta Del Este",
                 "lat": -34.960003,
-                "lng": -54.951179
+                "lng": -54.951179,
+                "restriccion": 2
             },
             {
                 "nombre": "Piedra del Chileno",
@@ -1751,7 +1754,7 @@
         "enganche": 3,
         "mejorViento": "E",
         "nivel": 3,
-        "portada": "Fotos/pesqueros/joseignacio.webp",
+        "portada": "Fotos/pesqueros/JoseIgnacio.webp",
         "imagenes": [
             "Fotos/pesqueros/JoseIgnacio.webp",
             "Fotos/pesqueros/JoseIgnacio2.webp",
