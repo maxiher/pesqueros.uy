@@ -34,6 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
 
+        // Los detalles pertenecen a la misma sección que su listado.
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const sectionPages = {
+            'pesqueros.html': 'pesqueros.html',
+            'pesquero.html': 'pesqueros.html',
+            'especies.html': 'especies.html',
+            'especie.html': 'especies.html',
+            'tecnicas.html': 'tecnicas.html',
+            'tecnica.html': 'tecnicas.html',
+            'contacto.html': 'contacto.html'
+        };
+        const sectionPage = sectionPages[currentPage];
+        const currentLink = navbarContainer.querySelector(`.nav-menu a[href="${sectionPage}"]`);
+        if (currentLink) {
+            currentLink.setAttribute('aria-current', currentPage === sectionPage ? 'page' : 'location');
+        }
+
         // Lógica de apertura/cierre
         const menuToggle = navbarContainer.querySelector('.menu-toggle');
         const navMenu = navbarContainer.querySelector('.nav-menu');
