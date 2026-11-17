@@ -108,7 +108,8 @@ async function getWeather(departamento) {
     temp: data.current.temperature_2m,
     wind: data.current.wind_speed_10m,
     windDirection: data.current.wind_direction_10m,
-    code: data.current.weather_code
+    code: data.current.weather_code,
+    isDay: data.current.is_day
   };
 }
 
@@ -129,17 +130,17 @@ function getWindDirection(degrees) {
     return directions[index];
 }
 
-function getWeatherCondition(code) {
+function getWeatherCondition(code, isDay) {
   if (code === 0) {
     return {
-      icon: "☀️",
+      icon: isDay === 1 ? "☀️" : isDay === 0 ? "🌙" : "--",
       text: "Despejado"
     };
   }
 
   if (code === 1 || code === 2) {
     return {
-      icon: "🌤️",
+      icon: isDay === 1 ? "🌤️" : isDay === 0 ? "🌙☁️" : "☁️",
       text: "Parcialmente nublado"
     };
   }
@@ -179,7 +180,7 @@ function getWeatherCondition(code) {
     };
   }
 
-  if (code >= 95) {
+  if ([95, 96, 97, 99].includes(code)) {
     return {
       icon: "⛈️",
       text: "Tormenta"
@@ -187,9 +188,22 @@ function getWeatherCondition(code) {
   }
 
   return {
-    icon: "🌤️",
+    icon: "--",
     text: "Variable"
   };
+}
+
+// Un único ambiente para las tres cards; sin datos fiables se conserva el neutro.
+function getWeatherAtmosphere(code, isDay) {
+  if (isDay !== 0 && isDay !== 1) return 'neutral';
+  const momento = isDay === 1 ? 'day' : 'night';
+  if (code === 0) return `${momento}-clear`;
+  if (code === 1 || code === 2) return `${momento}-partly-cloudy`;
+  if ([3, 45, 48, 71, 73, 75, 77, 85, 86].includes(code)) return `${momento}-cloudy`;
+  if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 97, 99].includes(code)) {
+    return `${momento}-rainy`;
+  }
+  return 'neutral';
 }
 
 function renderWeather(data) {
@@ -202,11 +216,12 @@ function renderWeather(data) {
   const windArrow = document.getElementById("wind-arrow");
 
   // CLIMA
-  const condition = getWeatherCondition(data.code);
+  const condition = getWeatherCondition(data.code, data.isDay);
+  cardsClima.dataset.weather = getWeatherAtmosphere(data.code, data.isDay);
 
   weatherIcon.textContent = condition.icon;
   weatherCondition.textContent = condition.text;
-  temperature.textContent = `${data.temp}°C`;
+  temperature.textContent = Number.isFinite(data.temp) ? `${Math.round(data.temp)}°C` : 'No disponible';
 
   // VIENTO
   const direction = getWindDirection(data.windDirection);
@@ -223,11 +238,13 @@ function renderWeather(data) {
 }
 
 const selectorClima = document.getElementById('zona-clima');
+const cardsClima = document.querySelector('.info-grid');
 const contenidosClima = document.querySelectorAll('.weather-content, .wind-content');
 let consultaClima = 0;
 
 async function actualizarZonaClima() {
   const consulta = ++consultaClima;
+  cardsClima.dataset.weather = 'neutral';
   const departamento = selectorClima.value;
   const zona = Meteorologia.zonas[departamento];
   document.getElementById('referencia-clima').textContent =
