@@ -1048,7 +1048,7 @@
             },
             {
                 "id": "lenguado",
-                "nivel": "3"
+                "nivel": 3
             }
         ],
         "ubicaciones": [
@@ -1126,7 +1126,7 @@
                 "nombre": "Playa Bella Vista",
             "lat": -34.806123,
             "lng": -55.353851,
-            "Restriccion": 1
+            "restriccion": 1
         }
     ]
     },

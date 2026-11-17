@@ -33,13 +33,6 @@
   updatePlayback();
 })();
 
-// Fecha de Uruguay, independiente del huso horario del navegador.
-document.getElementById("fecha").textContent = new Intl.DateTimeFormat('es-UY', {
-  timeZone: Temporadas.zonaHoraria,
-  weekday: 'long', day: 'numeric', month: 'long'
-}).format(new Date());
-
-
 // TEMPORAL
 // Fase lunar aproximada; no determina el instante exacto de cada fase.
 function getMoonPhase(date = new Date()) {
@@ -140,7 +133,8 @@ function getWeatherCondition(code, isDay) {
 
   if (code === 1 || code === 2) {
     return {
-      icon: isDay === 1 ? "🌤️" : isDay === 0 ? "🌙☁️" : "☁️",
+      icon: isDay === 1 ? "🌤️" : "☁️",
+      iconSrc: isDay === 0 ? 'Fotos/Clima/icons/cloud-moon.svg' : null,
       text: "Parcialmente nublado"
     };
   }
@@ -161,7 +155,7 @@ function getWeatherCondition(code, isDay) {
 
   if (code >= 51 && code <= 57) {
     return {
-      icon: "🌦️",
+      icon: isDay === 0 ? "🌧️" : "🌦️",
       text: "Llovizna"
     };
   }
@@ -175,7 +169,7 @@ function getWeatherCondition(code, isDay) {
 
   if (code >= 80 && code <= 82) {
     return {
-      icon: "🌦️",
+      icon: isDay === 0 ? "🌧️" : "🌦️",
       text: "Chubascos"
     };
   }
@@ -219,7 +213,18 @@ function renderWeather(data) {
   const condition = getWeatherCondition(data.code, data.isDay);
   cardsClima.dataset.weather = getWeatherAtmosphere(data.code, data.isDay);
 
-  weatherIcon.textContent = condition.icon;
+  weatherIcon.replaceChildren();
+  if (condition.iconSrc) {
+    const icon = document.createElement('img');
+    icon.src = condition.iconSrc;
+    icon.alt = '';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.width = 48;
+    icon.height = 48;
+    weatherIcon.append(icon);
+  } else {
+    weatherIcon.textContent = condition.icon;
+  }
   weatherCondition.textContent = condition.text;
   temperature.textContent = Number.isFinite(data.temp) ? `${Math.round(data.temp)}°C` : 'No disponible';
 

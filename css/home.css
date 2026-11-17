@@ -224,7 +224,6 @@ h2{
     outline-offset: 3px;
 }
 
-.info-date,
 .weather-reference {
     margin: 0 0 15px;
     color: #5f7183;
@@ -257,6 +256,14 @@ h2{
 #weather-icon {
     font-size: 3rem;
     line-height: 1;
+}
+
+/* Bootstrap Icons cloud-moon, MIT: Fotos/Clima/icons/LICENSE. */
+#weather-icon img {
+    display: block;
+    width: 1em;
+    height: 1em;
+    filter: brightness(0) invert(1);
 }
 
 #weather-condition {

@@ -322,7 +322,7 @@
       "arreglo": {
         "nombre": "A Fondo Con Boya Elevadora",
         "descripción": "El sargo es una especie voraz  pero de boca muy pequeña. Arremete contra la carnad de forma estrepitosa sin darle tiempo al plomo de que toque fondo. Se lo puede encontrar en fondos de piedra como punta colorada, punta negra, la punta del chileno, josé ignacio, inclusive en el cerro de la viuda en rocha. Embarcado es muy común encontrarlo en la isla de la tuna, o los bajos del solís. Pero si de algo estamos seguros, que sea donde sea, si encontramos un cardumen de sargos, aprontense para vivir una experiencia inolvidable.",
-        "imagen": "./Fotos/Arreglos/corvina_blanca.webp",
+        "imagen": "./Fotos/Arreglos/sargo.webp",
         "carga_de_reel": "0,25 - 0,30 mm",
         "chicote": "0.40 - 0.50 mm",
         "linea_madre": "0.50 mm",
@@ -368,7 +368,7 @@
       "arreglo": {
         "nombre": "Robador",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/robador.webp",
+        "imagen": "./Fotos/Arreglos/Robador.webp",
         "carga_de_reel": "0.50 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 - 0.70 mm",
@@ -610,7 +610,7 @@
       "arreglo": {
         "nombre": "Spinning con dos anzuelos",
         "descripción": "",
-        "imagen": "./Fotos/Arreglos/lenguado.webp",
+        "imagen": "./Fotos/Arreglos/Lenguado.webp",
         "carga_de_reel": "0.40 - 0.50 mm",
         "chicote": "0.50 - 0.60 mm",
         "linea_madre": "0.60 mm",
