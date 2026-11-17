@@ -59,7 +59,7 @@ const Meteorologia = (() => {
         const url = new URL('https://api.open-meteo.com/v1/forecast');
         url.search = new URLSearchParams({
           latitude: lat, longitude: lng,
-          current: 'temperature_2m,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m',
+          current: 'temperature_2m,weather_code,is_day,wind_speed_10m,wind_direction_10m,wind_gusts_10m',
           hourly: 'weather_code', forecast_days: '1', timeformat: 'unixtime',
           timezone: Temporadas.zonaHoraria, wind_speed_unit: 'kmh'
         });

@@ -136,12 +136,13 @@ test('cada código 95/96/97/99 excluye incluso si el viento y especies son ideal
   }
 });
 
-test('la exclusión se decide con el pronóstico horario restante', async () => {
+test('tormenta actual o prevista para las horas restantes excluye; una tormenta pasada no excluye', async () => {
   const datos = pronostico();
   datos.current.weather_code = 95;
-  assert.equal(M.tormentasRestantes(datos, fecha), false);
-  assert.equal((await R.calcular([pesquero(1)], especies, opciones(async () => datos))).length, 1);
+  assert.equal(M.tormentasRestantes(datos, fecha), true);
+  assert.equal((await R.calcular([pesquero(1)], especies, opciones(async () => datos))).length, 0);
   const pasada = pronostico(99, 1);
+  assert.equal(M.tormentasRestantes(pasada, fecha), false);
   assert.equal((await R.calcular([pesquero(1)], especies, opciones(async () => pasada))).length, 1);
 });
 

@@ -224,12 +224,12 @@ h2{
     outline-offset: 3px;
 }
 
-.info-date,
 .weather-reference {
     margin: 0 0 15px;
     color: #5f7183;
     font-size: 1rem;
 }
+
 
 .card {
     min-height: 220px;
@@ -256,6 +256,14 @@ h2{
 #weather-icon {
     font-size: 3rem;
     line-height: 1;
+}
+
+/* Bootstrap Icons cloud-moon, MIT: Fotos/Clima/icons/LICENSE. */
+#weather-icon img {
+    display: block;
+    width: 1em;
+    height: 1em;
+    filter: brightness(0) invert(1);
 }
 
 #weather-condition {
@@ -312,6 +320,120 @@ h2{
 
     box-shadow:
     0 6px 20px rgba(0,0,0,.08);
+}
+
+/* Ambiente compartido por Clima, Viento y Fase Lunar. */
+.info-grid[data-weather] {
+    --weather-image: none;
+    --weather-overlay: transparent;
+    --weather-background: #fff;
+    --weather-text: #0d3b66;
+    --weather-detail: #5f7183;
+}
+
+.info-grid[data-weather]:not([data-weather="neutral"]) {
+    --weather-overlay: rgba(8, 24, 42, .66);
+    --weather-background: #152c42;
+    --weather-text: #fff;
+    --weather-detail: #f1f5f9;
+}
+
+.info-grid[data-weather="day-clear"] {
+    --weather-image: url("../Fotos/Clima/dia-despejado.webp");
+}
+
+.info-grid[data-weather="day-partly-cloudy"] {
+    --weather-image: url("../Fotos/Clima/dia-parcialmente-nublado.webp");
+}
+
+.info-grid[data-weather="night-clear"] {
+    --weather-image: url("../Fotos/Clima/noche-estrellada.webp");
+}
+
+.info-grid[data-weather="night-partly-cloudy"] {
+    --weather-image: url("../Fotos/Clima/noche-parcialmente-nublado.webp");
+}
+
+.info-grid[data-weather="day-cloudy"] {
+    --weather-image: url("../Fotos/Clima/dia-nuboso.webp");
+}
+
+.info-grid[data-weather="night-cloudy"] {
+    --weather-image: url("../Fotos/Clima/noche-nuboso.webp");
+}
+
+.info-grid[data-weather="day-rainy"] {
+    --weather-image: url("../Fotos/Clima/dia-lluvioso.webp");
+}
+
+.info-grid[data-weather="night-rainy"] {
+    --weather-image: url("../Fotos/Clima/noche-lluviosa.webp");
+}
+
+.info-grid[data-weather] > .card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--weather-background);
+    color: var(--weather-text);
+}
+
+/* Mismo lienzo y origen; cada card recorta su propia ventana del cielo. */
+.info-grid[data-weather] > .card::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    pointer-events: none;
+    left: var(--sky-x, 0px);
+    top: var(--sky-y, 0px);
+    width: var(--sky-width, 100%);
+    height: var(--sky-height, 100%);
+    background-image: var(--weather-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: weather-sky-drift 80s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+
+.info-grid[data-weather]:not([data-weather="neutral"]) > .card::before {
+    animation-play-state: running;
+}
+
+/* El contraste permanece fijo mientras se desplaza únicamente la imagen. */
+.info-grid[data-weather] > .card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    inset: 0;
+    background: var(--weather-overlay);
+}
+
+@keyframes weather-sky-drift {
+    from { transform: translateX(12px); }
+    to { transform: translateX(-12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .info-grid[data-weather] > .card::before {
+        animation: none;
+        transform: none;
+    }
+}
+
+.info-grid[data-weather] #temperature,
+.info-grid[data-weather] .wind-speed {
+    color: var(--weather-detail);
+}
+
+.info-grid[data-weather] #weather-icon,
+.info-grid[data-weather] #moon-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .45));
+}
+
+.info-grid[data-weather] [hidden] {
+    display: none;
 }
 
 .alert-box{
