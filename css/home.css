@@ -331,8 +331,10 @@ h2{
     --weather-detail: #f1f5f9;
 }
 
-/* No hay un recurso diurno totalmente despejado: reutilizamos el cielo azul. */
-.info-grid[data-weather="day-clear"],
+.info-grid[data-weather="day-clear"] {
+    --weather-image: url("../Fotos/Clima/dia-despejado.webp");
+}
+
 .info-grid[data-weather="day-partly-cloudy"] {
     --weather-image: url("../Fotos/Clima/dia-parcialmente-nublado.webp");
 }
@@ -362,11 +364,55 @@ h2{
 }
 
 .info-grid[data-weather] > .card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background-color: var(--weather-background);
-    background-image: linear-gradient(var(--weather-overlay), var(--weather-overlay)), var(--weather-image);
+    color: var(--weather-text);
+}
+
+/* Mismo lienzo y origen; cada card recorta su propia ventana del cielo. */
+.info-grid[data-weather] > .card::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    pointer-events: none;
+    left: var(--sky-x, 0px);
+    top: var(--sky-y, 0px);
+    width: var(--sky-width, 100%);
+    height: var(--sky-height, 100%);
+    background-image: var(--weather-image);
     background-size: cover;
     background-position: center;
-    color: var(--weather-text);
+    background-repeat: no-repeat;
+    animation: weather-sky-drift 80s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+
+.info-grid[data-weather]:not([data-weather="neutral"]) > .card::before {
+    animation-play-state: running;
+}
+
+/* El contraste permanece fijo mientras se desplaza únicamente la imagen. */
+.info-grid[data-weather] > .card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    inset: 0;
+    background: var(--weather-overlay);
+}
+
+@keyframes weather-sky-drift {
+    from { transform: translateX(12px); }
+    to { transform: translateX(-12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .info-grid[data-weather] > .card::before {
+        animation: none;
+        transform: none;
+    }
 }
 
 .info-grid[data-weather] #temperature,

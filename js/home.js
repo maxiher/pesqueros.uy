@@ -239,6 +239,25 @@ function renderWeather(data) {
 
 const selectorClima = document.getElementById('zona-clima');
 const cardsClima = document.querySelector('.info-grid');
+
+// Ajustar el lienzo compartido solo al cambiar las medidas, nunca por fotograma.
+// Los 24 px de margen a cada lado cubren todo el recorrido de la imagen.
+function ajustarFondoClima() {
+  const grid = cardsClima.getBoundingClientRect();
+  cardsClima.style.setProperty('--sky-width', `${grid.width + 48}px`);
+  cardsClima.style.setProperty('--sky-height', `${grid.height}px`);
+  for (const card of cardsClima.children) {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--sky-x', `${grid.left - rect.left - 24}px`);
+    card.style.setProperty('--sky-y', `${grid.top - rect.top}px`);
+  }
+}
+
+const observadorFondoClima = new ResizeObserver(ajustarFondoClima);
+observadorFondoClima.observe(cardsClima);
+for (const card of cardsClima.children) observadorFondoClima.observe(card);
+ajustarFondoClima();
+
 const contenidosClima = document.querySelectorAll('.weather-content, .wind-content');
 let consultaClima = 0;
 
